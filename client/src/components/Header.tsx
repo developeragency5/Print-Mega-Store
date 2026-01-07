@@ -1,21 +1,14 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "wouter";
-import { Menu, X, ShoppingCart, Phone, ChevronDown, Loader2 } from "lucide-react";
+import { Menu, X, ShoppingCart, Phone } from "lucide-react";
 import { Button } from "./ui/button";
 import { cn } from "@/lib/utils";
-import { useEcwid, getCategoryUrl } from "@/lib/ecwid";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "./ui/dropdown-menu";
+import { STORE_CATEGORIES, getCategoryUrl } from "@/lib/ecwid";
 
 export function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [location] = useLocation();
-  const { categories, isLoading } = useEcwid();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -52,63 +45,17 @@ export function Header() {
                 "px-3 py-2 text-sm font-medium transition-colors rounded-md hover:bg-muted",
                 location === "/" ? "text-primary" : "text-muted-foreground"
               )}
+              data-testid="link-home"
             >
               Home
             </Link>
 
-            <DropdownMenu>
-              <DropdownMenuTrigger asChild>
-                <Button 
-                  variant="ghost" 
-                  className={cn(
-                    "text-sm font-medium gap-1",
-                    location.startsWith("/shop") ? "text-primary" : "text-muted-foreground"
-                  )}
-                  data-testid="dropdown-categories"
-                >
-                  Categories
-                  {isLoading ? (
-                    <Loader2 className="w-3 h-3 animate-spin" />
-                  ) : (
-                    <ChevronDown className="w-3 h-3" />
-                  )}
-                </Button>
-              </DropdownMenuTrigger>
-              <DropdownMenuContent align="start" className="w-56">
-                <DropdownMenuItem asChild>
-                  <a 
-                    href="/shop" 
-                    className="cursor-pointer"
-                    data-testid="link-all-products"
-                  >
-                    All Products
-                  </a>
-                </DropdownMenuItem>
-                {categories.map((category) => (
-                  <DropdownMenuItem key={category.id} asChild>
-                    <a
-                      href={getCategoryUrl(category)}
-                      className="cursor-pointer"
-                      data-testid={`link-category-${category.id}`}
-                    >
-                      {category.name}
-                      {category.productCount !== undefined && (
-                        <span className="ml-auto text-xs text-muted-foreground">
-                          ({category.productCount})
-                        </span>
-                      )}
-                    </a>
-                  </DropdownMenuItem>
-                ))}
-              </DropdownMenuContent>
-            </DropdownMenu>
-
-            {categories.slice(0, 5).map((category) => (
+            {STORE_CATEGORIES.map((category) => (
               <a
                 key={category.id}
                 href={getCategoryUrl(category)}
                 className="px-3 py-2 text-sm font-medium text-muted-foreground transition-colors rounded-md hover:bg-muted hover:text-foreground"
-                data-testid={`link-nav-category-${category.id}`}
+                data-testid={`link-nav-${category.slug}`}
               >
                 {category.name}
               </a>
@@ -120,6 +67,7 @@ export function Header() {
                 "px-3 py-2 text-sm font-medium transition-colors rounded-md hover:bg-muted",
                 location === "/contact" ? "text-primary" : "text-muted-foreground"
               )}
+              data-testid="link-contact"
             >
               Contact
             </Link>
@@ -127,13 +75,13 @@ export function Header() {
 
           <div className="flex items-center gap-2">
             <Button variant="ghost" size="icon" className="hidden sm:flex" asChild>
-              <Link href="/contact">
+              <Link href="/contact" data-testid="button-phone">
                 <Phone className="w-5 h-5" />
               </Link>
             </Button>
             
             <Button variant="ghost" size="icon" asChild>
-              <a href="/shop">
+              <a href="/shop" data-testid="button-cart">
                 <ShoppingCart className="w-5 h-5" />
               </a>
             </Button>
@@ -161,36 +109,22 @@ export function Header() {
                 "block px-3 py-2 text-base font-medium rounded-md transition-colors",
                 location === "/" ? "bg-primary/10 text-primary" : "text-foreground hover:bg-muted"
               )}
+              data-testid="link-mobile-home"
             >
               Home
             </Link>
-            
-            <a
-              href="/shop"
-              onClick={() => setIsOpen(false)}
-              className="block px-3 py-2 text-base font-medium rounded-md transition-colors text-foreground hover:bg-muted"
-            >
-              All Products
-            </a>
 
-            {isLoading ? (
-              <div className="px-3 py-2 flex items-center gap-2 text-muted-foreground">
-                <Loader2 className="w-4 h-4 animate-spin" />
-                Loading categories...
-              </div>
-            ) : (
-              categories.map((category) => (
-                <a
-                  key={category.id}
-                  href={getCategoryUrl(category)}
-                  onClick={() => setIsOpen(false)}
-                  className="block px-3 py-2 text-base font-medium rounded-md transition-colors text-foreground hover:bg-muted pl-6"
-                  data-testid={`link-mobile-category-${category.id}`}
-                >
-                  {category.name}
-                </a>
-              ))
-            )}
+            {STORE_CATEGORIES.map((category) => (
+              <a
+                key={category.id}
+                href={getCategoryUrl(category)}
+                onClick={() => setIsOpen(false)}
+                className="block px-3 py-2 text-base font-medium rounded-md transition-colors text-foreground hover:bg-muted"
+                data-testid={`link-mobile-${category.slug}`}
+              >
+                {category.name}
+              </a>
+            ))}
 
             <Link
               href="/contact"
@@ -199,6 +133,7 @@ export function Header() {
                 "block px-3 py-2 text-base font-medium rounded-md transition-colors",
                 location === "/contact" ? "bg-primary/10 text-primary" : "text-foreground hover:bg-muted"
               )}
+              data-testid="link-mobile-contact"
             >
               Contact
             </Link>

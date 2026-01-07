@@ -4,6 +4,7 @@ import { Input } from "./ui/input";
 import { Facebook, Twitter, Instagram, Mail, MapPin, Phone } from "lucide-react";
 import { useCreateSubscriber } from "@/hooks/use-subscribers";
 import { useState } from "react";
+import { STORE_CATEGORIES, getCategoryUrl } from "@/lib/ecwid";
 
 export function Footer() {
   const [email, setEmail] = useState("");
@@ -21,7 +22,6 @@ export function Footer() {
     <footer className="bg-gray-900 text-gray-300 border-t border-gray-800">
       <div className="container mx-auto px-4 py-12 md:py-16">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 lg:gap-12">
-          {/* Brand */}
           <div className="space-y-4">
             <Link href="/" className="flex items-center gap-2">
               <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
@@ -36,25 +36,34 @@ export function Footer() {
               Quality products, competitive prices, and expert support.
             </p>
             <div className="flex gap-4 pt-2">
-              <a href="#" className="hover:text-primary transition-colors"><Facebook className="w-5 h-5" /></a>
-              <a href="#" className="hover:text-primary transition-colors"><Twitter className="w-5 h-5" /></a>
-              <a href="#" className="hover:text-primary transition-colors"><Instagram className="w-5 h-5" /></a>
+              <a href="#" className="hover:text-primary transition-colors" data-testid="link-facebook"><Facebook className="w-5 h-5" /></a>
+              <a href="#" className="hover:text-primary transition-colors" data-testid="link-twitter"><Twitter className="w-5 h-5" /></a>
+              <a href="#" className="hover:text-primary transition-colors" data-testid="link-instagram"><Instagram className="w-5 h-5" /></a>
             </div>
           </div>
 
-          {/* Quick Links */}
           <div>
             <h3 className="text-white font-semibold mb-4">Shop</h3>
             <ul className="space-y-2 text-sm">
-              <li><Link href="/shop" className="hover:text-primary transition-colors">All Products</Link></li>
-              <li><Link href="/shop" className="hover:text-primary transition-colors">Home Printers</Link></li>
-              <li><Link href="/shop" className="hover:text-primary transition-colors">Office Printers</Link></li>
-              <li><Link href="/shop" className="hover:text-primary transition-colors">Ink & Toner</Link></li>
-              <li><Link href="/shop" className="hover:text-primary transition-colors">Scanners</Link></li>
+              <li>
+                <a href="/shop" className="hover:text-primary transition-colors" data-testid="link-footer-all-products">
+                  All Products
+                </a>
+              </li>
+              {STORE_CATEGORIES.map((category) => (
+                <li key={category.id}>
+                  <a 
+                    href={getCategoryUrl(category)} 
+                    className="hover:text-primary transition-colors"
+                    data-testid={`link-footer-${category.slug}`}
+                  >
+                    {category.name}
+                  </a>
+                </li>
+              ))}
             </ul>
           </div>
 
-          {/* Contact */}
           <div>
             <h3 className="text-white font-semibold mb-4">Contact</h3>
             <ul className="space-y-3 text-sm">
@@ -73,7 +82,6 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Newsletter */}
           <div>
             <h3 className="text-white font-semibold mb-4">Stay Updated</h3>
             <p className="text-sm text-gray-400 mb-4">
@@ -86,11 +94,13 @@ export function Footer() {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 required
+                data-testid="input-newsletter-email"
               />
               <Button 
                 type="submit" 
                 className="w-full"
                 disabled={subscribe.isPending}
+                data-testid="button-subscribe"
               >
                 {subscribe.isPending ? "Subscribing..." : "Subscribe"}
               </Button>

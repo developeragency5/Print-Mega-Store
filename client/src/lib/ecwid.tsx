@@ -3,38 +3,47 @@ import { createContext, useContext, useEffect, useState, useCallback, ReactNode 
 export const STORE_ID = "128774264";
 
 export interface EcwidCategory {
-  id: number;
+  id: string;
   name: string;
-  url: string;
-  parentId?: number;
-  productCount?: number;
-  enabled?: boolean;
+  slug: string;
 }
 
-export interface EcwidProduct {
-  id: number;
-  name: string;
-  price: number;
-  imageUrl?: string;
-  url: string;
-  sku?: string;
-  categoryIds?: number[];
+export const STORE_CATEGORIES: EcwidCategory[] = [
+  { id: "193853315", name: "Home Printers", slug: "Home-Printers" },
+  { id: "193853316", name: "Office Printers", slug: "Office-Printers" },
+  { id: "193853317", name: "Inkjet Printers", slug: "Inkjet-Printers" },
+  { id: "193853318", name: "Laser Printers", slug: "Laser-Printers" },
+  { id: "193853319", name: "Document Scanners", slug: "Document-Scanners" },
+];
+
+export function getCategoryUrl(category: EcwidCategory): string {
+  return `/shop#!/${category.slug}/c/${category.id}`;
+}
+
+export function getCategoryUrlById(id: string, name: string): string {
+  const slug = name.replace(/\s+/g, "-");
+  return `/shop#!/${slug}/c/${id}`;
+}
+
+export function getProductUrl(productId: string, productName: string): string {
+  const slug = productName.replace(/\s+/g, "-").replace(/[^a-zA-Z0-9-]/g, "");
+  return `/shop#!/${slug}/p/${productId}`;
 }
 
 interface EcwidContextType {
   isReady: boolean;
   categories: EcwidCategory[];
-  isLoading: boolean;
-  openCategory: (categoryId: number) => void;
-  openProduct: (productId: number) => void;
+  openCategory: (categoryId: string) => void;
+  openProduct: (productId: string) => void;
+  navigateToCategory: (category: EcwidCategory) => void;
 }
 
 const EcwidContext = createContext<EcwidContextType>({
   isReady: false,
-  categories: [],
-  isLoading: true,
+  categories: STORE_CATEGORIES,
   openCategory: () => {},
   openProduct: () => {},
+  navigateToCategory: () => {},
 });
 
 export function useEcwid() {
@@ -58,33 +67,26 @@ interface EcwidProviderProps {
 
 export function EcwidProvider({ children }: EcwidProviderProps) {
   const [isReady, setIsReady] = useState(false);
-  const [categories, setCategories] = useState<EcwidCategory[]>([]);
-  const [isLoading, setIsLoading] = useState(true);
 
-  const fetchCategories = useCallback(() => {
-    if (typeof window.Ecwid !== "undefined" && window.Ecwid.getCategories) {
-      window.Ecwid.getCategories(function(result: { items: EcwidCategory[] }) {
-        if (result && result.items) {
-          const enabledCategories = result.items.filter(cat => cat.enabled !== false);
-          setCategories(enabledCategories);
-        }
-        setIsLoading(false);
-      });
+  const openCategory = useCallback((categoryId: string) => {
+    if (typeof window.Ecwid !== "undefined" && window.Ecwid.openPage) {
+      window.Ecwid.openPage("category", { id: parseInt(categoryId) });
     } else {
-      setIsLoading(false);
+      const category = STORE_CATEGORIES.find(c => c.id === categoryId);
+      if (category) {
+        window.location.href = getCategoryUrl(category);
+      }
     }
   }, []);
 
-  const openCategory = useCallback((categoryId: number) => {
-    if (typeof window.Ecwid !== "undefined") {
-      window.Ecwid.openPage("category", { id: categoryId });
+  const openProduct = useCallback((productId: string) => {
+    if (typeof window.Ecwid !== "undefined" && window.Ecwid.openPage) {
+      window.Ecwid.openPage("product", { id: parseInt(productId) });
     }
   }, []);
 
-  const openProduct = useCallback((productId: number) => {
-    if (typeof window.Ecwid !== "undefined") {
-      window.Ecwid.openPage("product", { id: productId });
-    }
+  const navigateToCategory = useCallback((category: EcwidCategory) => {
+    window.location.href = getCategoryUrl(category);
   }, []);
 
   useEffect(() => {
@@ -93,17 +95,14 @@ export function EcwidProvider({ children }: EcwidProviderProps) {
 
     const initEcwid = () => {
       if (typeof window.Ecwid !== "undefined") {
-        window.Ecwid.OnAPILoaded.add(() => {
-          setIsReady(true);
-          fetchCategories();
-        });
-        
+        if (window.Ecwid.OnAPILoaded) {
+          window.Ecwid.OnAPILoaded.add(() => {
+            setIsReady(true);
+          });
+        }
         if (window.Ecwid.OnPageLoaded) {
           window.Ecwid.OnPageLoaded.add(() => {
-            if (!isReady) {
-              setIsReady(true);
-              fetchCategories();
-            }
+            setIsReady(true);
           });
         }
       }
@@ -123,20 +122,21 @@ export function EcwidProvider({ children }: EcwidProviderProps) {
     }
 
     const timeout = setTimeout(() => {
-      setIsLoading(false);
-    }, 10000);
+      setIsReady(true);
+    }, 5000);
 
     return () => clearTimeout(timeout);
-  }, [fetchCategories, isReady]);
+  }, []);
 
   return (
-    <EcwidContext.Provider value={{ isReady, categories, isLoading, openCategory, openProduct }}>
+    <EcwidContext.Provider value={{ 
+      isReady, 
+      categories: STORE_CATEGORIES, 
+      openCategory, 
+      openProduct,
+      navigateToCategory 
+    }}>
       {children}
     </EcwidContext.Provider>
   );
-}
-
-export function getCategoryUrl(category: EcwidCategory): string {
-  const slug = category.name.replace(/\s+/g, "-");
-  return `/shop#!/${slug}/c/${category.id}`;
 }
