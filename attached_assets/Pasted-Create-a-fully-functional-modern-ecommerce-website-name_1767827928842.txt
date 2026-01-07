@@ -1,0 +1,98 @@
+Create a fully functional modern ecommerce website named "Print Mega Store" using HTML, CSS, and JavaScript.
+
+DESIGN & THEME:
+- Color theme: Black, White, and Blue
+- Clean, modern, minimal design
+- Use a modern Google font (Inter or Poppins)
+- Smooth animations using CSS and subtle JavaScript
+- Professional ecommerce look similar to electronics retail websites
+- Responsive design (mobile, tablet, desktop)
+- Soft hover effects, smooth page transitions, and animated buttons
+
+WEBSITE STRUCTURE:
+1. Home Page
+   - Top announcement bar (free shipping / business solutions)
+   - Header with logo text "Print Mega Store"
+   - Navigation menu:
+     Home
+     Home Printers
+     Office Printers
+     Inkjet Printers
+     Laser Printers
+     Document Scanners
+     Contact
+   - Hero section with headline:
+     "Professional Printing & Scanning Solutions for Home and Business"
+   - Call-to-action buttons:
+     "Shop Printers"
+     "Shop Scanners"
+   - Featured categories section (cards with icons)
+   - Benefits section:
+     Fast Shipping
+     Secure Checkout
+     Business-Grade Products
+     Dedicated Support
+
+2. Category Pages
+   - Dynamic category grid layout
+   - Category title and SEO-friendly description
+   - Ecwid category embed for:
+     Home Printers
+     Office Printers
+     Inkjet Printers
+     Laser Printers
+     Document Scanners
+
+3. Product Pages (Handled by Ecwid)
+   - Use Ecwid product pages
+   - Show product image, price, description, features, specifications
+   - Add-to-cart or Buy Now button
+   - Smooth loading animation
+
+4. Footer
+   - About section
+   - Quick links
+   - Contact information
+   - Copyright text
+   - Social media icons
+
+ECWID INTEGRATION (VERY IMPORTANT):
+- Integrate Ecwid storefront using Ecwid JavaScript embed
+- Load Ecwid store dynamically on category and product pages
+- Enable:
+  - Shopping cart
+  - Checkout
+  - Product search
+  - Category navigation
+- Make sure Ecwid styling matches the website theme
+- Cart icon fixed in header with item count
+- Ecwid store ID should be clearly commented so it can be replaced easily
+
+FUNCTIONALITY:
+- Sticky header on scroll
+- Smooth scroll navigation
+- Animated category cards
+- Lazy loading for images
+- SEO-friendly structure (proper headings, semantic HTML)
+- Fast loading and clean code
+
+TECHNICAL REQUIREMENTS:
+- No frameworks (no React, no Vue)
+- Plain HTML, CSS, and JavaScript only
+- Well-structured folders:
+  /index.html
+  /css/style.css
+  /js/main.js
+- Comment the code clearly
+- Easy to customize later
+
+ANIMATIONS:
+- Fade-in on scroll for sections
+- Button hover animations
+- Smooth cart open/close animation
+- Subtle transitions (no heavy effects)
+
+FINAL GOAL:
+The website should look like a professional ecommerce store for printers and scanners, fully powered by Ecwid for products, cart, and checkout, with a clean black, white, and blue theme and modern UX.
+
+Make the site production-ready.
