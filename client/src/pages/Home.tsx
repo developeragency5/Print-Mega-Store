@@ -50,7 +50,7 @@ export default function Home() {
                 <Link href="/shop">Shop Printers</Link>
               </Button>
               <Button asChild variant="outline" size="lg" className="text-base font-semibold border-white/20 hover:bg-white/10 text-white hover:text-white">
-                <Link href="/shop?category=scanners">Shop Scanners</Link>
+                <Link href="/shop">Shop Scanners</Link>
               </Button>
             </motion.div>
           </div>
