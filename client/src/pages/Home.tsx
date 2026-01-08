@@ -15,11 +15,11 @@ import {
 import { motion } from "framer-motion";
 import { STORE_CATEGORIES, getCategoryUrl } from "@/lib/ecwid";
 import heroBannerImg from "@assets/Banner_meet_smallest_enterprise_-_Desktop@2x.png_1767904533249.avif";
-import homePrinterImg from "@assets/stock_images/home_printer_compact_563d38fc.jpg";
-import officePrinterImg from "@assets/stock_images/large_office_multifu_ed611672.jpg";
-import inkjetPrinterImg from "@assets/stock_images/inkjet_printer_color_ff5b9fc9.jpg";
-import laserPrinterImg from "@assets/stock_images/laser_printer_fast_d_67ea17ad.jpg";
-import scannerImg from "@assets/stock_images/document_scanner_fla_06670a5f.jpg";
+import homePrinterImg from "@assets/61g0ZhtFErL._AC_SL1500__1767904909151.jpg";
+import officePrinterImg from "@assets/HP_OfficeJet_Pro_8135e_Wireless_All-in-One_Printer_with_3_Mont_1767904971940.png";
+import inkjetPrinterImg from "@assets/HP_ENVY_Inspire_7955e_All-in-One_Printer_with_3_Months_of_Inst_1767905095614.jpg";
+import laserPrinterImg from "@assets/HP_LaserJet_M110w_Wireless_Black_&_White_Printer_1767905187439.png";
+import scannerImg from "@assets/9000_s1_1767905236089.jpg";
 
 const categoryIcons: Record<string, React.ReactNode> = {
   "Home-Printers": <Printer className="w-10 h-10" />,
@@ -40,48 +40,48 @@ const categoryDescriptions: Record<string, string> = {
 const featuredProducts = [
   {
     categorySlug: "Home-Printers",
-    name: "EcoTank Home Pro 4000",
-    description: "Perfect for home offices and personal use. This compact wireless printer delivers exceptional quality prints with ultra-low running costs. Features automatic duplex printing and mobile connectivity.",
-    price: "$249.99",
-    features: ["Wireless connectivity", "Auto duplex printing", "Low-cost ink system"],
+    name: "HP DeskJet 2827e Wireless All-in-One Printer",
+    description: "The perfect all-in-one solution for everyday home printing. Print, scan, and copy with wireless connectivity and 3 months of Instant Ink included. Compact design fits any space while delivering reliable quality for documents and photos.",
+    features: ["Print, Scan & Copy", "Wireless Connectivity", "3 Months Instant Ink"],
     image: homePrinterImg,
-    productId: "home-printer-1"
+    productId: "home-printer-1",
+    productUrl: "/shop#!/HP-DeskJet-2827e-Wireless-All-in-One-Color-Inkjet-Printer-with-Print-Scan-&-Copy-for-Everyday-Home-Printing/p/806466784"
   },
   {
     categorySlug: "Office-Printers",
-    name: "WorkForce Pro MX-8500",
-    description: "Built for demanding office environments. High-speed multifunction printer with print, scan, copy, and fax capabilities. Handles up to 50,000 pages per month with ease.",
-    price: "$899.99",
-    features: ["50,000 pages/month", "All-in-one functionality", "Network ready"],
+    name: "HP OfficeJet 8135e Wireless All-in-One Printer",
+    description: "Built for professional office environments with high-volume printing capabilities. Features wireless all-in-one functionality with print, scan, copy, and fax. Includes 3 months of ink trial for maximum productivity.",
+    features: ["All-in-One Office Solution", "3 Months Ink Trial", "High-Volume Printing"],
     image: officePrinterImg,
-    productId: "office-printer-1"
+    productId: "office-printer-1",
+    productUrl: "/shop#!/HP-OfficeJet-8135e-Wireless-All-in-One-Color-Inkjet-Printer-with-3-Months-of-Ink-Trial-for-Office-Use/p/806466580"
   },
   {
     categorySlug: "Inkjet-Printers",
-    name: "PhotoSmart Elite X700",
-    description: "Create stunning photo prints at home. 6-color ink system produces gallery-quality photos with vivid colors and exceptional detail. Perfect for photographers and creative professionals.",
-    price: "$399.99",
-    features: ["6-color ink system", "Borderless printing", "Photo paper support"],
+    name: "HP Envy 7955e Wireless Photo All-in-One Printer",
+    description: "Create stunning photo prints with vibrant colors and exceptional detail. Features auto duplex printing for efficient double-sided documents. Wireless connectivity lets you print from anywhere in your home.",
+    features: ["Photo Quality Prints", "Auto Duplex Printing", "Wireless All-in-One"],
     image: inkjetPrinterImg,
-    productId: "inkjet-printer-1"
+    productId: "inkjet-printer-1",
+    productUrl: "/shop#!/HP-Envy-7955e-Wireless-Photo-All-in-One-Color-Inkjet-Printer-with-Auto-Duplex-Printing/p/806452376"
   },
   {
     categorySlug: "Laser-Printers",
-    name: "LaserJet Enterprise M600",
-    description: "Lightning-fast document printing for busy offices. Prints up to 55 pages per minute with crisp, professional quality text. Built-in security features protect your sensitive documents.",
-    price: "$599.99",
-    features: ["55 ppm speed", "Enterprise security", "Low cost per page"],
+    name: "HP LaserJet M110w Compact Wireless Laser Printer",
+    description: "Compact monochrome laser printer perfect for small spaces and home offices. Delivers fast, crisp black and white prints with wireless connectivity. Energy efficient design with low cost per page.",
+    features: ["Compact Design", "Wireless Printing", "Fast Monochrome Output"],
     image: laserPrinterImg,
-    productId: "laser-printer-1"
+    productId: "laser-printer-1",
+    productUrl: "/shop#!/HP-LaserJet-M110w-Compact-Wireless-Monochrome-Laser-Printer/p/806466884"
   },
   {
     categorySlug: "Document-Scanners",
-    name: "ScanPro Elite DS-500",
-    description: "Professional document scanning at unprecedented speeds. Scans up to 80 pages per minute with automatic document feeder. Perfect for digitizing large document archives.",
-    price: "$449.99",
-    features: ["80 ppm scanning", "Auto document feeder", "OCR included"],
+    name: "HP ScanJet Enterprise Flow 9000 s1 Scanner",
+    description: "High-volume enterprise document scanner designed for demanding workloads. Features automatic document feeder for batch scanning and advanced image processing. Perfect for digitizing large document archives quickly.",
+    features: ["High-Volume Scanning", "Auto Document Feeder", "Enterprise Grade"],
     image: scannerImg,
-    productId: "scanner-1"
+    productId: "scanner-1",
+    productUrl: "/shop#!/HP-ScanJet-Enterprise-Flow-9000-s1-High-Volume-Document-Scanner/p/806466632"
   }
 ];
 
@@ -264,15 +264,15 @@ export default function Home() {
                 >
                   <div className={`${!isImageLeft ? 'lg:order-2' : ''}`}>
                     <a 
-                      href={category ? getCategoryUrl(category) : "/shop"} 
+                      href={product.productUrl} 
                       className="block group"
                       data-testid={`link-product-${product.productId}`}
                     >
-                      <div className="relative overflow-hidden rounded-md border border-gray-200">
+                      <div className="relative overflow-hidden rounded-md border border-gray-200 bg-white">
                         <img 
                           src={product.image} 
                           alt={product.name}
-                          className="w-full h-80 object-cover transition-transform duration-300 group-hover:scale-105"
+                          className="w-full h-80 object-contain p-4 transition-transform duration-300 group-hover:scale-105"
                           data-testid={`img-product-${product.productId}`}
                         />
                         <div className="absolute top-4 left-4">
@@ -301,11 +301,10 @@ export default function Home() {
                         ))}
                       </div>
 
-                      <div className="flex items-center gap-6 pt-4">
-                        <span className="text-3xl font-bold text-foreground">{product.price}</span>
+                      <div className="flex items-center pt-4">
                         <Button asChild>
-                          <a href={category ? getCategoryUrl(category) : "/shop"} data-testid={`button-view-${product.productId}`}>
-                            View in Store
+                          <a href={product.productUrl} data-testid={`button-view-${product.productId}`}>
+                            View Product
                             <ArrowRight className="ml-2 w-4 h-4" />
                           </a>
                         </Button>
