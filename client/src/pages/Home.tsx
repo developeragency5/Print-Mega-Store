@@ -204,9 +204,9 @@ export default function Home() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
             {[
               { icon: <Truck className="w-7 h-7" />, title: "Fast Shipping", desc: "Quick delivery to your door", color: "from-[#37AFE1] to-[#2d8bb8]" },
-              { icon: <Tag className="w-7 h-7" />, title: "Best Prices", desc: "Competitive rates guaranteed", color: "from-green-500 to-green-600" },
-              { icon: <ShieldCheck className="w-7 h-7" />, title: "Secure Checkout", desc: "SSL encrypted payments", color: "from-purple-500 to-purple-600" },
-              { icon: <BadgeCheck className="w-7 h-7" />, title: "Trusted Shopping", desc: "100% buyer protection", color: "from-orange-500 to-orange-600" },
+              { icon: <Tag className="w-7 h-7" />, title: "Best Prices", desc: "Competitive rates guaranteed", color: "from-[#37AFE1] to-[#2d8bb8]" },
+              { icon: <ShieldCheck className="w-7 h-7" />, title: "Secure Checkout", desc: "SSL encrypted payments", color: "from-[#37AFE1] to-[#2d8bb8]" },
+              { icon: <BadgeCheck className="w-7 h-7" />, title: "Trusted Shopping", desc: "100% buyer protection", color: "from-[#37AFE1] to-[#2d8bb8]" },
             ].map((benefit, i) => (
               <motion.div
                 key={i}
