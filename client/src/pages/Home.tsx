@@ -822,9 +822,9 @@ export default function Home() {
                 color: "from-[#37AFE1] to-[#2d8bb8]"
               },
               {
-                icon: <FileText className="w-8 h-8" />,
-                title: "Trusted Brands",
-                desc: "Shop from leading manufacturers known for quality and innovation in printing technology.",
+                icon: <ShieldCheck className="w-8 h-8" />,
+                title: "Secure Checkout",
+                desc: "Shop with confidence using our safe and encrypted payment processing for all transactions.",
                 color: "from-purple-500 to-purple-600"
               },
               {
