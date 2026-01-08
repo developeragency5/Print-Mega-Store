@@ -10,7 +10,10 @@ import {
   ArrowRight,
   Zap,
   FileText,
-  CheckCircle2
+  CheckCircle2,
+  BadgeCheck,
+  ThumbsUp,
+  Award
 } from "lucide-react";
 import { motion } from "framer-motion";
 import { STORE_CATEGORIES, getCategoryUrl } from "@/lib/ecwid";
@@ -21,12 +24,20 @@ import inkjetPrinterImg from "@assets/HP_ENVY_Inspire_7955e_All-in-One_Printer_w
 import laserPrinterImg from "@assets/HP_LaserJet_M110w_Wireless_Black_&_White_Printer_1767905187439.png";
 import scannerImg from "@assets/9000_s1_1767905236089.jpg";
 
+const categoryImages: Record<string, string> = {
+  "Home-Printers": homePrinterImg,
+  "Office-Printers": officePrinterImg,
+  "Inkjet-Printers": inkjetPrinterImg,
+  "Laser-Printers": laserPrinterImg,
+  "Document-Scanners": scannerImg,
+};
+
 const categoryIcons: Record<string, React.ReactNode> = {
-  "Home-Printers": <Printer className="w-10 h-10" />,
-  "Office-Printers": <Briefcase className="w-10 h-10" />,
-  "Inkjet-Printers": <FileText className="w-10 h-10" />,
-  "Laser-Printers": <Zap className="w-10 h-10" />,
-  "Document-Scanners": <ScanLine className="w-10 h-10" />,
+  "Home-Printers": <Printer className="w-8 h-8" />,
+  "Office-Printers": <Briefcase className="w-8 h-8" />,
+  "Inkjet-Printers": <FileText className="w-8 h-8" />,
+  "Laser-Printers": <Zap className="w-8 h-8" />,
+  "Document-Scanners": <ScanLine className="w-8 h-8" />,
 };
 
 const categoryDescriptions: Record<string, string> = {
@@ -85,23 +96,43 @@ const featuredProducts = [
   }
 ];
 
-const fadeInUp = {
-  initial: { opacity: 0, y: 30 },
-  animate: { opacity: 1, y: 0 },
-  transition: { duration: 0.6 }
-};
-
-const staggerContainer = {
-  animate: {
-    transition: {
-      staggerChildren: 0.1
-    }
-  }
-};
+const trustBadges = [
+  { 
+    icon: <Truck className="w-10 h-10" />, 
+    title: "FREE SHIPPING", 
+    desc: "On orders over $500",
+    color: "#37AFE1"
+  },
+  { 
+    icon: <ShieldCheck className="w-10 h-10" />, 
+    title: "SECURE PAYMENT", 
+    desc: "256-bit encryption",
+    color: "#4CC9FE"
+  },
+  { 
+    icon: <ThumbsUp className="w-10 h-10" />, 
+    title: "CUSTOMER SATISFACTION", 
+    desc: "Our top priority",
+    color: "#37AFE1"
+  },
+  { 
+    icon: <BadgeCheck className="w-10 h-10" />, 
+    title: "100% GUARANTEE", 
+    desc: "Money back promise",
+    color: "#4CC9FE"
+  },
+  { 
+    icon: <Headphones className="w-10 h-10" />, 
+    title: "EXPERT SUPPORT", 
+    desc: "24/7 available",
+    color: "#37AFE1"
+  },
+];
 
 export default function Home() {
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col bg-white">
+      {/* Hero Section */}
       <section className="relative w-full pt-[88px]" data-testid="hero-section">
         <div className="relative w-full">
           <img 
@@ -130,8 +161,7 @@ export default function Home() {
                   className="text-base sm:text-lg text-white/90 mb-6 leading-relaxed"
                 >
                   Discover enterprise-grade printing solutions designed for productivity. 
-                  From compact home printers to high-volume office workhorses, find the perfect 
-                  match for your printing needs with free shipping and expert support.
+                  From compact home printers to high-volume office workhorses.
                 </motion.p>
 
                 <motion.div 
@@ -139,7 +169,12 @@ export default function Home() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 0.2 }}
                 >
-                  <Button asChild size="lg" className="text-lg font-semibold">
+                  <Button 
+                    asChild 
+                    size="lg" 
+                    className="text-lg font-semibold"
+                    style={{ backgroundColor: '#37AFE1' }}
+                  >
                     <a href="/shop" data-testid="button-shop-now">
                       Shop Now
                       <ArrowRight className="ml-2 w-5 h-5" />
@@ -152,87 +187,102 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-12 bg-white border-b border-gray-200">
+      {/* Trust Badges Section - Like inkjets.com */}
+      <section className="py-16 bg-white border-b border-gray-100">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {[
-              { icon: <Truck className="w-6 h-6" />, title: "Fast Shipping", desc: "Free over $500" },
-              { icon: <ShieldCheck className="w-6 h-6" />, title: "Secure Checkout", desc: "256-bit encryption" },
-              { icon: <Briefcase className="w-6 h-6" />, title: "Business Grade", desc: "Professional quality" },
-              { icon: <Headphones className="w-6 h-6" />, title: "Expert Support", desc: "24/7 available" },
-            ].map((benefit, i) => (
+          <motion.h2 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-2xl md:text-3xl font-bold text-center mb-12 text-gray-900"
+          >
+            High Quality Printers & Scanners
+          </motion.h2>
+          
+          <div className="grid grid-cols-2 md:grid-cols-5 gap-8">
+            {trustBadges.map((badge, i) => (
               <motion.div
                 key={i}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
-                className="bg-white border border-gray-200 rounded-md p-5 flex items-center gap-4"
+                className="flex flex-col items-center text-center"
               >
-                <div className="p-3 rounded-md bg-gray-100 text-primary shrink-0">
-                  {benefit.icon}
+                <div 
+                  className="mb-4"
+                  style={{ color: badge.color }}
+                >
+                  {badge.icon}
                 </div>
-                <div>
-                  <h3 className="font-semibold text-sm text-foreground">{benefit.title}</h3>
-                  <p className="text-xs text-muted-foreground">{benefit.desc}</p>
-                </div>
+                <h3 className="font-bold text-xs uppercase tracking-wide text-gray-800 mb-1">
+                  {badge.title}
+                </h3>
+                <p className="text-xs text-gray-500">{badge.desc}</p>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="section-padding bg-white">
+      {/* Categories Section - Clean white with cream accent */}
+      <section className="py-20 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-center mb-16"
+            className="text-center mb-12"
           >
-            <span className="inline-block text-primary font-semibold text-sm uppercase tracking-wider mb-4">Browse Categories</span>
-            <h2 className="text-4xl md:text-5xl font-bold mb-4 text-foreground">Find Your Perfect Match</h2>
-            <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-              Explore our carefully curated selection of professional printing solutions
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900">
+              Your Source for Premium Printing Solutions
+            </h2>
+            <p className="text-gray-600 text-lg max-w-2xl mx-auto">
+              Explore our carefully curated selection of professional printers and scanners
             </p>
           </motion.div>
 
-          <motion.div 
-            variants={staggerContainer}
-            initial="initial"
-            whileInView="animate"
-            viewport={{ once: true }}
-            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6"
-          >
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
             {STORE_CATEGORIES.map((category, i) => (
               <motion.div
                 key={category.id}
-                variants={fadeInUp}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
               >
                 <a href={getCategoryUrl(category)} data-testid={`card-category-${category.slug}`}>
-                  <Card className="group h-full cursor-pointer border border-gray-200 hover:border-gray-300 hover:shadow-md transition-all duration-200">
-                    <CardContent className="p-6 flex flex-col items-center text-center h-full">
-                      <div className="w-20 h-20 rounded-md bg-gray-100 flex items-center justify-center mb-5 group-hover:bg-primary transition-colors duration-200">
-                        <div className="text-primary group-hover:text-white transition-colors duration-200">
-                          {categoryIcons[category.slug] || <Printer className="w-10 h-10" />}
-                        </div>
+                  <Card className="group h-full cursor-pointer border border-gray-200 hover:border-[#37AFE1] hover:shadow-lg transition-all duration-300 overflow-hidden">
+                    <CardContent className="p-0">
+                      {/* Product Image */}
+                      <div 
+                        className="h-40 flex items-center justify-center p-4"
+                        style={{ backgroundColor: '#FFFECB' }}
+                      >
+                        <img 
+                          src={categoryImages[category.slug]} 
+                          alt={category.name}
+                          className="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform duration-300"
+                        />
                       </div>
-                      <h3 className="text-lg font-bold mb-2 text-foreground group-hover:text-primary transition-colors">{category.name}</h3>
-                      <p className="text-sm text-muted-foreground">{categoryDescriptions[category.slug]}</p>
-                      <div className="mt-4 flex items-center text-primary text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity">
-                        Shop Now <ArrowRight className="w-4 h-4 ml-1" />
+                      {/* Category Info */}
+                      <div className="p-4 text-center bg-white">
+                        <h3 className="text-base font-bold mb-1 text-gray-900 group-hover:text-[#37AFE1] transition-colors">
+                          {category.name}
+                        </h3>
+                        <p className="text-sm text-gray-500">{categoryDescriptions[category.slug]}</p>
                       </div>
                     </CardContent>
                   </Card>
                 </a>
               </motion.div>
             ))}
-          </motion.div>
+          </div>
         </div>
       </section>
 
-      <section className="section-padding bg-white">
+      {/* Featured Products Section - Clean white with alternating layout */}
+      <section className="py-20" style={{ backgroundColor: '#FFFECB' }}>
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
@@ -240,18 +290,18 @@ export default function Home() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <span className="inline-block text-primary font-semibold text-sm uppercase tracking-wider mb-4">Featured Products</span>
-            <h2 className="text-4xl md:text-5xl font-bold mb-4 text-foreground">Top Picks from Each Category</h2>
-            <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900">
+              Top Picks from Each Category
+            </h2>
+            <p className="text-gray-600 text-lg max-w-2xl mx-auto">
               Discover our best-selling products handpicked for quality and performance
             </p>
           </motion.div>
 
-          <div className="space-y-0">
+          <div className="space-y-12">
             {featuredProducts.map((product, index) => {
               const category = STORE_CATEGORIES.find(c => c.slug === product.categorySlug);
               const isImageLeft = index % 2 === 0;
-              const isLast = index === featuredProducts.length - 1;
               
               return (
                 <motion.div
@@ -260,55 +310,63 @@ export default function Home() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.6 }}
-                  className={`grid lg:grid-cols-2 gap-8 lg:gap-12 items-center py-12 ${!isLast ? 'border-b border-gray-200' : ''}`}
+                  className="bg-white rounded-lg shadow-sm overflow-hidden"
                 >
-                  <div className={`${!isImageLeft ? 'lg:order-2' : ''}`}>
-                    <a 
-                      href={product.productUrl} 
-                      className="block group"
-                      data-testid={`link-product-${product.productId}`}
-                    >
-                      <div className="relative overflow-hidden rounded-md border border-gray-200 bg-white">
-                        <img 
-                          src={product.image} 
-                          alt={product.name}
-                          className="w-full h-80 object-contain p-4 transition-transform duration-300 group-hover:scale-105"
-                          data-testid={`img-product-${product.productId}`}
-                        />
-                        <div className="absolute top-4 left-4">
-                          <span className="bg-primary text-white text-xs font-semibold px-3 py-1.5 rounded-md">
-                            {category?.name || product.categorySlug.replace('-', ' ')}
-                          </span>
+                  <div className={`grid lg:grid-cols-2 gap-0 items-center`}>
+                    {/* Image */}
+                    <div className={`${!isImageLeft ? 'lg:order-2' : ''}`}>
+                      <a 
+                        href={product.productUrl} 
+                        className="block group"
+                        data-testid={`link-product-${product.productId}`}
+                      >
+                        <div 
+                          className="h-80 flex items-center justify-center p-8"
+                          style={{ backgroundColor: '#F5F4B3' }}
+                        >
+                          <img 
+                            src={product.image} 
+                            alt={product.name}
+                            className="max-h-full max-w-full object-contain transition-transform duration-300 group-hover:scale-105"
+                            data-testid={`img-product-${product.productId}`}
+                          />
                         </div>
-                      </div>
-                    </a>
-                  </div>
+                      </a>
+                    </div>
 
-                  <div className={`${!isImageLeft ? 'lg:order-1' : ''}`}>
-                    <div className="space-y-4">
-                      <h3 className="text-2xl lg:text-3xl font-bold text-foreground">{product.name}</h3>
-                      <p className="text-muted-foreground text-lg leading-relaxed">{product.description}</p>
+                    {/* Content */}
+                    <div className={`p-8 lg:p-12 ${!isImageLeft ? 'lg:order-1' : ''}`}>
+                      <span 
+                        className="inline-block text-white text-xs font-bold px-3 py-1 rounded-full mb-4"
+                        style={{ backgroundColor: '#37AFE1' }}
+                      >
+                        {category?.name || product.categorySlug.replace('-', ' ')}
+                      </span>
+                      <h3 className="text-2xl font-bold text-gray-900 mb-4">{product.name}</h3>
+                      <p className="text-gray-600 mb-6 leading-relaxed">{product.description}</p>
                       
-                      <div className="flex flex-wrap gap-2 pt-2">
+                      <div className="flex flex-wrap gap-2 mb-6">
                         {product.features.map((feature, i) => (
                           <span 
                             key={i} 
-                            className="inline-flex items-center gap-1.5 bg-gray-100 border border-gray-200 text-sm text-foreground px-3 py-1.5 rounded-md"
+                            className="inline-flex items-center gap-1.5 text-sm px-3 py-1.5 rounded-full"
+                            style={{ backgroundColor: '#4CC9FE', color: 'white' }}
                           >
-                            <CheckCircle2 className="w-4 h-4 text-primary" />
+                            <CheckCircle2 className="w-4 h-4" />
                             {feature}
                           </span>
                         ))}
                       </div>
 
-                      <div className="flex items-center pt-4">
-                        <Button asChild>
-                          <a href={product.productUrl} data-testid={`button-view-${product.productId}`}>
-                            View Product
-                            <ArrowRight className="ml-2 w-4 h-4" />
-                          </a>
-                        </Button>
-                      </div>
+                      <Button 
+                        asChild
+                        style={{ backgroundColor: '#37AFE1' }}
+                      >
+                        <a href={product.productUrl} data-testid={`button-view-${product.productId}`}>
+                          View Product
+                          <ArrowRight className="ml-2 w-4 h-4" />
+                        </a>
+                      </Button>
                     </div>
                   </div>
                 </motion.div>
@@ -318,56 +376,95 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section-padding bg-gray-100">
+      {/* Stats Section - Light blue background */}
+      <section className="py-20 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-            >
-              <span className="inline-block text-primary font-semibold text-sm uppercase tracking-wider mb-4">Why Choose Us</span>
-              <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">Built for Professionals</h2>
-              <p className="text-muted-foreground text-lg mb-12">
-                We partner with leading brands to bring you the best printing technology at competitive prices
-              </p>
-            </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900">
+              10,000+ Satisfied Customers
+            </h2>
+            <p className="text-gray-600 text-lg max-w-2xl mx-auto">
+              Join thousands of businesses who trust Print Mega Store for their printing needs
+            </p>
+          </motion.div>
 
-            <div className="grid md:grid-cols-3 gap-8">
-              {[
-                { number: "10K+", label: "Happy Customers" },
-                { number: "500+", label: "Products Available" },
-                { number: "99%", label: "Satisfaction Rate" },
-              ].map((stat, i) => (
-                <motion.div
-                  key={i}
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: i * 0.1 }}
-                  className="p-8 bg-white rounded-md border border-gray-200"
+          <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+            {[
+              { 
+                icon: <ThumbsUp className="w-12 h-12" />,
+                title: "Customer First", 
+                desc: "We aim to deliver excellent customer service along every step of the way. Our friendly team is ready to assist you with any questions.",
+                color: "#37AFE1"
+              },
+              { 
+                icon: <Award className="w-12 h-12" />,
+                title: "100% Satisfaction", 
+                desc: "We offer only premium quality printers and scanners. That's why we provide a 100% satisfaction guarantee on all products.",
+                color: "#4CC9FE"
+              },
+              { 
+                icon: <BadgeCheck className="w-12 h-12" />,
+                title: "Why Choose Us?", 
+                desc: "Print Mega Store is your reliable provider of high-quality printing solutions at competitive prices from leading brands.",
+                color: "#37AFE1"
+              },
+            ].map((item, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.1 }}
+                className="text-center p-6"
+              >
+                <div 
+                  className="w-20 h-20 rounded-full mx-auto mb-6 flex items-center justify-center"
+                  style={{ backgroundColor: '#F5F4B3' }}
                 >
-                  <div className="text-5xl font-extrabold text-primary mb-2">{stat.number}</div>
-                  <div className="text-muted-foreground font-medium">{stat.label}</div>
-                </motion.div>
-              ))}
-            </div>
+                  <div style={{ color: item.color }}>
+                    {item.icon}
+                  </div>
+                </div>
+                <h3 className="font-bold text-lg text-gray-900 mb-3 uppercase tracking-wide">
+                  {item.title}
+                </h3>
+                <p className="text-gray-600 text-sm leading-relaxed">
+                  {item.desc}
+                </p>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
 
-      <section className="section-padding bg-primary">
+      {/* CTA Section - Primary Blue */}
+      <section 
+        className="py-16"
+        style={{ backgroundColor: '#37AFE1' }}
+      >
         <div className="container mx-auto px-4 text-center max-w-3xl">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">Ready to Upgrade?</h2>
-            <p className="text-xl text-white/90 mb-10">
-              Explore our catalog of premium printing equipment and find the perfect solution for your needs.
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
+              Get 10% Off Your First Order
+            </h2>
+            <p className="text-lg text-white/90 mb-8">
+              Sign up today and get exclusive deals, product updates, and special offers delivered straight to your inbox.
             </p>
-            <Button asChild size="lg" variant="secondary" className="text-lg font-semibold">
+            <Button 
+              asChild 
+              size="lg" 
+              className="text-lg font-semibold"
+              style={{ backgroundColor: '#FFFECB', color: '#1a1a1a' }}
+            >
               <a href="/shop" data-testid="button-browse-catalog">
                 Browse Full Catalog
                 <ArrowRight className="ml-2 w-5 h-5" />
