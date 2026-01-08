@@ -194,9 +194,9 @@ export default function Home() {
             className="text-center mb-12"
           >
             <span className="inline-block text-[#37AFE1] font-semibold text-sm uppercase tracking-wider mb-4">About Print Mega Store</span>
-            <h2 className="text-4xl md:text-5xl font-extrabold mb-6 text-black">Your Independent Printing Solutions Destination</h2>
+            <h2 className="text-4xl md:text-5xl font-extrabold mb-6 text-black">Your Trusted Source for Printers & Scanners</h2>
             <p className="text-gray-600 text-lg max-w-3xl mx-auto">
-              Welcome to Print Mega Store, your independent online destination to buy printers, scanners, and professional printing equipment at competitive prices.
+              Welcome to Print Mega Store, your online destination to buy printers, scanners, and professional printing equipment at competitive prices.
             </p>
           </motion.div>
 
@@ -211,10 +211,10 @@ export default function Home() {
                 <div className="w-12 h-12 rounded-md bg-[#37AFE1]/10 flex items-center justify-center">
                   <ShieldCheck className="w-6 h-6 text-[#37AFE1]" />
                 </div>
-                <h3 className="text-xl font-bold text-black">Independent Retailer</h3>
+                <h3 className="text-xl font-bold text-black">Who We Are</h3>
               </div>
               <p className="text-gray-600 leading-relaxed">
-                As an independent ecommerce retailer, we are not affiliated with, sponsored by, or endorsed by any printer manufacturer. Our mission is simple: help homes, offices, and businesses find the best printers and scanners to meet their unique document and imaging needs.
+                Print Mega Store is your go-to online destination for quality printing solutions. We specialize in helping homes, offices, and businesses find the perfect printers and scanners to meet their unique document and imaging needs. Our team is passionate about connecting customers with reliable equipment at competitive prices.
               </p>
             </motion.div>
 
@@ -228,10 +228,10 @@ export default function Home() {
                 <div className="w-12 h-12 rounded-md bg-[#37AFE1]/10 flex items-center justify-center">
                   <Printer className="w-6 h-6 text-[#37AFE1]" />
                 </div>
-                <h3 className="text-xl font-bold text-black">Five Product Categories</h3>
+                <h3 className="text-xl font-bold text-black">What We Offer</h3>
               </div>
               <p className="text-gray-600 leading-relaxed">
-                Our online printer store features a carefully curated selection across five essential categories: Home Printers for everyday tasks, Office Printers for team productivity, Inkjet Printers for vibrant photos, Laser Printers for crisp documents, and Document Scanners for digitization.
+                Browse our carefully curated catalog featuring printers and scanners for every need. From compact home printers and high-volume office machines to vibrant inkjet photo printers, fast laser printers, and professional document scanners, we have everything you need to print, copy, scan, and digitize with confidence.
               </p>
             </motion.div>
           </div>
