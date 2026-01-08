@@ -181,45 +181,109 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-16 md:py-24 bg-white" data-testid="about-section">
+      <section className="py-16 md:py-24 bg-gray-50" data-testid="about-section">
         <div className="container mx-auto px-6 sm:px-8 lg:px-12">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="max-w-4xl mx-auto"
+            className="text-center mb-12"
           >
-            <div className="text-center mb-10">
-              <span className="inline-block text-[#37AFE1] font-semibold text-sm uppercase tracking-wider mb-4">About Print Mega Store</span>
-              <h2 className="text-4xl md:text-5xl font-extrabold mb-6 text-black">Your Independent Printing Solutions Destination</h2>
-            </div>
-            
-            <div className="prose prose-lg max-w-none text-gray-700 space-y-6">
-              <p>
-                Welcome to Print Mega Store, your independent online destination to buy printers, scanners, and professional printing equipment at competitive prices. As an independent ecommerce retailer, we are not affiliated with, sponsored by, or endorsed by any printer manufacturer. Our mission is simple: help homes, offices, and businesses find the best printers and scanners to meet their unique document and imaging needs.
+            <span className="inline-block text-[#37AFE1] font-semibold text-sm uppercase tracking-wider mb-4">About Print Mega Store</span>
+            <h2 className="text-4xl md:text-5xl font-extrabold mb-6 text-black">Your Independent Printing Solutions Destination</h2>
+            <p className="text-gray-600 text-lg max-w-3xl mx-auto">
+              Welcome to Print Mega Store, your independent online destination to buy printers, scanners, and professional printing equipment at competitive prices.
+            </p>
+          </motion.div>
+
+          <div className="grid lg:grid-cols-2 gap-8 mb-12">
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              className="bg-white rounded-md border border-gray-200 p-8"
+            >
+              <div className="flex items-center gap-4 mb-6">
+                <div className="w-12 h-12 rounded-md bg-[#37AFE1]/10 flex items-center justify-center">
+                  <ShieldCheck className="w-6 h-6 text-[#37AFE1]" />
+                </div>
+                <h3 className="text-xl font-bold text-black">Independent Retailer</h3>
+              </div>
+              <p className="text-gray-600 leading-relaxed">
+                As an independent ecommerce retailer, we are not affiliated with, sponsored by, or endorsed by any printer manufacturer. Our mission is simple: help homes, offices, and businesses find the best printers and scanners to meet their unique document and imaging needs.
               </p>
-              
-              <p>
-                Our online printer store features a carefully curated selection across five essential categories. Shop <strong>Home Printers</strong> perfect for everyday printing tasks like homework, recipes, and personal documents. Explore <strong>Office Printers</strong> engineered for high-volume printing and team productivity in professional workplaces. Discover <strong>Inkjet Printers</strong> that deliver vibrant photo prints and stunning color documents for creative projects. Find <strong>Laser Printers</strong> offering fast, crisp black-and-white output ideal for text-heavy documents and reports. Browse <strong>Document Scanners</strong> designed to digitize paperwork, receipts, and archives with precision and speed.
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              className="bg-white rounded-md border border-gray-200 p-8"
+            >
+              <div className="flex items-center gap-4 mb-6">
+                <div className="w-12 h-12 rounded-md bg-[#37AFE1]/10 flex items-center justify-center">
+                  <Printer className="w-6 h-6 text-[#37AFE1]" />
+                </div>
+                <h3 className="text-xl font-bold text-black">Five Product Categories</h3>
+              </div>
+              <p className="text-gray-600 leading-relaxed">
+                Our online printer store features a carefully curated selection across five essential categories: Home Printers for everyday tasks, Office Printers for team productivity, Inkjet Printers for vibrant photos, Laser Printers for crisp documents, and Document Scanners for digitization.
               </p>
-              
-              <p>
-                Whether you need a compact wireless printer for your home office, a multifunction all-in-one printer for a small business, a high-speed laser printer for your corporate department, or an enterprise document scanner for bulk digitization, Print Mega Store has printing solutions to match every requirement and budget. We serve remote workers, freelancers, startups, small businesses, creative professionals, and enterprise teams looking to buy quality printers online with confidence.
+            </motion.div>
+          </div>
+
+          <div className="grid lg:grid-cols-2 gap-8 mb-12">
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.1 }}
+              className="bg-white rounded-md border border-gray-200 p-8"
+            >
+              <div className="flex items-center gap-4 mb-6">
+                <div className="w-12 h-12 rounded-md bg-[#37AFE1]/10 flex items-center justify-center">
+                  <Briefcase className="w-6 h-6 text-[#37AFE1]" />
+                </div>
+                <h3 className="text-xl font-bold text-black">Solutions for Everyone</h3>
+              </div>
+              <p className="text-gray-600 leading-relaxed">
+                Whether you need a compact wireless printer for your home office, a multifunction all-in-one printer for a small business, a high-speed laser printer for your corporate department, or an enterprise document scanner for bulk digitization, we have printing solutions for every requirement and budget.
               </p>
-              
-              <p>
-                Shopping for printers and scanners online should be straightforward. That is why Print Mega Store provides detailed product specifications, comparison information, and transparent pricing to help you make informed purchasing decisions. We offer secure checkout, competitive shipping rates, and dedicated customer support to ensure a smooth buying experience from browsing to delivery. Find the perfect printer or scanner for your home, office, or business today.
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.1 }}
+              className="bg-white rounded-md border border-gray-200 p-8"
+            >
+              <div className="flex items-center gap-4 mb-6">
+                <div className="w-12 h-12 rounded-md bg-[#37AFE1]/10 flex items-center justify-center">
+                  <Headphones className="w-6 h-6 text-[#37AFE1]" />
+                </div>
+                <h3 className="text-xl font-bold text-black">Easy Online Shopping</h3>
+              </div>
+              <p className="text-gray-600 leading-relaxed">
+                Shopping for printers and scanners online should be straightforward. That is why Print Mega Store provides detailed product specifications, transparent pricing, secure checkout, competitive shipping rates, and dedicated customer support for a smooth buying experience.
               </p>
-              
-              <p className="text-sm text-gray-500 border-t border-gray-200 pt-6 mt-8">
-                <strong>Trademark Disclaimer:</strong> Manufacturer brand names, logos, and trademarks referenced on this website are the registered property of their respective owners. Print Mega Store is an independent retailer and is not affiliated with, authorized by, or sponsored by any manufacturer. Any brand name designations or references are made solely for purposes of demonstrating product compatibility and identification.
-              </p>
-            </div>
+            </motion.div>
+          </div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="bg-gray-100 rounded-md p-6 text-center"
+          >
+            <p className="text-sm text-gray-500">
+              <strong>Trademark Disclaimer:</strong> Manufacturer brand names, logos, and trademarks referenced on this website are the registered property of their respective owners. Print Mega Store is an independent retailer and is not affiliated with, authorized by, or sponsored by any manufacturer. Any brand name designations or references are made solely for purposes of demonstrating product compatibility and identification.
+            </p>
           </motion.div>
         </div>
       </section>
 
-      <section className="py-16 md:py-24 bg-gray-50">
+      <section className="py-16 md:py-24 bg-white">
         <div className="container mx-auto px-6 sm:px-8 lg:px-12">
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
