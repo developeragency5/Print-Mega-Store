@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { Link, useLocation } from "wouter";
-import { Menu, X, Phone, Printer } from "lucide-react";
+import { Menu, X, Phone, Printer, User } from "lucide-react";
 import { Button } from "./ui/button";
 import { cn } from "@/lib/utils";
 import { STORE_CATEGORIES, getCategoryUrl, STORE_ID } from "@/lib/ecwid";
@@ -11,7 +11,6 @@ export function Header() {
   const [currentHash, setCurrentHash] = useState("");
   const [location] = useLocation();
   const cartWidgetRef = useRef<HTMLDivElement>(null);
-  const loginWidgetRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -108,12 +107,15 @@ export function Header() {
 
               <div className="hidden md:block w-px h-6 bg-gray-200" />
 
-              {/* Ecwid Sign In Widget */}
-              <div 
-                ref={loginWidgetRef}
-                className="ec-minicart-widget"
-                data-testid="ecwid-signin"
-              />
+              {/* Ecwid Sign In Button */}
+              <a
+                href="/shop#!/~/signin"
+                className="hidden md:flex items-center gap-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+                data-testid="link-signin"
+              >
+                <User className="w-4 h-4" />
+                <span className="hidden lg:inline">Sign In</span>
+              </a>
 
               {/* Ecwid Cart Widget - Native Ecwid Icon */}
               <div 
