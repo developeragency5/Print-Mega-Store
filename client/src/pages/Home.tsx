@@ -482,6 +482,41 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="py-16 md:py-24 bg-gray-50" data-testid="printing-guide-section">
+        <div className="container mx-auto px-6 sm:px-8 lg:px-12">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="max-w-4xl mx-auto"
+          >
+            <h2 className="text-3xl md:text-4xl font-extrabold text-black text-center mb-8">
+              How to Choose the Right Printer for Your Needs
+            </h2>
+            <div className="space-y-6 text-gray-600 leading-relaxed">
+              <p>
+                Choosing the <strong>best printer for home use</strong> or <strong>office printing</strong> depends on your specific requirements. Consider how often you print, what types of documents you produce, and whether you need color or monochrome output. Understanding these factors will help you make an informed decision when you <strong>shop for printers online</strong>.
+              </p>
+              <p>
+                For <strong>photo printing</strong> and creative projects, an <strong>inkjet printer with high resolution</strong> delivers stunning results on glossy paper. These printers excel at reproducing vivid colors and fine details, making them ideal for photographers, artists, and families who want to print memorable photos at home.
+              </p>
+              <p>
+                If your primary need is <strong>printing text documents</strong>, reports, or business correspondence, a <strong>monochrome laser printer</strong> offers the best value. Laser technology produces sharp, smudge-free text at high speeds, with a lower <strong>cost per page</strong> compared to inkjet alternatives. Many models also include <strong>duplex printing</strong> to save paper automatically.
+              </p>
+              <p>
+                Small businesses and home offices benefit from <strong>all-in-one printers</strong> that combine printing, scanning, copying, and faxing capabilities. These <strong>multifunction printers</strong> save desk space and reduce equipment costs while providing comprehensive document handling. Look for models with <strong>wireless connectivity</strong> and <strong>mobile printing support</strong> to print from smartphones and tablets.
+              </p>
+              <p>
+                For enterprise environments handling large volumes of documents, our <strong>high-capacity document scanners</strong> streamline workflows with automatic document feeders, <strong>OCR text recognition</strong>, and direct-to-cloud scanning. Digitize your paper archives and create searchable PDF files with professional-grade scanning equipment.
+              </p>
+              <p className="text-center font-medium text-black">
+                Not sure which printer is right for you? Browse our categories or contact our team for personalized recommendations.
+              </p>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
       <section className="py-16 md:py-24 bg-[#37AFE1]">
         <div className="container mx-auto px-6 sm:px-8 lg:px-12 text-center max-w-3xl">
           <motion.div
