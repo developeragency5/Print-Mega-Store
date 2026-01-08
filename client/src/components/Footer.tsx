@@ -26,14 +26,9 @@ export function Footer() {
             <div className="lg:col-span-4 space-y-6">
               <Link href="/" className="flex items-center gap-2">
                 <Printer className="w-8 h-8 text-[#37AFE1]" />
-                <div className="flex flex-col leading-none">
-                  <svg className="w-16 h-2 text-[#37AFE1] -mb-0.5" viewBox="0 0 60 8" fill="none">
-                    <path d="M5 6 C20 -2, 40 -2, 55 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" fill="none"/>
-                  </svg>
-                  <span className="text-xl font-bold tracking-tight text-white">
-                    print<span className="text-[#37AFE1]">mega</span>
-                  </span>
-                </div>
+                <span className="text-xl font-bold tracking-tight">
+                  <span className="text-[#37AFE1]">PRINT MEGA</span> <span className="text-white">STORE</span>
+                </span>
               </Link>
               <p className="text-base leading-relaxed text-gray-400 max-w-sm">
                 Your independent online destination for professional printing and scanning equipment. 

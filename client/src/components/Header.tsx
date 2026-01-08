@@ -89,14 +89,9 @@ export function Header() {
             {/* Logo */}
             <Link href="/" className="flex items-center gap-2 shrink-0 group" data-testid="link-logo">
               <Printer className="w-8 h-8 text-[#37AFE1]" />
-              <div className="flex flex-col leading-none">
-                <svg className="w-16 h-2 text-[#37AFE1] -mb-0.5" viewBox="0 0 60 8" fill="none">
-                  <path d="M5 6 C20 -2, 40 -2, 55 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" fill="none"/>
-                </svg>
-                <span className="text-xl font-bold tracking-tight text-gray-800">
-                  print<span className="text-[#37AFE1]">mega</span>
-                </span>
-              </div>
+              <span className="text-xl font-bold tracking-tight">
+                <span className="text-[#37AFE1]">PRINT MEGA</span> <span className="text-gray-900">STORE</span>
+              </span>
             </Link>
 
             {/* Right Side Actions */}
