@@ -863,35 +863,6 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-16 md:py-24 bg-gradient-to-br from-gray-50 to-[#37AFE1]/5" data-testid="newsletter-section">
-        <div className="container mx-auto px-6 sm:px-8 lg:px-12">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="max-w-2xl mx-auto text-center"
-          >
-            <motion.div 
-              whileHover={{ scale: 1.05, rotate: 5 }}
-              className="w-16 h-16 bg-gradient-to-br from-[#37AFE1] to-[#2d8bb8] rounded-xl flex items-center justify-center mx-auto mb-6 shadow-lg"
-            >
-              <Mail className="w-8 h-8 text-white" />
-            </motion.div>
-            <h2 className="text-3xl md:text-4xl font-extrabold text-black mb-4">
-              Subscribe to Our Newsletter
-            </h2>
-            <p className="text-gray-600 mb-8">
-              Get exclusive deals, new product announcements, and helpful printing tips delivered straight to your inbox.
-            </p>
-            <NewsletterForm />
-            <p className="text-xs text-gray-500 mt-4">
-              By subscribing, you agree to receive promotional emails. You can unsubscribe anytime. 
-              Read our <a href="/privacy" className="text-[#37AFE1] hover:underline">Privacy Policy</a> for more information.
-            </p>
-          </motion.div>
-        </div>
-      </section>
-
       <section className="py-16 md:py-24 bg-gray-50" data-testid="trust-section">
         <div className="container mx-auto px-6 sm:px-8 lg:px-12">
           <div className="grid md:grid-cols-3 gap-12 md:gap-8">
@@ -972,6 +943,35 @@ export default function Home() {
               </p>
             </motion.div>
           </div>
+        </div>
+      </section>
+
+      <section className="py-16 md:py-24 bg-gradient-to-br from-gray-50 to-[#37AFE1]/5" data-testid="newsletter-section">
+        <div className="container mx-auto px-6 sm:px-8 lg:px-12">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="max-w-2xl mx-auto text-center"
+          >
+            <motion.div 
+              whileHover={{ scale: 1.05, rotate: 5 }}
+              className="w-16 h-16 bg-gradient-to-br from-[#37AFE1] to-[#2d8bb8] rounded-xl flex items-center justify-center mx-auto mb-6 shadow-lg"
+            >
+              <Mail className="w-8 h-8 text-white" />
+            </motion.div>
+            <h2 className="text-3xl md:text-4xl font-extrabold text-black mb-4">
+              Subscribe to Our Newsletter
+            </h2>
+            <p className="text-gray-600 mb-8">
+              Get exclusive deals, new product announcements, and helpful printing tips delivered straight to your inbox.
+            </p>
+            <NewsletterForm />
+            <p className="text-xs text-gray-500 mt-4">
+              By subscribing, you agree to receive promotional emails. You can unsubscribe anytime. 
+              Read our <a href="/privacy" className="text-[#37AFE1] hover:underline">Privacy Policy</a> for more information.
+            </p>
+          </motion.div>
         </div>
       </section>
     </div>
