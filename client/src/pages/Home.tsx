@@ -280,8 +280,8 @@ export default function Home() {
             viewport={{ once: true }}
             className="bg-gray-100 rounded-md p-6 text-center"
           >
-            <p className="text-sm text-gray-500">
-              <strong>Trademark Disclaimer:</strong> Manufacturer brand names, logos, and trademarks referenced on this website are the registered property of their respective owners. Print Mega Store is an independent retailer and is not affiliated with, authorized by, or sponsored by any manufacturer. Any brand name designations or references are made solely for purposes of demonstrating product compatibility and identification.
+            <p className="text-sm text-gray-500 leading-relaxed">
+              <strong>Disclaimer:</strong> Print Mega Store is an independent retailer and is not affiliated with, endorsed by, or sponsored by HP Inc., Hewlett-Packard Company, or any other manufacturer. All product images, logos, and trademarks are the property of their respective owners and are used for informational purposes only. Please verify product details with the manufacturer before making a purchase decision.
             </p>
           </motion.div>
         </div>

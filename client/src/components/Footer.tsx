@@ -147,10 +147,8 @@ export function Footer() {
         </div>
 
         <div className="py-6 border-t border-white/10">
-          <p className="text-xs text-gray-500 text-center mb-4 max-w-4xl mx-auto">
-            Manufacturer brand names, logos, and trademarks are the registered property of their respective owners. 
-            Print Mega Store is an independent retailer and is not affiliated with, authorized by, or sponsored by any manufacturer. 
-            Brand references are made solely for purposes of product identification and compatibility.
+          <p className="text-xs text-gray-500 text-center max-w-4xl mx-auto leading-relaxed">
+            <strong>Disclaimer:</strong> Print Mega Store is an independent retailer and is not affiliated with, endorsed by, or sponsored by HP Inc., Hewlett-Packard Company, or any other manufacturer. All product images, logos, and trademarks are the property of their respective owners. Product images are used for informational purposes only under fair use guidelines. HP, LaserJet, and related trademarks are registered trademarks of HP Inc. All other trademarks are the property of their respective owners. All product information, specifications, and pricing are subject to change without notice. We make every effort to ensure accuracy but cannot guarantee that all information is complete or error-free. Please verify product details with the manufacturer before making a purchase decision.
           </p>
         </div>
         <div className="py-6 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4">
