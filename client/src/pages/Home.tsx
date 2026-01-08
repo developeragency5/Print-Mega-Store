@@ -373,7 +373,7 @@ export default function Home() {
                       className="block group"
                       data-testid={`link-product-${product.productId}`}
                     >
-                      <div className="w-64 h-64 md:w-72 md:h-72 bg-white rounded-md border border-gray-200 p-4 flex items-center justify-center">
+                      <div className="w-72 h-72 md:w-80 md:h-80 lg:w-96 lg:h-96 bg-white rounded-md border border-gray-200 p-6 flex items-center justify-center">
                         <img 
                           src={product.image} 
                           alt={product.name}
