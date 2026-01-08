@@ -21,10 +21,12 @@ export function Header() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Track hash changes for Ecwid category highlighting
+  // Track hash changes for Ecwid category highlighting and scroll to top
   useEffect(() => {
     const updateHash = () => {
       setCurrentHash(window.location.hash);
+      // Scroll to top when navigating to a new category
+      window.scrollTo(0, 0);
     };
     updateHash();
     window.addEventListener("hashchange", updateHash);
