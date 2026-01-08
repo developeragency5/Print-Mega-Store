@@ -106,10 +106,7 @@ export default function Home() {
 
   return (
     <div className="flex flex-col">
-      <section className="relative min-h-[90vh] flex items-center bg-gradient-to-br from-gray-50 via-white to-blue-50 overflow-hidden pt-32">
-        <div className="absolute top-40 left-10 w-72 h-72 bg-primary/10 rounded-full blur-3xl animate-pulse-slow"></div>
-        <div className="absolute bottom-20 right-20 w-96 h-96 bg-blue-100/50 rounded-full blur-3xl animate-pulse-slow" style={{ animationDelay: '2s' }}></div>
-        
+      <section className="relative min-h-[90vh] flex items-center bg-gray-100 pt-32">
         <div className="container relative mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="max-w-xl">
@@ -117,7 +114,7 @@ export default function Home() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
-                className="inline-flex items-center gap-2 bg-primary/10 border border-primary/20 rounded-full px-4 py-2 mb-8"
+                className="inline-flex items-center gap-2 bg-white border border-gray-200 rounded-full px-4 py-2 mb-8"
               >
                 <Star className="w-4 h-4 text-yellow-500 fill-yellow-500" />
                 <span className="text-foreground text-sm font-medium">Trusted by 10,000+ businesses</span>
@@ -150,13 +147,13 @@ export default function Home() {
                 transition={{ duration: 0.6, delay: 0.3 }}
                 className="flex flex-col sm:flex-row gap-4 mb-10"
               >
-                <Button asChild size="lg" className="text-lg font-semibold h-14 px-8 btn-glow">
+                <Button asChild size="lg" className="text-lg font-semibold">
                   <a href={printersCategory ? getCategoryUrl(printersCategory) : "/shop"} data-testid="button-shop-printers">
                     Shop Printers
                     <ArrowRight className="ml-2 w-5 h-5" />
                   </a>
                 </Button>
-                <Button asChild variant="outline" size="lg" className="text-lg font-semibold h-14 px-8 border-gray-300 hover:bg-gray-100">
+                <Button asChild variant="outline" size="lg" className="text-lg font-semibold bg-white">
                   <a href={scannersCategory ? getCategoryUrl(scannersCategory) : "/shop"} data-testid="button-shop-scanners">
                     Shop Scanners
                   </a>
@@ -172,7 +169,7 @@ export default function Home() {
                 {["Free Shipping $500+", "2-Year Warranty", "Expert Support"].map((item, i) => (
                   <div key={i} className="flex items-center gap-2">
                     <CheckCircle2 className="w-5 h-5 text-primary" />
-                    <span className="text-sm font-medium text-muted-foreground">{item}</span>
+                    <span className="text-sm font-medium text-foreground">{item}</span>
                   </div>
                 ))}
               </motion.div>
@@ -184,25 +181,20 @@ export default function Home() {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="hidden lg:flex justify-center items-center"
             >
-              <div className="relative">
-                <div className="absolute -inset-4 bg-gradient-to-r from-primary/20 to-blue-400/20 rounded-3xl blur-2xl"></div>
-                <img 
-                  src={printerImage} 
-                  alt="Professional HP Printer" 
-                  className="relative w-full max-w-lg rounded-2xl shadow-2xl"
-                  data-testid="img-hero-printer"
-                />
-              </div>
+              <img 
+                src={printerImage} 
+                alt="Professional HP Printer" 
+                className="w-full max-w-lg rounded-md shadow-lg"
+                data-testid="img-hero-printer"
+              />
             </motion.div>
           </div>
         </div>
-
-        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent"></div>
       </section>
 
-      <section className="py-6 -mt-16 relative z-10">
+      <section className="py-12 bg-white border-b border-gray-200">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {[
               { icon: <Truck className="w-6 h-6" />, title: "Fast Shipping", desc: "Free over $500" },
               { icon: <ShieldCheck className="w-6 h-6" />, title: "Secure Checkout", desc: "256-bit encryption" },
@@ -215,13 +207,13 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
-                className="card-glass p-5 flex items-center gap-4"
+                className="bg-white border border-gray-200 rounded-md p-5 flex items-center gap-4"
               >
-                <div className="p-3 rounded-xl bg-primary/10 text-primary shrink-0">
+                <div className="p-3 rounded-md bg-gray-100 text-primary shrink-0">
                   {benefit.icon}
                 </div>
                 <div>
-                  <h3 className="font-semibold text-sm">{benefit.title}</h3>
+                  <h3 className="font-semibold text-sm text-foreground">{benefit.title}</h3>
                   <p className="text-xs text-muted-foreground">{benefit.desc}</p>
                 </div>
               </motion.div>
@@ -230,7 +222,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section-padding bg-background">
+      <section className="section-padding bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
@@ -239,7 +231,7 @@ export default function Home() {
             className="text-center mb-16"
           >
             <span className="inline-block text-primary font-semibold text-sm uppercase tracking-wider mb-4">Browse Categories</span>
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">Find Your Perfect Match</h2>
+            <h2 className="text-4xl md:text-5xl font-bold mb-4 text-foreground">Find Your Perfect Match</h2>
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
               Explore our carefully curated selection of professional printing solutions
             </p>
@@ -259,14 +251,14 @@ export default function Home() {
                 transition={{ delay: i * 0.1 }}
               >
                 <a href={getCategoryUrl(category)} data-testid={`card-category-${category.slug}`}>
-                  <Card className="group h-full card-elevated cursor-pointer overflow-hidden">
+                  <Card className="group h-full cursor-pointer border border-gray-200 hover:border-gray-300 hover:shadow-md transition-all duration-200">
                     <CardContent className="p-6 flex flex-col items-center text-center h-full">
-                      <div className="w-20 h-20 rounded-2xl bg-gradient-to-br from-primary/10 to-primary/5 flex items-center justify-center mb-5 group-hover:from-primary group-hover:to-primary/80 transition-all duration-300">
-                        <div className="text-primary group-hover:text-white transition-colors duration-300">
+                      <div className="w-20 h-20 rounded-md bg-gray-100 flex items-center justify-center mb-5 group-hover:bg-primary transition-colors duration-200">
+                        <div className="text-primary group-hover:text-white transition-colors duration-200">
                           {categoryIcons[category.slug] || <Printer className="w-10 h-10" />}
                         </div>
                       </div>
-                      <h3 className="text-lg font-bold mb-2 group-hover:text-primary transition-colors">{category.name}</h3>
+                      <h3 className="text-lg font-bold mb-2 text-foreground group-hover:text-primary transition-colors">{category.name}</h3>
                       <p className="text-sm text-muted-foreground">{categoryDescriptions[category.slug]}</p>
                       <div className="mt-4 flex items-center text-primary text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity">
                         Shop Now <ArrowRight className="w-4 h-4 ml-1" />
@@ -280,8 +272,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Featured Products Showcase */}
-      <section className="section-padding bg-gray-50">
+      <section className="section-padding bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
@@ -290,16 +281,17 @@ export default function Home() {
             className="text-center mb-16"
           >
             <span className="inline-block text-primary font-semibold text-sm uppercase tracking-wider mb-4">Featured Products</span>
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">Top Picks from Each Category</h2>
+            <h2 className="text-4xl md:text-5xl font-bold mb-4 text-foreground">Top Picks from Each Category</h2>
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
               Discover our best-selling products handpicked for quality and performance
             </p>
           </motion.div>
 
-          <div className="space-y-16">
+          <div className="space-y-0">
             {featuredProducts.map((product, index) => {
               const category = STORE_CATEGORIES.find(c => c.slug === product.categorySlug);
               const isImageLeft = index % 2 === 0;
+              const isLast = index === featuredProducts.length - 1;
               
               return (
                 <motion.div
@@ -308,25 +300,23 @@ export default function Home() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.6 }}
-                  className={`grid lg:grid-cols-2 gap-8 lg:gap-12 items-center ${!isImageLeft ? 'lg:flex-row-reverse' : ''}`}
+                  className={`grid lg:grid-cols-2 gap-8 lg:gap-12 items-center py-12 ${!isLast ? 'border-b border-gray-200' : ''}`}
                 >
-                  {/* Image */}
                   <div className={`${!isImageLeft ? 'lg:order-2' : ''}`}>
                     <a 
                       href={category ? getCategoryUrl(category) : "/shop"} 
                       className="block group"
                       data-testid={`link-product-${product.productId}`}
                     >
-                      <div className="relative overflow-hidden rounded-2xl shadow-lg">
-                        <div className="absolute inset-0 bg-gradient-to-tr from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10"></div>
+                      <div className="relative overflow-hidden rounded-md border border-gray-200">
                         <img 
                           src={product.image} 
                           alt={product.name}
-                          className="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-105"
+                          className="w-full h-80 object-cover transition-transform duration-300 group-hover:scale-105"
                           data-testid={`img-product-${product.productId}`}
                         />
-                        <div className="absolute top-4 left-4 z-20">
-                          <span className="bg-primary text-white text-xs font-semibold px-3 py-1.5 rounded-full">
+                        <div className="absolute top-4 left-4">
+                          <span className="bg-primary text-white text-xs font-semibold px-3 py-1.5 rounded-md">
                             {category?.name || product.categorySlug.replace('-', ' ')}
                           </span>
                         </div>
@@ -334,7 +324,6 @@ export default function Home() {
                     </a>
                   </div>
 
-                  {/* Content */}
                   <div className={`${!isImageLeft ? 'lg:order-1' : ''}`}>
                     <div className="space-y-4">
                       <h3 className="text-2xl lg:text-3xl font-bold text-foreground">{product.name}</h3>
@@ -344,7 +333,7 @@ export default function Home() {
                         {product.features.map((feature, i) => (
                           <span 
                             key={i} 
-                            className="inline-flex items-center gap-1.5 bg-white border border-gray-200 text-sm text-muted-foreground px-3 py-1.5 rounded-full"
+                            className="inline-flex items-center gap-1.5 bg-gray-100 border border-gray-200 text-sm text-foreground px-3 py-1.5 rounded-md"
                           >
                             <CheckCircle2 className="w-4 h-4 text-primary" />
                             {feature}
@@ -353,7 +342,7 @@ export default function Home() {
                       </div>
 
                       <div className="flex items-center gap-6 pt-4">
-                        <span className="text-3xl font-bold text-primary">{product.price}</span>
+                        <span className="text-3xl font-bold text-foreground">{product.price}</span>
                         <Button asChild>
                           <a href={category ? getCategoryUrl(category) : "/shop"} data-testid={`button-view-${product.productId}`}>
                             View in Store
@@ -370,7 +359,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section-padding bg-gradient-to-b from-white to-gray-50">
+      <section className="section-padding bg-gray-100">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
@@ -379,7 +368,7 @@ export default function Home() {
               viewport={{ once: true }}
             >
               <span className="inline-block text-primary font-semibold text-sm uppercase tracking-wider mb-4">Why Choose Us</span>
-              <h2 className="text-4xl md:text-5xl font-bold mb-6">Built for Professionals</h2>
+              <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">Built for Professionals</h2>
               <p className="text-muted-foreground text-lg mb-12">
                 We partner with leading brands to bring you the best printing technology at competitive prices
               </p>
@@ -397,9 +386,9 @@ export default function Home() {
                   whileInView={{ opacity: 1, scale: 1 }}
                   viewport={{ once: true }}
                   transition={{ delay: i * 0.1 }}
-                  className="p-8"
+                  className="p-8 bg-white rounded-md border border-gray-200"
                 >
-                  <div className="text-5xl font-extrabold text-gradient mb-2">{stat.number}</div>
+                  <div className="text-5xl font-extrabold text-primary mb-2">{stat.number}</div>
                   <div className="text-muted-foreground font-medium">{stat.label}</div>
                 </motion.div>
               ))}
@@ -408,20 +397,18 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section-padding gradient-primary relative overflow-hidden">
-        <div className="absolute inset-0 gradient-mesh opacity-30"></div>
-        
-        <div className="container relative mx-auto px-4 text-center max-w-3xl">
+      <section className="section-padding bg-primary">
+        <div className="container mx-auto px-4 text-center max-w-3xl">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">Ready to Upgrade?</h2>
-            <p className="text-xl text-white/80 mb-10">
+            <p className="text-xl text-white/90 mb-10">
               Explore our catalog of premium printing equipment and find the perfect solution for your needs.
             </p>
-            <Button asChild size="lg" variant="secondary" className="h-14 px-10 text-lg font-semibold shadow-xl">
+            <Button asChild size="lg" variant="secondary" className="text-lg font-semibold">
               <a href="/shop" data-testid="button-browse-catalog">
                 Browse Full Catalog
                 <ArrowRight className="ml-2 w-5 h-5" />

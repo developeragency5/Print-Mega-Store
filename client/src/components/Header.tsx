@@ -8,6 +8,7 @@ import { STORE_CATEGORIES, getCategoryUrl, STORE_ID } from "@/lib/ecwid";
 export function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [currentHash, setCurrentHash] = useState("");
   const [location] = useLocation();
   const cartWidgetRef = useRef<HTMLDivElement>(null);
   const loginWidgetRef = useRef<HTMLDivElement>(null);
@@ -19,6 +20,22 @@ export function Header() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  // Track hash changes for Ecwid category highlighting
+  useEffect(() => {
+    const updateHash = () => {
+      setCurrentHash(window.location.hash);
+    };
+    updateHash();
+    window.addEventListener("hashchange", updateHash);
+    return () => window.removeEventListener("hashchange", updateHash);
+  }, []);
+
+  const isActiveCategory = (categorySlug: string) => {
+    return currentHash.includes(`/category/${categorySlug}`);
+  };
+
+  const isShopPage = location === "/shop" || window.location.pathname === "/shop";
 
   useEffect(() => {
     const initEcwidWidgets = () => {
@@ -152,7 +169,7 @@ export function Header() {
               href="/shop"
               className={cn(
                 "px-5 py-3 text-sm font-medium transition-all duration-300 border-b-2",
-                location === "/shop"
+                isShopPage && !currentHash.includes("/category/")
                   ? "border-primary text-primary"
                   : "border-transparent text-muted-foreground hover:text-foreground hover:border-gray-300"
               )}
@@ -165,7 +182,12 @@ export function Header() {
               <a
                 key={category.id}
                 href={getCategoryUrl(category)}
-                className="px-5 py-3 text-sm font-medium transition-all duration-300 border-b-2 border-transparent text-muted-foreground hover:text-foreground hover:border-gray-300"
+                className={cn(
+                  "px-5 py-3 text-sm font-medium transition-all duration-300 border-b-2",
+                  isActiveCategory(category.slug)
+                    ? "border-primary text-primary"
+                    : "border-transparent text-muted-foreground hover:text-foreground hover:border-gray-300"
+                )}
                 data-testid={`link-nav-${category.slug}`}
               >
                 {category.name}
@@ -209,7 +231,12 @@ export function Header() {
           <a
             href="/shop"
             onClick={() => setIsOpen(false)}
-            className="block px-4 py-3 text-base font-medium rounded-xl transition-colors text-foreground hover:bg-gray-100"
+            className={cn(
+              "block px-4 py-3 text-base font-medium rounded-xl transition-colors",
+              isShopPage && !currentHash.includes("/category/")
+                ? "bg-primary/10 text-primary"
+                : "text-foreground hover:bg-gray-100"
+            )}
             data-testid="link-mobile-shop"
           >
             All Products
@@ -220,7 +247,12 @@ export function Header() {
               key={category.id}
               href={getCategoryUrl(category)}
               onClick={() => setIsOpen(false)}
-              className="block px-4 py-3 text-base font-medium rounded-xl transition-colors text-foreground hover:bg-gray-100"
+              className={cn(
+                "block px-4 py-3 text-base font-medium rounded-xl transition-colors",
+                isActiveCategory(category.slug)
+                  ? "bg-primary/10 text-primary"
+                  : "text-foreground hover:bg-gray-100"
+              )}
               data-testid={`link-mobile-${category.slug}`}
             >
               {category.name}
