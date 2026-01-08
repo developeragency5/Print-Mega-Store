@@ -10,10 +10,10 @@ export interface EcwidCategory {
 
 export const STORE_CATEGORIES: EcwidCategory[] = [
   { id: "193853315", name: "Home Printers", slug: "Home-Printers" },
-  { id: "193853316", name: "Office Printers", slug: "Office-Printers" },
-  { id: "193853317", name: "Inkjet Printers", slug: "Inkjet-Printers" },
-  { id: "193853318", name: "Laser Printers", slug: "Laser-Printers" },
-  { id: "193853319", name: "Document Scanners", slug: "Document-Scanners" },
+  { id: "193855066", name: "Office Printers", slug: "Office-Printers" },
+  { id: "193859557", name: "Inkjet Printers", slug: "Inkjet-Printers" },
+  { id: "193855067", name: "Laser Printers", slug: "Laser-Printers" },
+  { id: "193855068", name: "Document Scanners", slug: "Document-Scanners" },
 ];
 
 export function getCategoryUrl(category: EcwidCategory): string {
