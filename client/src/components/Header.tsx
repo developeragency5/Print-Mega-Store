@@ -53,29 +53,23 @@ export function Header() {
         scrolled
           ? "bg-white/95 backdrop-blur-xl shadow-lg"
           : isHome
-            ? "bg-gradient-to-b from-black/50 to-transparent"
+            ? "bg-white/90 backdrop-blur-md shadow-sm"
             : "bg-white shadow-sm"
       )}
     >
       {/* Top Bar - Logo, Contact, Login, Cart */}
       <div className={cn(
         "border-b transition-colors duration-300",
-        scrolled || !isHome ? "border-gray-100" : "border-white/10"
+        "border-gray-100"
       )}>
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex h-16 items-center justify-between gap-4">
             {/* Logo */}
             <Link href="/" className="flex items-center gap-3 shrink-0 group" data-testid="link-logo">
-              <div className={cn(
-                "w-10 h-10 rounded-xl flex items-center justify-center transition-all duration-300 shadow-lg",
-                scrolled || !isHome ? "bg-primary" : "bg-white/20 backdrop-blur-sm border border-white/30"
-              )}>
+              <div className="w-10 h-10 rounded-xl flex items-center justify-center transition-all duration-300 shadow-lg bg-primary">
                 <span className="font-bold text-xl text-white">P</span>
               </div>
-              <span className={cn(
-                "text-xl font-bold tracking-tight font-display transition-colors duration-300",
-                scrolled || !isHome ? "text-foreground" : "text-white"
-              )}>
+              <span className="text-xl font-bold tracking-tight font-display text-foreground">
                 Print<span className="text-primary">Mega</span>Store
               </span>
             </Link>
@@ -85,30 +79,19 @@ export function Header() {
               {/* Phone */}
               <a 
                 href="tel:+15551234567"
-                className={cn(
-                  "hidden md:flex items-center gap-2 text-sm font-medium transition-colors",
-                  scrolled || !isHome ? "text-muted-foreground hover:text-foreground" : "text-white/80 hover:text-white"
-                )}
+                className="hidden md:flex items-center gap-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
                 data-testid="link-phone"
               >
                 <Phone className="w-4 h-4" />
                 <span className="hidden lg:inline">+1 (555) 123-4567</span>
               </a>
 
-              <div className={cn(
-                "hidden md:block w-px h-6",
-                scrolled || !isHome ? "bg-gray-200" : "bg-white/20"
-              )} />
+              <div className="hidden md:block w-px h-6 bg-gray-200" />
 
               {/* Ecwid Login Widget */}
               <a
                 href="/shop#!/~/signin"
-                className={cn(
-                  "flex items-center gap-2 px-3 py-2 rounded-lg text-sm font-medium transition-all",
-                  scrolled || !isHome 
-                    ? "text-muted-foreground hover:text-foreground hover:bg-gray-100" 
-                    : "text-white/80 hover:text-white hover:bg-white/10"
-                )}
+                className="flex items-center gap-2 px-3 py-2 rounded-lg text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-gray-100 transition-all"
                 data-testid="button-login"
               >
                 <User className="w-5 h-5" />
@@ -120,19 +103,11 @@ export function Header() {
                 <div 
                   ref={cartWidgetRef}
                   id="my-cart-widget"
-                  className={cn(
-                    "ec-cart-widget [&_.ec-cart-widget]:!bg-transparent",
-                    scrolled || !isHome ? "[&_svg]:!fill-foreground" : "[&_svg]:!fill-white"
-                  )}
+                  className="ec-cart-widget [&_.ec-cart-widget]:!bg-transparent [&_svg]:!fill-foreground"
                 >
                   <a
                     href="/shop#!/~/cart"
-                    className={cn(
-                      "flex items-center gap-2 px-3 py-2 rounded-lg text-sm font-medium transition-all",
-                      scrolled || !isHome 
-                        ? "text-muted-foreground hover:text-foreground hover:bg-gray-100" 
-                        : "text-white/80 hover:text-white hover:bg-white/10"
-                    )}
+                    className="flex items-center gap-2 px-3 py-2 rounded-lg text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-gray-100 transition-all"
                     data-testid="button-cart"
                   >
                     <ShoppingCart className="w-5 h-5" />
@@ -145,10 +120,7 @@ export function Header() {
               <Button
                 variant="ghost"
                 size="icon"
-                className={cn(
-                  "lg:hidden transition-colors",
-                  !scrolled && isHome && "text-white hover:bg-white/10"
-                )}
+                className="lg:hidden"
                 onClick={() => setIsOpen(!isOpen)}
                 data-testid="button-mobile-menu"
               >
@@ -160,10 +132,7 @@ export function Header() {
       </div>
 
       {/* Bottom Nav Bar - Navigation Links */}
-      <div className={cn(
-        "hidden lg:block transition-colors duration-300",
-        scrolled || !isHome ? "bg-gray-50/80" : "bg-black/20 backdrop-blur-sm"
-      )}>
+      <div className="hidden lg:block bg-gray-50/80">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <nav className="flex items-center justify-center gap-1">
             <Link
@@ -171,12 +140,8 @@ export function Header() {
               className={cn(
                 "px-5 py-3 text-sm font-medium transition-all duration-300 border-b-2",
                 location === "/" 
-                  ? scrolled || !isHome
-                    ? "border-primary text-primary"
-                    : "border-white text-white"
-                  : scrolled || !isHome
-                    ? "border-transparent text-muted-foreground hover:text-foreground hover:border-gray-300"
-                    : "border-transparent text-white/80 hover:text-white hover:border-white/50"
+                  ? "border-primary text-primary"
+                  : "border-transparent text-muted-foreground hover:text-foreground hover:border-gray-300"
               )}
               data-testid="link-home"
             >
@@ -188,12 +153,8 @@ export function Header() {
               className={cn(
                 "px-5 py-3 text-sm font-medium transition-all duration-300 border-b-2",
                 location === "/shop"
-                  ? scrolled || !isHome
-                    ? "border-primary text-primary"
-                    : "border-white text-white"
-                  : scrolled || !isHome
-                    ? "border-transparent text-muted-foreground hover:text-foreground hover:border-gray-300"
-                    : "border-transparent text-white/80 hover:text-white hover:border-white/50"
+                  ? "border-primary text-primary"
+                  : "border-transparent text-muted-foreground hover:text-foreground hover:border-gray-300"
               )}
               data-testid="link-shop"
             >
@@ -204,12 +165,7 @@ export function Header() {
               <a
                 key={category.id}
                 href={getCategoryUrl(category)}
-                className={cn(
-                  "px-5 py-3 text-sm font-medium transition-all duration-300 border-b-2 border-transparent",
-                  scrolled || !isHome
-                    ? "text-muted-foreground hover:text-foreground hover:border-gray-300"
-                    : "text-white/80 hover:text-white hover:border-white/50"
-                )}
+                className="px-5 py-3 text-sm font-medium transition-all duration-300 border-b-2 border-transparent text-muted-foreground hover:text-foreground hover:border-gray-300"
                 data-testid={`link-nav-${category.slug}`}
               >
                 {category.name}
@@ -221,12 +177,8 @@ export function Header() {
               className={cn(
                 "px-5 py-3 text-sm font-medium transition-all duration-300 border-b-2",
                 location === "/contact" 
-                  ? scrolled || !isHome
-                    ? "border-primary text-primary"
-                    : "border-white text-white"
-                  : scrolled || !isHome
-                    ? "border-transparent text-muted-foreground hover:text-foreground hover:border-gray-300"
-                    : "border-transparent text-white/80 hover:text-white hover:border-white/50"
+                  ? "border-primary text-primary"
+                  : "border-transparent text-muted-foreground hover:text-foreground hover:border-gray-300"
               )}
               data-testid="link-contact"
             >
