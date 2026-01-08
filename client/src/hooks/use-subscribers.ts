@@ -25,8 +25,8 @@ export function useCreateSubscriber() {
     },
     onSuccess: () => {
       toast({
-        title: "Subscribed!",
-        description: "Thank you for joining our newsletter.",
+        title: "Newsletter Subscribed",
+        description: "Thank you for subscribing! You'll receive our latest updates and exclusive offers.",
       });
     },
     onError: (error: Error) => {

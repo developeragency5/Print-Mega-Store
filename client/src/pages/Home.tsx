@@ -13,8 +13,12 @@ import {
   Tag,
   ThumbsUp,
   Smile,
-  BadgeCheck
+  BadgeCheck,
+  Mail
 } from "lucide-react";
+import { Input } from "@/components/ui/input";
+import { useCreateSubscriber } from "@/hooks/use-subscribers";
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { STORE_CATEGORIES, getCategoryUrl } from "@/lib/ecwid";
 import heroBannerImg from "@assets/Banner_meet_smallest_enterprise_-_Desktop@2x.png_1767904533249.avif";
@@ -39,6 +43,42 @@ const categoryDescriptions: Record<string, string> = {
   "Laser-Printers": "Fast monochrome laser printers for documents and reports",
   "Document-Scanners": "Professional scanners to digitize documents and archives",
 };
+
+function NewsletterForm() {
+  const [email, setEmail] = useState("");
+  const subscribe = useCreateSubscriber();
+
+  const handleSubscribe = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!email) return;
+    subscribe.mutate({ email }, {
+      onSuccess: () => setEmail("")
+    });
+  };
+
+  return (
+    <form onSubmit={handleSubscribe} className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
+      <Input
+        type="email"
+        placeholder="Enter your email address"
+        className="h-12 text-base"
+        value={email}
+        onChange={(e) => setEmail(e.target.value)}
+        required
+        data-testid="input-home-newsletter-email"
+      />
+      <Button 
+        type="submit" 
+        size="lg"
+        className="h-12 px-8"
+        disabled={subscribe.isPending}
+        data-testid="button-home-newsletter-subscribe"
+      >
+        {subscribe.isPending ? "Subscribing..." : "Subscribe"}
+      </Button>
+    </form>
+  );
+}
 
 const featuredProducts = [
   {
@@ -534,6 +574,32 @@ export default function Home() {
                 <ArrowRight className="ml-2 w-5 h-5" />
               </a>
             </Button>
+          </motion.div>
+        </div>
+      </section>
+
+      <section className="py-16 md:py-24 bg-white" data-testid="newsletter-section">
+        <div className="container mx-auto px-6 sm:px-8 lg:px-12">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="max-w-2xl mx-auto text-center"
+          >
+            <div className="w-16 h-16 bg-[#37AFE1]/10 rounded-full flex items-center justify-center mx-auto mb-6">
+              <Mail className="w-8 h-8 text-[#37AFE1]" />
+            </div>
+            <h2 className="text-3xl md:text-4xl font-extrabold text-black mb-4">
+              Subscribe to Our Newsletter
+            </h2>
+            <p className="text-gray-600 mb-8">
+              Get exclusive deals, new product announcements, and helpful printing tips delivered straight to your inbox.
+            </p>
+            <NewsletterForm />
+            <p className="text-xs text-gray-500 mt-4">
+              By subscribing, you agree to receive promotional emails. You can unsubscribe anytime. 
+              Read our <a href="/privacy" className="text-[#37AFE1] hover:underline">Privacy Policy</a> for more information.
+            </p>
           </motion.div>
         </div>
       </section>

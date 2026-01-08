@@ -1,5 +1,7 @@
 import { z } from 'zod';
-import { insertSubscriberSchema, insertContactMessageSchema, subscribers, contactMessages } from './schema';
+import { insertSubscriberSchema, insertContactMessageSchema, subscribers, contactMessages, type InsertSubscriber } from './schema';
+
+export type { InsertSubscriber };
 
 export const errorSchemas = {
   validation: z.object({
