@@ -450,6 +450,38 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="py-16 md:py-24 bg-white" data-testid="seo-content-section">
+        <div className="container mx-auto px-6 sm:px-8 lg:px-12">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="max-w-4xl mx-auto"
+          >
+            <h2 className="text-3xl md:text-4xl font-extrabold text-black text-center mb-8">
+              Buy Printers Online with Confidence
+            </h2>
+            <div className="space-y-6 text-gray-600 leading-relaxed">
+              <p>
+                Looking to <strong>buy a printer online</strong>? Print Mega Store makes it easy to find the perfect printing solution for your home or business. Whether you need a <strong>wireless inkjet printer</strong> for everyday documents, a <strong>high-speed laser printer</strong> for busy offices, or a <strong>professional document scanner</strong> for digitizing important files, our curated selection has you covered.
+              </p>
+              <p>
+                Our <strong>home printers</strong> are designed for families and remote workers who need reliable, compact devices that handle everything from school projects to work reports. For larger teams, our <strong>office printers</strong> deliver high-volume printing with fast output speeds and multifunction capabilities including printing, scanning, copying, and faxing all in one machine.
+              </p>
+              <p>
+                Photographers and creative professionals love our <strong>inkjet printers</strong> for their vibrant color reproduction and ability to print stunning photos on various paper types. Meanwhile, businesses that prioritize speed and efficiency prefer our <strong>laser printers</strong> for their crisp text quality and lower cost-per-page on high-volume document printing.
+              </p>
+              <p>
+                Going paperless? Our <strong>document scanners</strong> help you digitize receipts, contracts, photos, and archives quickly and efficiently. From portable scanners for on-the-go professionals to high-capacity sheet-fed scanners for enterprise document management, we have scanning solutions for every workflow.
+              </p>
+              <p className="text-center font-medium text-black">
+                Shop today and discover why thousands of customers trust Print Mega Store for their printing and scanning needs.
+              </p>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
       <section className="py-16 md:py-24 bg-[#37AFE1]">
         <div className="container mx-auto px-6 sm:px-8 lg:px-12 text-center max-w-3xl">
           <motion.div
