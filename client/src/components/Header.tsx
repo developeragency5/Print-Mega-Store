@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { Link, useLocation } from "wouter";
-import { Menu, X, Phone, User, ShoppingCart, Printer } from "lucide-react";
+import { Menu, X, Phone, Printer } from "lucide-react";
 import { Button } from "./ui/button";
 import { cn } from "@/lib/utils";
 import { STORE_CATEGORIES, getCategoryUrl, STORE_ID } from "@/lib/ecwid";
@@ -108,33 +108,19 @@ export function Header() {
 
               <div className="hidden md:block w-px h-6 bg-gray-200" />
 
-              {/* Ecwid Login Widget */}
-              <a
-                href="/shop#!/~/signin"
-                className="flex items-center gap-2 px-3 py-2 rounded-lg text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-gray-100 transition-all"
-                data-testid="button-login"
-              >
-                <User className="w-5 h-5" />
-                <span className="hidden sm:inline">Sign In</span>
-              </a>
+              {/* Ecwid Sign In Widget */}
+              <div 
+                ref={loginWidgetRef}
+                className="ec-minicart-widget"
+                data-testid="ecwid-signin"
+              />
 
-              {/* Ecwid Cart Widget */}
-              <div className="relative">
-                <div 
-                  ref={cartWidgetRef}
-                  id="my-cart-widget"
-                  className="ec-cart-widget [&_.ec-cart-widget]:!bg-transparent [&_svg]:!fill-foreground"
-                >
-                  <a
-                    href="/shop#!/~/cart"
-                    className="flex items-center gap-2 px-3 py-2 rounded-lg text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-gray-100 transition-all"
-                    data-testid="button-cart"
-                  >
-                    <ShoppingCart className="w-5 h-5" />
-                    <span className="hidden sm:inline">Cart</span>
-                  </a>
-                </div>
-              </div>
+              {/* Ecwid Cart Widget - Native Ecwid Icon */}
+              <div 
+                ref={cartWidgetRef}
+                className="ec-cart-widget"
+                data-testid="ecwid-cart"
+              />
 
               {/* Mobile Menu Button */}
               <Button
@@ -299,21 +285,19 @@ export function Header() {
             Contact
           </Link>
 
-          <div className="pt-4 space-y-2">
+          <div className="pt-4 space-y-2 border-t border-gray-100">
             <a
               href="/shop#!/~/signin"
-              className="flex items-center gap-2 px-4 py-3 text-base font-medium rounded-xl transition-colors text-foreground hover:bg-gray-100"
+              className="block px-4 py-3 text-base font-medium rounded-xl transition-colors text-foreground hover:bg-gray-100"
               data-testid="link-mobile-signin"
             >
-              <User className="w-5 h-5" />
               Sign In / Register
             </a>
             <a
               href="/shop#!/~/cart"
-              className="flex items-center gap-2 px-4 py-3 text-base font-medium rounded-xl transition-colors text-foreground hover:bg-gray-100"
+              className="block px-4 py-3 text-base font-medium rounded-xl transition-colors text-foreground hover:bg-gray-100"
               data-testid="link-mobile-cart"
             >
-              <ShoppingCart className="w-5 h-5" />
               View Cart
             </a>
           </div>
