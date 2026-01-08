@@ -472,6 +472,83 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="py-16 md:py-24 bg-gradient-to-b from-gray-50 to-white" data-testid="why-choose-section">
+        <div className="container mx-auto px-6 sm:px-8 lg:px-12">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-12"
+          >
+            <span className="inline-block text-[#37AFE1] font-semibold text-sm uppercase tracking-wider mb-4">The Print Mega Store Advantage</span>
+            <h2 className="text-3xl md:text-4xl font-extrabold text-black mb-4">Why Choose Print Mega Store?</h2>
+            <p className="text-gray-600 text-lg max-w-2xl mx-auto">
+              Discover what makes us the preferred choice for buying printers and scanners online.
+            </p>
+          </motion.div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+            {[
+              {
+                icon: <Printer className="w-8 h-8" />,
+                title: "Wide Selection of Printers",
+                desc: "From home inkjet printers to enterprise laser printers, we offer a comprehensive range of printing solutions. Find wireless printers, all-in-one multifunction printers, and specialized photo printers all in one place.",
+                color: "from-[#37AFE1] to-[#2d8bb8]"
+              },
+              {
+                icon: <ScanLine className="w-8 h-8" />,
+                title: "Professional Document Scanners",
+                desc: "Digitize your documents with our selection of high-quality scanners. Whether you need a portable scanner for receipts or a high-volume sheet-fed scanner for office archives, we have you covered.",
+                color: "from-purple-500 to-purple-600"
+              },
+              {
+                icon: <Tag className="w-8 h-8" />,
+                title: "Competitive Online Prices",
+                desc: "Shop smart with our budget-friendly pricing on top printer brands. We continuously monitor the market to ensure you get the best value when you buy printers online from Print Mega Store.",
+                color: "from-green-500 to-green-600"
+              },
+              {
+                icon: <Truck className="w-8 h-8" />,
+                title: "Fast & Reliable Shipping",
+                desc: "Get your new printer or scanner delivered quickly and safely. Our efficient shipping partners ensure your printing equipment arrives in perfect condition, ready to set up and use.",
+                color: "from-orange-500 to-orange-600"
+              },
+              {
+                icon: <ShieldCheck className="w-8 h-8" />,
+                title: "Secure Shopping Experience",
+                desc: "Shop with confidence knowing your personal and payment information is protected with industry-standard SSL encryption. Our secure checkout process keeps your data safe every step of the way.",
+                color: "from-pink-500 to-pink-600"
+              },
+              {
+                icon: <Headphones className="w-8 h-8" />,
+                title: "Dedicated Customer Support",
+                desc: "Have questions about which printer is right for you? Our knowledgeable support team is here to help you choose the perfect printing solution for your home office or business needs.",
+                color: "from-indigo-500 to-indigo-600"
+              },
+            ].map((item, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.1 }}
+                whileHover={{ y: -8, boxShadow: "0 20px 40px rgba(0,0,0,0.1)" }}
+                className="bg-white rounded-xl border border-gray-100 p-8 cursor-pointer group"
+              >
+                <motion.div 
+                  whileHover={{ scale: 1.1, rotate: 5 }}
+                  className={`w-16 h-16 rounded-xl bg-gradient-to-br ${item.color} flex items-center justify-center shadow-lg mb-6`}
+                >
+                  <span className="text-white">{item.icon}</span>
+                </motion.div>
+                <h3 className="text-xl font-bold text-black mb-3 group-hover:text-[#37AFE1] transition-colors">{item.title}</h3>
+                <p className="text-gray-600 leading-relaxed">{item.desc}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section className="py-16 md:py-24 bg-white">
         <div className="container mx-auto px-6 sm:px-8 lg:px-12">
           <motion.div
@@ -485,11 +562,11 @@ export default function Home() {
 
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 md:gap-6">
             {[
-              { icon: <Tag className="w-10 h-10" />, label: "Competitive Prices for Best Value", color: "text-pink-500" },
-              { icon: <ShieldCheck className="w-10 h-10" />, label: "Secure Payment Options", color: "text-pink-500" },
-              { icon: <ThumbsUp className="w-10 h-10" />, label: "Customer Satisfaction is Our Priority", color: "text-[#37AFE1]" },
-              { icon: <Smile className="w-10 h-10" />, label: "Quality Products You Can Trust", color: "text-[#37AFE1]" },
-              { icon: <BadgeCheck className="w-10 h-10" />, label: "Independent Trusted Retailer", color: "text-green-500" },
+              { icon: <Tag className="w-10 h-10" />, label: "Competitive Prices for Best Value", color: "from-pink-500 to-pink-600" },
+              { icon: <ShieldCheck className="w-10 h-10" />, label: "Secure Payment Options", color: "from-purple-500 to-purple-600" },
+              { icon: <ThumbsUp className="w-10 h-10" />, label: "Customer Satisfaction is Our Priority", color: "from-[#37AFE1] to-[#2d8bb8]" },
+              { icon: <Smile className="w-10 h-10" />, label: "Quality Products You Can Trust", color: "from-green-500 to-green-600" },
+              { icon: <BadgeCheck className="w-10 h-10" />, label: "Trusted Online Retailer", color: "from-orange-500 to-orange-600" },
             ].map((item, i) => (
               <motion.div
                 key={i}
@@ -497,12 +574,16 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
-                className="flex flex-col items-center text-center"
+                whileHover={{ y: -6, scale: 1.02 }}
+                className="flex flex-col items-center text-center cursor-pointer group"
               >
-                <div className={`mb-4 ${item.color}`}>
-                  {item.icon}
-                </div>
-                <p className="text-sm font-semibold text-gray-700 uppercase tracking-wide leading-relaxed">
+                <motion.div 
+                  whileHover={{ scale: 1.15, rotate: 10 }}
+                  className={`w-16 h-16 rounded-xl bg-gradient-to-br ${item.color} flex items-center justify-center shadow-lg mb-4`}
+                >
+                  <span className="text-white">{item.icon}</span>
+                </motion.div>
+                <p className="text-sm font-semibold text-gray-700 uppercase tracking-wide leading-relaxed group-hover:text-[#37AFE1] transition-colors">
                   {item.label}
                 </p>
               </motion.div>
