@@ -199,10 +199,10 @@ export default function Home() {
         <div className="container mx-auto px-6 sm:px-8 lg:px-12">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
             {[
-              { icon: <Truck className="w-6 h-6" />, title: "Fast Shipping", desc: "Quick delivery to your door" },
-              { icon: <Tag className="w-6 h-6" />, title: "Best Prices", desc: "Competitive rates guaranteed" },
-              { icon: <ShieldCheck className="w-6 h-6" />, title: "Secure Checkout", desc: "SSL encrypted payments" },
-              { icon: <BadgeCheck className="w-6 h-6" />, title: "Trusted Shopping", desc: "100% buyer protection" },
+              { icon: <Truck className="w-7 h-7" />, title: "Fast Shipping", desc: "Quick delivery to your door", color: "from-[#37AFE1] to-[#2d8bb8]" },
+              { icon: <Tag className="w-7 h-7" />, title: "Best Prices", desc: "Competitive rates guaranteed", color: "from-green-500 to-green-600" },
+              { icon: <ShieldCheck className="w-7 h-7" />, title: "Secure Checkout", desc: "SSL encrypted payments", color: "from-purple-500 to-purple-600" },
+              { icon: <BadgeCheck className="w-7 h-7" />, title: "Trusted Shopping", desc: "100% buyer protection", color: "from-orange-500 to-orange-600" },
             ].map((benefit, i) => (
               <motion.div
                 key={i}
@@ -210,15 +210,18 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
-                className="bg-white border border-gray-200 rounded-md p-5 md:p-6 flex items-center gap-4"
+                whileHover={{ y: -6, boxShadow: "0 15px 30px rgba(0,0,0,0.1)" }}
+                className="bg-white border border-gray-200 rounded-lg p-6 md:p-8 flex flex-col items-center text-center cursor-pointer"
               >
-                <div className="p-3 rounded-md bg-[#37AFE1]/10 text-[#37AFE1] shrink-0">
-                  {benefit.icon}
-                </div>
-                <div>
-                  <h3 className="font-bold text-sm text-black">{benefit.title}</h3>
-                  <p className="text-xs text-gray-600">{benefit.desc}</p>
-                </div>
+                <motion.div 
+                  whileHover={{ scale: 1.15, rotate: 10 }}
+                  transition={{ duration: 0.3 }}
+                  className={`w-16 h-16 rounded-xl bg-gradient-to-br ${benefit.color} flex items-center justify-center shadow-lg mb-4`}
+                >
+                  <span className="text-white">{benefit.icon}</span>
+                </motion.div>
+                <h3 className="font-bold text-base text-black mb-1">{benefit.title}</h3>
+                <p className="text-sm text-gray-600">{benefit.desc}</p>
               </motion.div>
             ))}
           </div>
