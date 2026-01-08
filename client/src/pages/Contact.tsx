@@ -90,8 +90,8 @@ export default function Contact() {
     {
       icon: <MessageCircle className="w-6 h-6 text-white" />,
       color: "from-indigo-500 to-indigo-600",
-      title: "Technical Assistance",
-      desc: "Having trouble with setup or need technical help? Our experts are ready to assist."
+      title: "General Questions",
+      desc: "Have any other questions? Feel free to reach out and we'll be happy to help."
     },
     {
       icon: <Clock className="w-6 h-6 text-white" />,
@@ -266,7 +266,7 @@ export default function Contact() {
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold text-black mb-4">How Can We Help?</h2>
               <p className="text-gray-600 max-w-2xl mx-auto">
-                Whether you need help choosing the right printer, have questions about your order, or need technical support, we're here for you.
+                Whether you need help choosing the right printer or have questions about your order, we're here for you.
               </p>
             </div>
 

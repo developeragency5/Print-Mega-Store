@@ -157,7 +157,7 @@ export default function About() {
                   </div>
                 </div>
                 <p>
-                  We continuously research the latest printing technology trends and products to provide you with up-to-date information and recommendations. Our customer service team is available Monday through Friday to assist you with product questions, order inquiries, and technical support.
+                  We continuously research the latest printing technology trends and products to provide you with up-to-date information and recommendations. Our team is available Monday through Friday to assist you with product questions and order inquiries.
                 </p>
               </section>
 
