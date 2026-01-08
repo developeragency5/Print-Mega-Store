@@ -1,7 +1,7 @@
 import { Link } from "wouter";
 import { Button } from "./ui/button";
 import { Input } from "./ui/input";
-import { Facebook, Twitter, Instagram, Linkedin, Mail, MapPin, Phone, ArrowRight } from "lucide-react";
+import { Facebook, Twitter, Instagram, Linkedin, Mail, MapPin, Phone, ArrowRight, Printer } from "lucide-react";
 import { useCreateSubscriber } from "@/hooks/use-subscribers";
 import { useState } from "react";
 import { STORE_CATEGORIES, getCategoryUrl } from "@/lib/ecwid";
@@ -24,13 +24,16 @@ export function Footer() {
         <div className="py-16 md:py-20">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12">
             <div className="lg:col-span-4 space-y-6">
-              <Link href="/" className="flex items-center gap-3">
-                <div className="w-10 h-10 bg-primary rounded-xl flex items-center justify-center shadow-lg">
-                  <span className="text-white font-bold text-xl">P</span>
+              <Link href="/" className="flex items-center gap-2">
+                <Printer className="w-8 h-8 text-[#37AFE1]" />
+                <div className="flex flex-col leading-none">
+                  <svg className="w-16 h-2 text-[#37AFE1] -mb-0.5" viewBox="0 0 60 8" fill="none">
+                    <path d="M5 6 C20 -2, 40 -2, 55 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" fill="none"/>
+                  </svg>
+                  <span className="text-xl font-bold tracking-tight text-white">
+                    print<span className="text-[#37AFE1]">mega</span>
+                  </span>
                 </div>
-                <span className="text-2xl font-bold tracking-tight text-white font-display">
-                  Print<span className="text-primary">Mega</span>Store
-                </span>
               </Link>
               <p className="text-base leading-relaxed text-gray-400 max-w-sm">
                 Your independent online destination for professional printing and scanning equipment. 

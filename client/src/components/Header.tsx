@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { Link, useLocation } from "wouter";
-import { Menu, X, Phone, User, ShoppingCart } from "lucide-react";
+import { Menu, X, Phone, User, ShoppingCart, Printer } from "lucide-react";
 import { Button } from "./ui/button";
 import { cn } from "@/lib/utils";
 import { STORE_CATEGORIES, getCategoryUrl, STORE_ID } from "@/lib/ecwid";
@@ -87,13 +87,16 @@ export function Header() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex h-16 items-center justify-between gap-4">
             {/* Logo */}
-            <Link href="/" className="flex items-center gap-3 shrink-0 group" data-testid="link-logo">
-              <div className="w-10 h-10 rounded-xl flex items-center justify-center transition-all duration-300 shadow-lg bg-primary">
-                <span className="font-bold text-xl text-white">P</span>
+            <Link href="/" className="flex items-center gap-2 shrink-0 group" data-testid="link-logo">
+              <Printer className="w-8 h-8 text-[#37AFE1]" />
+              <div className="flex flex-col leading-none">
+                <svg className="w-16 h-2 text-[#37AFE1] -mb-0.5" viewBox="0 0 60 8" fill="none">
+                  <path d="M5 6 C20 -2, 40 -2, 55 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" fill="none"/>
+                </svg>
+                <span className="text-xl font-bold tracking-tight text-gray-800">
+                  print<span className="text-[#37AFE1]">mega</span>
+                </span>
               </div>
-              <span className="text-xl font-bold tracking-tight font-display text-foreground">
-                Print<span className="text-primary">Mega</span>Store
-              </span>
             </Link>
 
             {/* Right Side Actions */}
