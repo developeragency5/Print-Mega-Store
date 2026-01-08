@@ -10,12 +10,11 @@ import {
   ArrowRight,
   Zap,
   FileText,
-  Star,
   CheckCircle2
 } from "lucide-react";
 import { motion } from "framer-motion";
 import { STORE_CATEGORIES, getCategoryUrl } from "@/lib/ecwid";
-import printerImage from "@assets/stock_images/hp_printer_professio_855d99b4.jpg";
+import heroBannerImg from "@assets/Banner_meet_smallest_enterprise_-_Desktop@2x.png_1767904533249.avif";
 import homePrinterImg from "@assets/stock_images/home_printer_compact_563d38fc.jpg";
 import officePrinterImg from "@assets/stock_images/large_office_multifu_ed611672.jpg";
 import inkjetPrinterImg from "@assets/stock_images/inkjet_printer_color_ff5b9fc9.jpg";
@@ -101,93 +100,54 @@ const staggerContainer = {
 };
 
 export default function Home() {
-  const printersCategory = STORE_CATEGORIES.find(c => c.slug === "Home-Printers");
-  const scannersCategory = STORE_CATEGORIES.find(c => c.slug === "Document-Scanners");
-
   return (
     <div className="flex flex-col">
-      <section className="relative min-h-[90vh] flex items-center bg-gray-100 pt-32">
-        <div className="container relative mx-auto px-4 sm:px-6 lg:px-8 py-12">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="max-w-xl">
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5 }}
-                className="inline-flex items-center gap-2 bg-white border border-gray-200 rounded-full px-4 py-2 mb-8"
-              >
-                <Star className="w-4 h-4 text-yellow-500 fill-yellow-500" />
-                <span className="text-foreground text-sm font-medium">Trusted by 10,000+ businesses</span>
-              </motion.div>
+      <section className="relative w-full pt-[88px]" data-testid="hero-section">
+        <div className="relative w-full">
+          <img 
+            src={heroBannerImg} 
+            alt="Print Mega Store - Professional Printing Solutions for Enterprise and Home"
+            className="w-full h-auto object-cover"
+            data-testid="img-hero-banner"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-transparent" />
+          <div className="absolute inset-0 flex items-center">
+            <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+              <div className="max-w-xl">
+                <motion.h1 
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6 }}
+                  className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight mb-4 text-white leading-tight"
+                >
+                  Premium Printers & Scanners for Every Business Need
+                </motion.h1>
 
-              <motion.h1 
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.1 }}
-                className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight mb-6 text-foreground leading-tight"
-              >
-                Professional Printing{" "}
-                <span className="text-primary">Solutions</span>
-                <br />for Every Need
-              </motion.h1>
+                <motion.p 
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 0.1 }}
+                  className="text-base sm:text-lg text-white/90 mb-6 leading-relaxed"
+                >
+                  Discover enterprise-grade printing solutions designed for productivity. 
+                  From compact home printers to high-volume office workhorses, find the perfect 
+                  match for your printing needs with free shipping and expert support.
+                </motion.p>
 
-              <motion.p 
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
-                className="text-lg sm:text-xl text-muted-foreground mb-10 leading-relaxed"
-              >
-                Premium printers and scanners for home, office, and enterprise. 
-                Quality you can trust, prices you'll love.
-              </motion.p>
-
-              <motion.div 
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.3 }}
-                className="flex flex-col sm:flex-row gap-4 mb-10"
-              >
-                <Button asChild size="lg" className="text-lg font-semibold">
-                  <a href={printersCategory ? getCategoryUrl(printersCategory) : "/shop"} data-testid="button-shop-printers">
-                    Shop Printers
-                    <ArrowRight className="ml-2 w-5 h-5" />
-                  </a>
-                </Button>
-                <Button asChild variant="outline" size="lg" className="text-lg font-semibold bg-white">
-                  <a href={scannersCategory ? getCategoryUrl(scannersCategory) : "/shop"} data-testid="button-shop-scanners">
-                    Shop Scanners
-                  </a>
-                </Button>
-              </motion.div>
-
-              <motion.div 
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 0.6, delay: 0.5 }}
-                className="flex flex-wrap gap-6"
-              >
-                {["Free Shipping $500+", "2-Year Warranty", "Expert Support"].map((item, i) => (
-                  <div key={i} className="flex items-center gap-2">
-                    <CheckCircle2 className="w-5 h-5 text-primary" />
-                    <span className="text-sm font-medium text-foreground">{item}</span>
-                  </div>
-                ))}
-              </motion.div>
+                <motion.div 
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 0.2 }}
+                >
+                  <Button asChild size="lg" className="text-lg font-semibold">
+                    <a href="/shop" data-testid="button-shop-now">
+                      Shop Now
+                      <ArrowRight className="ml-2 w-5 h-5" />
+                    </a>
+                  </Button>
+                </motion.div>
+              </div>
             </div>
-
-            <motion.div
-              initial={{ opacity: 0, x: 50, scale: 0.95 }}
-              animate={{ opacity: 1, x: 0, scale: 1 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="hidden lg:flex justify-center items-center"
-            >
-              <img 
-                src={printerImage} 
-                alt="Professional HP Printer" 
-                className="w-full max-w-lg rounded-md shadow-lg"
-                data-testid="img-hero-printer"
-              />
-            </motion.div>
           </div>
         </div>
       </section>
