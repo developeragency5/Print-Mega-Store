@@ -9,7 +9,11 @@ import {
   Briefcase,
   ArrowRight,
   Zap,
-  FileText
+  FileText,
+  Tag,
+  ThumbsUp,
+  Smile,
+  BadgeCheck
 } from "lucide-react";
 import { motion } from "framer-motion";
 import { STORE_CATEGORIES, getCategoryUrl } from "@/lib/ecwid";
@@ -409,38 +413,39 @@ export default function Home() {
 
       <section className="py-16 md:py-24 bg-white">
         <div className="container mx-auto px-6 sm:px-8 lg:px-12">
-          <div className="max-w-4xl mx-auto text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-            >
-              <span className="inline-block text-[#37AFE1] font-semibold text-sm uppercase tracking-wider mb-4">Why Choose Us</span>
-              <h2 className="text-4xl md:text-5xl font-extrabold mb-6 text-black">Your Trusted Independent Retailer</h2>
-              <p className="text-gray-600 text-lg mb-12 md:mb-16">
-                We offer a wide selection of printing equipment with competitive pricing and reliable customer service
-              </p>
-            </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-12 md:mb-16"
+          >
+            <h2 className="text-3xl md:text-4xl font-extrabold text-black">Why Shop at Print Mega Store?</h2>
+          </motion.div>
 
-            <div className="grid md:grid-cols-3 gap-6 md:gap-8">
-              {[
-                { number: "5", label: "Product Categories" },
-                { number: "100%", label: "Secure Checkout" },
-                { number: "24/7", label: "Customer Support" },
-              ].map((stat, i) => (
-                <motion.div
-                  key={i}
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: i * 0.1 }}
-                  className="p-8 md:p-10 bg-gray-50 rounded-md border border-gray-200"
-                >
-                  <div className="text-5xl font-extrabold text-[#37AFE1] mb-3">{stat.number}</div>
-                  <div className="text-gray-600 font-medium">{stat.label}</div>
-                </motion.div>
-              ))}
-            </div>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 md:gap-6">
+            {[
+              { icon: <Tag className="w-10 h-10" />, label: "Competitive Prices for Best Value", color: "text-pink-500" },
+              { icon: <ShieldCheck className="w-10 h-10" />, label: "Secure Payment Options", color: "text-pink-500" },
+              { icon: <ThumbsUp className="w-10 h-10" />, label: "Customer Satisfaction is Our Priority", color: "text-[#37AFE1]" },
+              { icon: <Smile className="w-10 h-10" />, label: "Quality Products You Can Trust", color: "text-[#37AFE1]" },
+              { icon: <BadgeCheck className="w-10 h-10" />, label: "Independent Trusted Retailer", color: "text-green-500" },
+            ].map((item, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.1 }}
+                className="flex flex-col items-center text-center"
+              >
+                <div className={`mb-4 ${item.color}`}>
+                  {item.icon}
+                </div>
+                <p className="text-sm font-semibold text-gray-700 uppercase tracking-wide leading-relaxed">
+                  {item.label}
+                </p>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
