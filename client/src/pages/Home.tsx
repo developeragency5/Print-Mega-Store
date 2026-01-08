@@ -367,13 +367,13 @@ export default function Home() {
                   transition={{ duration: 0.6 }}
                   className={`grid lg:grid-cols-2 gap-8 lg:gap-12 items-center py-12 md:py-16 ${!isLast ? 'border-b border-gray-100' : ''}`}
                 >
-                  <div className={`${!isImageLeft ? 'lg:order-2' : ''}`}>
+                  <div className={`${!isImageLeft ? 'lg:order-2' : ''} flex justify-center`}>
                     <a 
                       href={product.productUrl} 
                       className="block group"
                       data-testid={`link-product-${product.productId}`}
                     >
-                      <div className="aspect-square bg-white rounded-md border border-gray-200 p-6 flex items-center justify-center">
+                      <div className="w-64 h-64 md:w-72 md:h-72 bg-white rounded-md border border-gray-200 p-4 flex items-center justify-center">
                         <img 
                           src={product.image} 
                           alt={product.name}
