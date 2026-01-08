@@ -152,9 +152,9 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-12 bg-white border-b border-gray-200">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+      <section className="py-12 md:py-16 bg-white border-b border-gray-100">
+        <div className="container mx-auto px-6 sm:px-8 lg:px-12">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
             {[
               { icon: <Truck className="w-6 h-6" />, title: "Fast Shipping", desc: "Free over $500" },
               { icon: <ShieldCheck className="w-6 h-6" />, title: "Secure Checkout", desc: "256-bit encryption" },
@@ -167,14 +167,14 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
-                className="bg-white border border-gray-200 rounded-md p-5 flex items-center gap-4"
+                className="bg-white border border-gray-200 rounded-md p-5 md:p-6 flex items-center gap-4"
               >
-                <div className="p-3 rounded-md bg-gray-100 text-primary shrink-0">
+                <div className="p-3 rounded-md bg-[#4CC9FE]/10 text-[#4CC9FE] shrink-0">
                   {benefit.icon}
                 </div>
                 <div>
-                  <h3 className="font-semibold text-sm text-foreground">{benefit.title}</h3>
-                  <p className="text-xs text-muted-foreground">{benefit.desc}</p>
+                  <h3 className="font-bold text-sm text-black">{benefit.title}</h3>
+                  <p className="text-xs text-gray-600">{benefit.desc}</p>
                 </div>
               </motion.div>
             ))}
@@ -182,17 +182,17 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section-padding bg-white">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-16 md:py-24 bg-white">
+        <div className="container mx-auto px-6 sm:px-8 lg:px-12">
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-center mb-16"
+            className="text-center mb-12 md:mb-16"
           >
-            <span className="inline-block text-primary font-semibold text-sm uppercase tracking-wider mb-4">Browse Categories</span>
-            <h2 className="text-4xl md:text-5xl font-bold mb-4 text-foreground">Find Your Perfect Match</h2>
-            <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+            <span className="inline-block text-[#4CC9FE] font-semibold text-sm uppercase tracking-wider mb-4">Browse Categories</span>
+            <h2 className="text-4xl md:text-5xl font-extrabold mb-6 text-black">Find Your Perfect Match</h2>
+            <p className="text-gray-600 text-lg max-w-2xl mx-auto">
               Explore our carefully curated selection of professional printing solutions
             </p>
           </motion.div>
@@ -202,7 +202,7 @@ export default function Home() {
             initial="initial"
             whileInView="animate"
             viewport={{ once: true }}
-            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6"
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 md:gap-8"
           >
             {STORE_CATEGORIES.map((category, i) => (
               <motion.div
@@ -211,16 +211,16 @@ export default function Home() {
                 transition={{ delay: i * 0.1 }}
               >
                 <a href={getCategoryUrl(category)} data-testid={`card-category-${category.slug}`}>
-                  <Card className="group h-full cursor-pointer border border-gray-200 hover:border-gray-300 hover:shadow-md transition-all duration-200">
-                    <CardContent className="p-6 flex flex-col items-center text-center h-full">
-                      <div className="w-20 h-20 rounded-md bg-gray-100 flex items-center justify-center mb-5 group-hover:bg-primary transition-colors duration-200">
-                        <div className="text-primary group-hover:text-white transition-colors duration-200">
+                  <Card className="group h-full cursor-pointer border border-gray-200 hover:border-[#4CC9FE] hover:shadow-lg transition-all duration-200 bg-white">
+                    <CardContent className="p-6 md:p-8 flex flex-col items-center text-center h-full">
+                      <div className="w-20 h-20 rounded-md bg-[#4CC9FE]/10 flex items-center justify-center mb-5 group-hover:bg-[#4CC9FE] transition-colors duration-200">
+                        <div className="text-[#4CC9FE] group-hover:text-white transition-colors duration-200">
                           {categoryIcons[category.slug] || <Printer className="w-10 h-10" />}
                         </div>
                       </div>
-                      <h3 className="text-lg font-bold mb-2 text-foreground group-hover:text-primary transition-colors">{category.name}</h3>
-                      <p className="text-sm text-muted-foreground">{categoryDescriptions[category.slug]}</p>
-                      <div className="mt-4 flex items-center text-primary text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity">
+                      <h3 className="text-lg font-bold mb-2 text-black group-hover:text-[#4CC9FE] transition-colors">{category.name}</h3>
+                      <p className="text-sm text-gray-600">{categoryDescriptions[category.slug]}</p>
+                      <div className="mt-4 flex items-center text-[#4CC9FE] text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity">
                         Shop Now <ArrowRight className="w-4 h-4 ml-1" />
                       </div>
                     </CardContent>
@@ -232,17 +232,17 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section-padding bg-white">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-16 md:py-24 bg-white">
+        <div className="container mx-auto px-6 sm:px-8 lg:px-12">
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-center mb-16"
+            className="text-center mb-12 md:mb-16"
           >
-            <span className="inline-block text-primary font-semibold text-sm uppercase tracking-wider mb-4">Featured Products</span>
-            <h2 className="text-4xl md:text-5xl font-bold mb-4 text-foreground">Top Picks from Each Category</h2>
-            <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+            <span className="inline-block text-[#4CC9FE] font-semibold text-sm uppercase tracking-wider mb-4">Featured Products</span>
+            <h2 className="text-4xl md:text-5xl font-extrabold mb-6 text-black">Top Picks from Each Category</h2>
+            <p className="text-gray-600 text-lg max-w-2xl mx-auto">
               Discover our best-selling products handpicked for quality and performance
             </p>
           </motion.div>
@@ -260,7 +260,7 @@ export default function Home() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.6 }}
-                  className={`grid lg:grid-cols-2 gap-8 lg:gap-12 items-center py-12 ${!isLast ? 'border-b border-gray-200' : ''}`}
+                  className={`grid lg:grid-cols-2 gap-8 lg:gap-16 items-center py-12 md:py-16 ${!isLast ? 'border-b border-gray-100' : ''}`}
                 >
                   <div className={`${!isImageLeft ? 'lg:order-2' : ''}`}>
                     <a 
@@ -272,11 +272,11 @@ export default function Home() {
                         <img 
                           src={product.image} 
                           alt={product.name}
-                          className="w-full h-80 object-contain p-4 transition-transform duration-300 group-hover:scale-105"
+                          className="w-full h-80 object-contain p-6 transition-transform duration-300 group-hover:scale-105"
                           data-testid={`img-product-${product.productId}`}
                         />
                         <div className="absolute top-4 left-4">
-                          <span className="bg-primary text-white text-xs font-semibold px-3 py-1.5 rounded-md">
+                          <span className="bg-[#4CC9FE] text-white text-xs font-semibold px-3 py-1.5 rounded-md">
                             {category?.name || product.categorySlug.replace('-', ' ')}
                           </span>
                         </div>
@@ -285,24 +285,24 @@ export default function Home() {
                   </div>
 
                   <div className={`${!isImageLeft ? 'lg:order-1' : ''}`}>
-                    <div className="space-y-4">
-                      <h3 className="text-2xl lg:text-3xl font-bold text-foreground">{product.name}</h3>
-                      <p className="text-muted-foreground text-lg leading-relaxed">{product.description}</p>
+                    <div className="space-y-5">
+                      <h3 className="text-2xl lg:text-3xl font-extrabold text-black">{product.name}</h3>
+                      <p className="text-gray-600 text-lg leading-relaxed">{product.description}</p>
                       
-                      <div className="flex flex-wrap gap-2 pt-2">
+                      <div className="flex flex-wrap gap-3 pt-2">
                         {product.features.map((feature, i) => (
                           <span 
                             key={i} 
-                            className="inline-flex items-center gap-1.5 bg-gray-100 border border-gray-200 text-sm text-foreground px-3 py-1.5 rounded-md"
+                            className="inline-flex items-center gap-1.5 bg-gray-50 border border-gray-200 text-sm text-black px-4 py-2 rounded-md"
                           >
-                            <CheckCircle2 className="w-4 h-4 text-primary" />
+                            <CheckCircle2 className="w-4 h-4 text-[#4CC9FE]" />
                             {feature}
                           </span>
                         ))}
                       </div>
 
                       <div className="flex items-center pt-4">
-                        <Button asChild>
+                        <Button asChild className="bg-[#4CC9FE] hover:bg-[#3ab8ed] text-white">
                           <a href={product.productUrl} data-testid={`button-view-${product.productId}`}>
                             View Product
                             <ArrowRight className="ml-2 w-4 h-4" />
@@ -318,22 +318,22 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section-padding bg-gray-100">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-16 md:py-24 bg-gray-50">
+        <div className="container mx-auto px-6 sm:px-8 lg:px-12">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
             >
-              <span className="inline-block text-primary font-semibold text-sm uppercase tracking-wider mb-4">Why Choose Us</span>
-              <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">Built for Professionals</h2>
-              <p className="text-muted-foreground text-lg mb-12">
+              <span className="inline-block text-[#4CC9FE] font-semibold text-sm uppercase tracking-wider mb-4">Why Choose Us</span>
+              <h2 className="text-4xl md:text-5xl font-extrabold mb-6 text-black">Built for Professionals</h2>
+              <p className="text-gray-600 text-lg mb-12 md:mb-16">
                 We partner with leading brands to bring you the best printing technology at competitive prices
               </p>
             </motion.div>
 
-            <div className="grid md:grid-cols-3 gap-8">
+            <div className="grid md:grid-cols-3 gap-6 md:gap-8">
               {[
                 { number: "10K+", label: "Happy Customers" },
                 { number: "500+", label: "Products Available" },
@@ -345,10 +345,10 @@ export default function Home() {
                   whileInView={{ opacity: 1, scale: 1 }}
                   viewport={{ once: true }}
                   transition={{ delay: i * 0.1 }}
-                  className="p-8 bg-white rounded-md border border-gray-200"
+                  className="p-8 md:p-10 bg-white rounded-md border border-gray-200"
                 >
-                  <div className="text-5xl font-extrabold text-primary mb-2">{stat.number}</div>
-                  <div className="text-muted-foreground font-medium">{stat.label}</div>
+                  <div className="text-5xl font-extrabold text-[#4CC9FE] mb-3">{stat.number}</div>
+                  <div className="text-gray-600 font-medium">{stat.label}</div>
                 </motion.div>
               ))}
             </div>
@@ -356,18 +356,18 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section-padding bg-primary">
-        <div className="container mx-auto px-4 text-center max-w-3xl">
+      <section className="py-16 md:py-24 bg-[#4CC9FE]">
+        <div className="container mx-auto px-6 sm:px-8 lg:px-12 text-center max-w-3xl">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">Ready to Upgrade?</h2>
+            <h2 className="text-4xl md:text-5xl font-extrabold mb-6 text-white">Ready to Upgrade?</h2>
             <p className="text-xl text-white/90 mb-10">
               Explore our catalog of premium printing equipment and find the perfect solution for your needs.
             </p>
-            <Button asChild size="lg" variant="secondary" className="text-lg font-semibold">
+            <Button asChild size="lg" className="bg-white text-black hover:bg-gray-100 text-lg font-bold">
               <a href="/shop" data-testid="button-browse-catalog">
                 Browse Full Catalog
                 <ArrowRight className="ml-2 w-5 h-5" />
