@@ -169,7 +169,7 @@ export default function Home() {
                 transition={{ delay: i * 0.1 }}
                 className="bg-white border border-gray-200 rounded-md p-5 md:p-6 flex items-center gap-4"
               >
-                <div className="p-3 rounded-md bg-[#4CC9FE]/10 text-[#4CC9FE] shrink-0">
+                <div className="p-3 rounded-md bg-[#37AFE1]/10 text-[#37AFE1] shrink-0">
                   {benefit.icon}
                 </div>
                 <div>
@@ -190,7 +190,7 @@ export default function Home() {
             viewport={{ once: true }}
             className="text-center mb-12 md:mb-16"
           >
-            <span className="inline-block text-[#4CC9FE] font-semibold text-sm uppercase tracking-wider mb-4">Browse Categories</span>
+            <span className="inline-block text-[#37AFE1] font-semibold text-sm uppercase tracking-wider mb-4">Browse Categories</span>
             <h2 className="text-4xl md:text-5xl font-extrabold mb-6 text-black">Find Your Perfect Match</h2>
             <p className="text-gray-600 text-lg max-w-2xl mx-auto">
               Explore our carefully curated selection of professional printing solutions
@@ -211,16 +211,16 @@ export default function Home() {
                 transition={{ delay: i * 0.1 }}
               >
                 <a href={getCategoryUrl(category)} data-testid={`card-category-${category.slug}`}>
-                  <Card className="group h-full cursor-pointer border border-gray-200 hover:border-[#4CC9FE] hover:shadow-lg transition-all duration-200 bg-white">
+                  <Card className="group h-full cursor-pointer border border-gray-200 hover:border-[#37AFE1] hover:shadow-lg transition-all duration-200 bg-white">
                     <CardContent className="p-6 md:p-8 flex flex-col items-center text-center h-full">
-                      <div className="w-20 h-20 rounded-md bg-[#4CC9FE]/10 flex items-center justify-center mb-5 group-hover:bg-[#4CC9FE] transition-colors duration-200">
-                        <div className="text-[#4CC9FE] group-hover:text-white transition-colors duration-200">
+                      <div className="w-20 h-20 rounded-md bg-[#37AFE1]/10 flex items-center justify-center mb-5 group-hover:bg-[#37AFE1] transition-colors duration-200">
+                        <div className="text-[#37AFE1] group-hover:text-white transition-colors duration-200">
                           {categoryIcons[category.slug] || <Printer className="w-10 h-10" />}
                         </div>
                       </div>
-                      <h3 className="text-lg font-bold mb-2 text-black group-hover:text-[#4CC9FE] transition-colors">{category.name}</h3>
+                      <h3 className="text-lg font-bold mb-2 text-black group-hover:text-[#37AFE1] transition-colors">{category.name}</h3>
                       <p className="text-sm text-gray-600">{categoryDescriptions[category.slug]}</p>
-                      <div className="mt-4 flex items-center text-[#4CC9FE] text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity">
+                      <div className="mt-4 flex items-center text-[#37AFE1] text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity">
                         Shop Now <ArrowRight className="w-4 h-4 ml-1" />
                       </div>
                     </CardContent>
@@ -240,7 +240,7 @@ export default function Home() {
             viewport={{ once: true }}
             className="text-center mb-12 md:mb-16"
           >
-            <span className="inline-block text-[#4CC9FE] font-semibold text-sm uppercase tracking-wider mb-4">Featured Products</span>
+            <span className="inline-block text-[#37AFE1] font-semibold text-sm uppercase tracking-wider mb-4">Featured Products</span>
             <h2 className="text-4xl md:text-5xl font-extrabold mb-6 text-black">Top Picks from Each Category</h2>
             <p className="text-gray-600 text-lg max-w-2xl mx-auto">
               Discover our best-selling products handpicked for quality and performance
@@ -276,7 +276,7 @@ export default function Home() {
                           data-testid={`img-product-${product.productId}`}
                         />
                         <div className="absolute top-4 left-4">
-                          <span className="bg-[#4CC9FE] text-white text-xs font-semibold px-3 py-1.5 rounded-md">
+                          <span className="bg-[#37AFE1] text-white text-xs font-semibold px-3 py-1.5 rounded-md">
                             {category?.name || product.categorySlug.replace('-', ' ')}
                           </span>
                         </div>
@@ -295,14 +295,14 @@ export default function Home() {
                             key={i} 
                             className="inline-flex items-center gap-1.5 bg-gray-50 border border-gray-200 text-sm text-black px-4 py-2 rounded-md"
                           >
-                            <CheckCircle2 className="w-4 h-4 text-[#4CC9FE]" />
+                            <CheckCircle2 className="w-4 h-4 text-[#37AFE1]" />
                             {feature}
                           </span>
                         ))}
                       </div>
 
                       <div className="flex items-center pt-4">
-                        <Button asChild className="bg-[#4CC9FE] hover:bg-[#3ab8ed] text-white">
+                        <Button asChild className="bg-[#37AFE1] hover:bg-[#3ab8ed] text-white">
                           <a href={product.productUrl} data-testid={`button-view-${product.productId}`}>
                             View Product
                             <ArrowRight className="ml-2 w-4 h-4" />
@@ -326,7 +326,7 @@ export default function Home() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
             >
-              <span className="inline-block text-[#4CC9FE] font-semibold text-sm uppercase tracking-wider mb-4">Why Choose Us</span>
+              <span className="inline-block text-[#37AFE1] font-semibold text-sm uppercase tracking-wider mb-4">Why Choose Us</span>
               <h2 className="text-4xl md:text-5xl font-extrabold mb-6 text-black">Built for Professionals</h2>
               <p className="text-gray-600 text-lg mb-12 md:mb-16">
                 We partner with leading brands to bring you the best printing technology at competitive prices
@@ -347,7 +347,7 @@ export default function Home() {
                   transition={{ delay: i * 0.1 }}
                   className="p-8 md:p-10 bg-white rounded-md border border-gray-200"
                 >
-                  <div className="text-5xl font-extrabold text-[#4CC9FE] mb-3">{stat.number}</div>
+                  <div className="text-5xl font-extrabold text-[#37AFE1] mb-3">{stat.number}</div>
                   <div className="text-gray-600 font-medium">{stat.label}</div>
                 </motion.div>
               ))}
@@ -356,7 +356,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-16 md:py-24 bg-[#4CC9FE]">
+      <section className="py-16 md:py-24 bg-[#37AFE1]">
         <div className="container mx-auto px-6 sm:px-8 lg:px-12 text-center max-w-3xl">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

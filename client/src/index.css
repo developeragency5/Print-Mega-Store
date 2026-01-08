@@ -5,11 +5,11 @@
 @tailwind utilities;
 
 :root {
-  /* Primary Cyan #4CC9FE */
-  --primary: 192 99% 65%;
+  /* Primary Cyan #37AFE1 */
+  --primary: 197 75% 55%;
   --primary-foreground: 0 0% 100%;
-  --primary-light: 192 99% 75%;
-  --primary-dark: 192 99% 55%;
+  --primary-light: 197 75% 65%;
+  --primary-dark: 197 75% 45%;
 
   /* White background with black text */
   --foreground: 0 0% 0%;
@@ -32,7 +32,7 @@
   --muted: 0 0% 96%;
   --muted-foreground: 0 0% 40%;
   
-  --accent: 192 99% 95%;
+  --accent: 197 75% 95%;
   --accent-foreground: 0 0% 0%;
   
   --destructive: 0 84% 60%;
@@ -40,7 +40,7 @@
 
   --border: 0 0% 90%;
   --input: 0 0% 90%;
-  --ring: 192 99% 65%;
+  --ring: 197 75% 55%;
   
   --radius: 0.375rem;
 
@@ -106,7 +106,7 @@
   }
 
   .gradient-primary {
-    background: linear-gradient(135deg, hsl(192 99% 65%) 0%, hsl(192 99% 55%) 100%);
+    background: linear-gradient(135deg, hsl(197 75% 55%) 0%, hsl(197 75% 45%) 100%);
   }
 
   .gradient-dark {
@@ -114,15 +114,15 @@
   }
 
   .gradient-hero {
-    background: linear-gradient(135deg, hsl(192 99% 60%) 0%, hsl(192 99% 70%) 50%, hsl(192 99% 55%) 100%);
+    background: linear-gradient(135deg, hsl(197 75% 50%) 0%, hsl(197 75% 60%) 50%, hsl(197 75% 45%) 100%);
   }
 
   .gradient-mesh {
     background: 
-      radial-gradient(at 40% 20%, hsl(192 99% 65% / 0.08) 0px, transparent 50%),
-      radial-gradient(at 80% 0%, hsl(192 99% 75% / 0.06) 0px, transparent 50%),
-      radial-gradient(at 0% 50%, hsl(192 99% 55% / 0.06) 0px, transparent 50%),
-      radial-gradient(at 80% 50%, hsl(192 99% 45% / 0.1) 0px, transparent 50%),
+      radial-gradient(at 40% 20%, hsl(197 75% 55% / 0.08) 0px, transparent 50%),
+      radial-gradient(at 80% 0%, hsl(197 75% 65% / 0.06) 0px, transparent 50%),
+      radial-gradient(at 0% 50%, hsl(197 75% 45% / 0.06) 0px, transparent 50%),
+      radial-gradient(at 80% 50%, hsl(197 75% 35% / 0.1) 0px, transparent 50%),
       radial-gradient(at 0% 100%, hsl(0 0% 50% / 0.06) 0px, transparent 50%);
   }
 
@@ -141,15 +141,15 @@
   }
 
   .btn-glow {
-    box-shadow: 0 0 20px hsl(192 99% 65% / 0.3), 0 0 60px hsl(192 99% 65% / 0.1);
+    box-shadow: 0 0 20px hsl(197 75% 55% / 0.3), 0 0 60px hsl(197 75% 55% / 0.1);
   }
 
   .btn-glow:hover {
-    box-shadow: 0 0 30px hsl(192 99% 65% / 0.5), 0 0 80px hsl(192 99% 65% / 0.2);
+    box-shadow: 0 0 30px hsl(197 75% 55% / 0.5), 0 0 80px hsl(197 75% 55% / 0.2);
   }
 
   .text-gradient {
-    background: linear-gradient(135deg, hsl(192 99% 75%) 0%, hsl(192 99% 55%) 100%);
+    background: linear-gradient(135deg, hsl(197 75% 65%) 0%, hsl(197 75% 45%) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -178,8 +178,8 @@
   }
 
   .border-glow {
-    box-shadow: 0 0 0 1px hsl(192 99% 65% / 0.2), 
-                inset 0 0 0 1px hsl(192 99% 65% / 0.1);
+    box-shadow: 0 0 0 1px hsl(197 75% 55% / 0.2), 
+                inset 0 0 0 1px hsl(197 75% 55% / 0.1);
   }
 
   .section-padding {
@@ -190,7 +190,7 @@
 /* Ecwid store styling overrides */
 [class*="ecwid"] .form-control__button--add-to-bag,
 [class*="ecwid"] .ec-store .form-control__button--add-to-bag {
-  background-color: hsl(192 99% 65%) !important;
+  background-color: #37AFE1 !important;
   border-radius: 0.375rem !important;
 }
 
