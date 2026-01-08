@@ -182,7 +182,45 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-16 md:py-24 bg-white">
+      <section className="py-16 md:py-24 bg-white" data-testid="about-section">
+        <div className="container mx-auto px-6 sm:px-8 lg:px-12">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="max-w-4xl mx-auto"
+          >
+            <div className="text-center mb-10">
+              <span className="inline-block text-[#37AFE1] font-semibold text-sm uppercase tracking-wider mb-4">About Print Mega Store</span>
+              <h2 className="text-4xl md:text-5xl font-extrabold mb-6 text-black">Your Independent Printing Solutions Destination</h2>
+            </div>
+            
+            <div className="prose prose-lg max-w-none text-gray-700 space-y-6">
+              <p>
+                Welcome to Print Mega Store, an independent online retailer dedicated to providing high-quality printing and scanning equipment for homes, offices, and businesses of all sizes. We are not affiliated with, sponsored by, or endorsed by any printer manufacturer. Instead, we operate as a standalone ecommerce destination committed to helping you find the right printing solution at competitive prices.
+              </p>
+              
+              <p>
+                Our curated catalog features a comprehensive selection of products across five main categories: Home Printers for everyday personal use, Office Printers built for professional environments and team productivity, Inkjet Printers ideal for vibrant photo printing and color documents, Laser Printers designed for fast and crisp monochrome output, and Document Scanners that help you digitize paperwork with precision and efficiency.
+              </p>
+              
+              <p>
+                Whether you are a remote worker setting up a home office, a small business owner looking to streamline document workflows, a creative professional who needs gallery-quality photo prints, or an enterprise team requiring high-volume printing capabilities, Print Mega Store offers equipment to match your specific requirements. We understand that every printing need is unique, which is why we provide detailed product information and specifications to help you make informed purchasing decisions.
+              </p>
+              
+              <p>
+                At Print Mega Store, we prioritize customer satisfaction through competitive pricing, secure checkout, and reliable shipping. Our goal is to simplify the process of finding and purchasing printing equipment online, saving you time while ensuring you receive products that meet your expectations. We believe that quality printing solutions should be accessible to everyone, from individual consumers to growing businesses.
+              </p>
+              
+              <p className="text-sm text-gray-500 border-t border-gray-200 pt-6 mt-8">
+                <strong>Trademark Disclaimer:</strong> Manufacturer brand names, logos, and trademarks referenced on this website are the registered property of their respective owners. Print Mega Store is an independent retailer and is not affiliated with, authorized by, or sponsored by any manufacturer. Any brand name designations or references are made solely for purposes of demonstrating product compatibility and identification.
+              </p>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      <section className="py-16 md:py-24 bg-gray-50">
         <div className="container mx-auto px-6 sm:px-8 lg:px-12">
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
@@ -193,7 +231,7 @@ export default function Home() {
             <span className="inline-block text-[#37AFE1] font-semibold text-sm uppercase tracking-wider mb-4">Browse Categories</span>
             <h2 className="text-4xl md:text-5xl font-extrabold mb-6 text-black">Find Your Perfect Match</h2>
             <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-              Explore our carefully curated selection of professional printing solutions
+              Explore our selection of professional printing solutions across five product categories
             </p>
           </motion.div>
 
@@ -318,7 +356,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-16 md:py-24 bg-gray-50">
+      <section className="py-16 md:py-24 bg-white">
         <div className="container mx-auto px-6 sm:px-8 lg:px-12">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
@@ -327,17 +365,17 @@ export default function Home() {
               viewport={{ once: true }}
             >
               <span className="inline-block text-[#37AFE1] font-semibold text-sm uppercase tracking-wider mb-4">Why Choose Us</span>
-              <h2 className="text-4xl md:text-5xl font-extrabold mb-6 text-black">Built for Professionals</h2>
+              <h2 className="text-4xl md:text-5xl font-extrabold mb-6 text-black">Your Trusted Independent Retailer</h2>
               <p className="text-gray-600 text-lg mb-12 md:mb-16">
-                We partner with leading brands to bring you the best printing technology at competitive prices
+                We offer a wide selection of printing equipment with competitive pricing and reliable customer service
               </p>
             </motion.div>
 
             <div className="grid md:grid-cols-3 gap-6 md:gap-8">
               {[
-                { number: "10K+", label: "Happy Customers" },
-                { number: "500+", label: "Products Available" },
-                { number: "99%", label: "Satisfaction Rate" },
+                { number: "5", label: "Product Categories" },
+                { number: "100%", label: "Secure Checkout" },
+                { number: "24/7", label: "Customer Support" },
               ].map((stat, i) => (
                 <motion.div
                   key={i}
@@ -345,7 +383,7 @@ export default function Home() {
                   whileInView={{ opacity: 1, scale: 1 }}
                   viewport={{ once: true }}
                   transition={{ delay: i * 0.1 }}
-                  className="p-8 md:p-10 bg-white rounded-md border border-gray-200"
+                  className="p-8 md:p-10 bg-gray-50 rounded-md border border-gray-200"
                 >
                   <div className="text-5xl font-extrabold text-[#37AFE1] mb-3">{stat.number}</div>
                   <div className="text-gray-600 font-medium">{stat.label}</div>

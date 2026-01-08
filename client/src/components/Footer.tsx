@@ -33,8 +33,8 @@ export function Footer() {
                 </span>
               </Link>
               <p className="text-base leading-relaxed text-gray-400 max-w-sm">
-                Your trusted destination for professional printing solutions. 
-                Quality products, competitive prices, and expert support since 2020.
+                Your independent online destination for professional printing and scanning equipment. 
+                Quality products, competitive prices, and reliable customer service.
               </p>
               <div className="flex gap-3 pt-2">
                 {[
@@ -143,11 +143,18 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="py-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4">
+        <div className="py-6 border-t border-white/10">
+          <p className="text-xs text-gray-500 text-center mb-4 max-w-4xl mx-auto">
+            Manufacturer brand names, logos, and trademarks are the registered property of their respective owners. 
+            Print Mega Store is an independent retailer and is not affiliated with, authorized by, or sponsored by any manufacturer. 
+            Brand references are made solely for purposes of product identification and compatibility.
+          </p>
+        </div>
+        <div className="py-6 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-sm text-gray-500">
             &copy; {new Date().getFullYear()} Print Mega Store. All rights reserved.
           </p>
-          <div className="flex gap-6 text-sm text-gray-500">
+          <div className="flex flex-wrap justify-center gap-6 text-sm text-gray-500">
             <a href="#" className="hover:text-primary transition-colors">Privacy Policy</a>
             <a href="#" className="hover:text-primary transition-colors">Terms of Service</a>
             <a href="#" className="hover:text-primary transition-colors">Cookie Policy</a>
