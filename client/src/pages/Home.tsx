@@ -14,7 +14,11 @@ import {
   ThumbsUp,
   Smile,
   BadgeCheck,
-  Mail
+  Mail,
+  Award,
+  Users,
+  Clock,
+  Heart
 } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { useCreateSubscriber } from "@/hooks/use-subscribers";
@@ -794,7 +798,72 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-16 md:py-24 bg-white" data-testid="newsletter-section">
+      <section className="py-16 md:py-24 bg-white" data-testid="what-sets-us-apart-section">
+        <div className="container mx-auto px-6 sm:px-8 lg:px-12">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-12"
+          >
+            <span className="inline-block text-[#37AFE1] font-semibold text-sm uppercase tracking-wider mb-4">Our Commitment</span>
+            <h2 className="text-3xl md:text-4xl font-extrabold text-black mb-4">What Sets Us Apart</h2>
+            <p className="text-gray-600 text-lg max-w-2xl mx-auto">
+              Experience the Print Mega Store difference with our dedication to quality, service, and customer satisfaction.
+            </p>
+          </motion.div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+            {[
+              {
+                icon: <Award className="w-8 h-8" />,
+                title: "Curated Selection",
+                desc: "Every product in our catalog is carefully selected to ensure quality and reliability for your printing needs.",
+                color: "from-[#37AFE1] to-[#2d8bb8]"
+              },
+              {
+                icon: <Users className="w-8 h-8" />,
+                title: "Expert Guidance",
+                desc: "Our knowledgeable team helps you find the perfect printer or scanner based on your specific requirements.",
+                color: "from-purple-500 to-purple-600"
+              },
+              {
+                icon: <Clock className="w-8 h-8" />,
+                title: "Quick Processing",
+                desc: "We process orders promptly to ensure your new printing equipment arrives when you need it most.",
+                color: "from-green-500 to-green-600"
+              },
+              {
+                icon: <Heart className="w-8 h-8" />,
+                title: "Customer First",
+                desc: "Your satisfaction is our priority. We go above and beyond to ensure a seamless shopping experience.",
+                color: "from-pink-500 to-pink-600"
+              },
+            ].map((item, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.1 }}
+                whileHover={{ y: -8, boxShadow: "0 20px 40px rgba(0,0,0,0.1)" }}
+                className="bg-gray-50 rounded-xl p-8 cursor-pointer group text-center"
+              >
+                <motion.div 
+                  whileHover={{ scale: 1.1, rotate: 5 }}
+                  className={`w-16 h-16 rounded-xl bg-gradient-to-br ${item.color} flex items-center justify-center shadow-lg mx-auto mb-6`}
+                >
+                  <span className="text-white">{item.icon}</span>
+                </motion.div>
+                <h3 className="text-xl font-bold text-black mb-3 group-hover:text-[#37AFE1] transition-colors">{item.title}</h3>
+                <p className="text-gray-600 leading-relaxed">{item.desc}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-16 md:py-24 bg-gradient-to-br from-gray-50 to-[#37AFE1]/5" data-testid="newsletter-section">
         <div className="container mx-auto px-6 sm:px-8 lg:px-12">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -802,9 +871,12 @@ export default function Home() {
             viewport={{ once: true }}
             className="max-w-2xl mx-auto text-center"
           >
-            <div className="w-16 h-16 bg-[#37AFE1]/10 rounded-full flex items-center justify-center mx-auto mb-6">
-              <Mail className="w-8 h-8 text-[#37AFE1]" />
-            </div>
+            <motion.div 
+              whileHover={{ scale: 1.05, rotate: 5 }}
+              className="w-16 h-16 bg-gradient-to-br from-[#37AFE1] to-[#2d8bb8] rounded-xl flex items-center justify-center mx-auto mb-6 shadow-lg"
+            >
+              <Mail className="w-8 h-8 text-white" />
+            </motion.div>
             <h2 className="text-3xl md:text-4xl font-extrabold text-black mb-4">
               Subscribe to Our Newsletter
             </h2>
