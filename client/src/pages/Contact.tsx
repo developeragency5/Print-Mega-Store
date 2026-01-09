@@ -110,7 +110,7 @@ export default function Contact() {
             animate={{ opacity: 1, y: 0 }}
             className="text-center mb-16"
           >
-            <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-br from-[#37AFE1] to-[#2d8bb8] mb-6">
+            <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-br from-[#FFD93D] to-[#E6C135] mb-6">
               <Mail className="w-10 h-10 text-white" />
             </div>
             <h1 className="text-4xl md:text-5xl font-extrabold text-black mb-4" data-testid="heading-contact">
@@ -141,7 +141,7 @@ export default function Contact() {
                       <p className="text-sm text-gray-500 mb-2">{item.subtitle}</p>
                       <a 
                         href={item.href} 
-                        className="text-[#37AFE1] hover:underline font-medium"
+                        className="text-[#FFD93D] hover:underline font-medium"
                         data-testid={`link-contact-${item.title.toLowerCase().replace(/\s+/g, '-')}`}
                       >
                         {item.content}
@@ -151,7 +151,7 @@ export default function Contact() {
                 </Card>
               ))}
 
-              <div className="bg-gradient-to-br from-[#37AFE1]/10 to-[#37AFE1]/5 rounded-xl p-6 border border-[#37AFE1]/20 mt-8">
+              <div className="bg-gradient-to-br from-[#FFD93D]/10 to-[#FFD93D]/5 rounded-xl p-6 border border-[#FFD93D]/20 mt-8">
                 <h3 className="font-bold text-black mb-2">Business Hours</h3>
                 <div className="space-y-2 text-gray-600">
                   <p className="flex justify-between">
@@ -176,7 +176,7 @@ export default function Contact() {
               transition={{ delay: 0.2 }}
             >
               <Card className="shadow-xl border-0 rounded-3xl overflow-hidden">
-                <div className="p-8 pb-4 bg-gradient-to-br from-[#37AFE1] to-[#2d8bb8]">
+                <div className="p-8 pb-4 bg-gradient-to-br from-[#FFD93D] to-[#E6C135]">
                   <h2 className="text-2xl font-bold text-white flex items-center gap-3">
                     <Send className="w-6 h-6" />
                     Send us a Message
@@ -245,7 +245,7 @@ export default function Contact() {
 
                       <Button 
                         type="submit" 
-                        className="w-full h-14 text-base font-semibold rounded-xl bg-gradient-to-r from-[#37AFE1] to-[#2d8bb8] hover:from-[#2d8bb8] hover:to-[#37AFE1] transition-all duration-300"
+                        className="w-full h-14 text-base font-semibold rounded-xl bg-gradient-to-r from-[#FFD93D] to-[#E6C135] hover:from-[#E6C135] hover:to-[#FFD93D] transition-all duration-300"
                         disabled={createMessage.isPending}
                         data-testid="button-submit-contact"
                       >
@@ -332,7 +332,7 @@ export default function Contact() {
 
               <div className="text-center mt-8 pt-6 border-t border-gray-100">
                 <p className="text-gray-600 mb-4">Still have questions?</p>
-                <Button asChild className="bg-gradient-to-r from-[#37AFE1] to-[#2d8bb8] hover:from-[#2d8bb8] hover:to-[#37AFE1]">
+                <Button asChild className="bg-gradient-to-r from-[#FFD93D] to-[#E6C135] hover:from-[#E6C135] hover:to-[#FFD93D]">
                   <a href="mailto:info@printmegastore.com">
                     Email Us Directly
                   </a>

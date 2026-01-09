@@ -87,9 +87,9 @@ export function Header() {
           <div className="flex h-16 items-center justify-between gap-4">
             {/* Logo */}
             <Link href="/" className="flex items-center gap-2 shrink-0 group" data-testid="link-logo">
-              <Printer className="w-8 h-8 text-[#37AFE1]" />
+              <Printer className="w-8 h-8 text-[#FFD93D]" />
               <span className="text-xl font-bold tracking-tight">
-                <span className="text-gray-900">PRINT</span> <span className="text-[#37AFE1]">MEGA</span> <span className="text-gray-900">STORE</span>
+                <span className="text-gray-900">PRINT</span> <span className="text-[#FFD93D]">MEGA</span> <span className="text-gray-900">STORE</span>
               </span>
             </Link>
 

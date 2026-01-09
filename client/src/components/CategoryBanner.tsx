@@ -99,7 +99,7 @@ export function CategoryBanner() {
           </p>
           <button
             onClick={scrollToProducts}
-            className="inline-flex items-center gap-2 bg-[#37AFE1] text-white px-6 py-3 rounded-lg font-medium hover:bg-[#2d8bb8] transition-all"
+            className="inline-flex items-center gap-2 bg-[#FFD93D] text-white px-6 py-3 rounded-lg font-medium hover:bg-[#E6C135] transition-all"
             data-testid="category-banner-browse-button"
           >
             Browse Collection

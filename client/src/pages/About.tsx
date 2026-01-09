@@ -12,7 +12,7 @@ export default function About() {
             className="max-w-4xl mx-auto"
           >
             <div className="text-center mb-12">
-              <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-br from-[#37AFE1] to-[#2d8bb8] mb-6">
+              <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-br from-[#FFD93D] to-[#E6C135] mb-6">
                 <Printer className="w-10 h-10 text-white" />
               </div>
               <h1 className="text-4xl md:text-5xl font-extrabold text-black mb-4" data-testid="heading-about">
@@ -88,9 +88,9 @@ export default function About() {
 
               <section>
                 <h2 className="text-2xl font-bold text-black mb-4">Our Mission</h2>
-                <div className="bg-gradient-to-br from-[#37AFE1]/10 to-[#37AFE1]/5 rounded-xl p-8 border border-[#37AFE1]/20">
+                <div className="bg-gradient-to-br from-[#FFD93D]/10 to-[#FFD93D]/5 rounded-xl p-8 border border-[#FFD93D]/20">
                   <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[#37AFE1] to-[#2d8bb8] flex items-center justify-center shrink-0">
+                    <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[#FFD93D] to-[#E6C135] flex items-center justify-center shrink-0">
                       <Target className="w-6 h-6 text-white" />
                     </div>
                     <div>

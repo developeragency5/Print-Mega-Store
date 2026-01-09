@@ -101,7 +101,7 @@ export default function Privacy() {
                   <li><strong>Functional Cookies:</strong> Remember your preferences and settings for a personalized experience.</li>
                 </ul>
                 <p>
-                  You can control cookie preferences through your browser settings. Please note that disabling certain cookies may affect the functionality of our website. For more information, please see our <a href="/cookies" className="text-[#37AFE1] hover:underline">Cookie Policy</a>.
+                  You can control cookie preferences through your browser settings. Please note that disabling certain cookies may affect the functionality of our website. For more information, please see our <a href="/cookies" className="text-[#FFD93D] hover:underline">Cookie Policy</a>.
                 </p>
               </section>
 
@@ -112,7 +112,7 @@ export default function Privacy() {
                 </p>
                 <p className="mb-4"><strong>Analytics tools we use:</strong></p>
                 <ul className="list-disc pl-6 space-y-2">
-                  <li><strong>Google Analytics:</strong> We use Google Analytics to analyze website traffic and user behavior. Google Analytics uses cookies to collect anonymous data about your visit. For more information, see <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" className="text-[#37AFE1] hover:underline">Google's Privacy Policy</a>.</li>
+                  <li><strong>Google Analytics:</strong> We use Google Analytics to analyze website traffic and user behavior. Google Analytics uses cookies to collect anonymous data about your visit. For more information, see <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" className="text-[#FFD93D] hover:underline">Google's Privacy Policy</a>.</li>
                   <li><strong>Google Tag Manager:</strong> Used to manage website tags and tracking scripts efficiently.</li>
                 </ul>
               </section>
@@ -124,16 +124,16 @@ export default function Privacy() {
                 </p>
                 <p className="mb-4"><strong>Advertising platforms we use:</strong></p>
                 <ul className="list-disc pl-6 space-y-2 mb-4">
-                  <li><strong>Microsoft Advertising (Bing Ads):</strong> We use Microsoft Advertising to display ads on Microsoft properties and partner sites. Microsoft may collect data about your visits to serve relevant ads. For more information, see <a href="https://privacy.microsoft.com/en-us/privacystatement" target="_blank" rel="noopener noreferrer" className="text-[#37AFE1] hover:underline">Microsoft's Privacy Statement</a>.</li>
-                  <li><strong>Google Ads:</strong> We use Google Ads for search and display advertising. Google may use cookies to serve ads based on your prior visits. For more information, see <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" className="text-[#37AFE1] hover:underline">Google's Privacy Policy</a>.</li>
-                  <li><strong>Meta (Facebook) Pixel:</strong> We use Meta Pixel to measure ad effectiveness and serve targeted ads on Facebook and Instagram. For more information, see <a href="https://www.facebook.com/privacy/policy/" target="_blank" rel="noopener noreferrer" className="text-[#37AFE1] hover:underline">Meta's Privacy Policy</a>.</li>
+                  <li><strong>Microsoft Advertising (Bing Ads):</strong> We use Microsoft Advertising to display ads on Microsoft properties and partner sites. Microsoft may collect data about your visits to serve relevant ads. For more information, see <a href="https://privacy.microsoft.com/en-us/privacystatement" target="_blank" rel="noopener noreferrer" className="text-[#FFD93D] hover:underline">Microsoft's Privacy Statement</a>.</li>
+                  <li><strong>Google Ads:</strong> We use Google Ads for search and display advertising. Google may use cookies to serve ads based on your prior visits. For more information, see <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" className="text-[#FFD93D] hover:underline">Google's Privacy Policy</a>.</li>
+                  <li><strong>Meta (Facebook) Pixel:</strong> We use Meta Pixel to measure ad effectiveness and serve targeted ads on Facebook and Instagram. For more information, see <a href="https://www.facebook.com/privacy/policy/" target="_blank" rel="noopener noreferrer" className="text-[#FFD93D] hover:underline">Meta's Privacy Policy</a>.</li>
                 </ul>
                 <p className="mb-4"><strong>Opting Out of Personalized Advertising:</strong></p>
                 <ul className="list-disc pl-6 space-y-2">
-                  <li>Google: <a href="https://adssettings.google.com" target="_blank" rel="noopener noreferrer" className="text-[#37AFE1] hover:underline">Google Ad Settings</a></li>
-                  <li>Microsoft: <a href="https://account.microsoft.com/privacy/ad-settings" target="_blank" rel="noopener noreferrer" className="text-[#37AFE1] hover:underline">Microsoft Privacy Dashboard</a></li>
-                  <li>Meta: <a href="https://www.facebook.com/settings?tab=ads" target="_blank" rel="noopener noreferrer" className="text-[#37AFE1] hover:underline">Facebook Ad Preferences</a></li>
-                  <li>Industry-wide opt-out: <a href="https://optout.aboutads.info" target="_blank" rel="noopener noreferrer" className="text-[#37AFE1] hover:underline">Digital Advertising Alliance</a></li>
+                  <li>Google: <a href="https://adssettings.google.com" target="_blank" rel="noopener noreferrer" className="text-[#FFD93D] hover:underline">Google Ad Settings</a></li>
+                  <li>Microsoft: <a href="https://account.microsoft.com/privacy/ad-settings" target="_blank" rel="noopener noreferrer" className="text-[#FFD93D] hover:underline">Microsoft Privacy Dashboard</a></li>
+                  <li>Meta: <a href="https://www.facebook.com/settings?tab=ads" target="_blank" rel="noopener noreferrer" className="text-[#FFD93D] hover:underline">Facebook Ad Preferences</a></li>
+                  <li>Industry-wide opt-out: <a href="https://optout.aboutads.info" target="_blank" rel="noopener noreferrer" className="text-[#FFD93D] hover:underline">Digital Advertising Alliance</a></li>
                 </ul>
               </section>
 
@@ -150,7 +150,7 @@ export default function Privacy() {
                   <li>Withdraw consent where processing is based on consent</li>
                 </ul>
                 <p className="mt-4">
-                  To exercise any of these rights, please contact us at info@printmegastore.com. California residents may also visit our <a href="/do-not-sell" className="text-[#37AFE1] hover:underline">Do Not Sell My Personal Information</a> page.
+                  To exercise any of these rights, please contact us at info@printmegastore.com. California residents may also visit our <a href="/do-not-sell" className="text-[#FFD93D] hover:underline">Do Not Sell My Personal Information</a> page.
                 </p>
               </section>
 
@@ -166,7 +166,7 @@ export default function Privacy() {
                   <li><strong>Right to Non-Discrimination:</strong> We will not discriminate against you for exercising your privacy rights.</li>
                 </ul>
                 <p className="mt-4">
-                  For more information, please visit our <a href="/do-not-sell" className="text-[#37AFE1] hover:underline">Do Not Sell My Personal Information</a> page.
+                  For more information, please visit our <a href="/do-not-sell" className="text-[#FFD93D] hover:underline">Do Not Sell My Personal Information</a> page.
                 </p>
               </section>
 

@@ -71,7 +71,7 @@ export default function DoNotSell() {
                 <p className="mb-4">
                   Contact us directly to opt out of the sale or sharing of your personal information:
                 </p>
-                <div className="bg-[#37AFE1]/10 rounded-xl p-6 mb-6">
+                <div className="bg-[#FFD93D]/10 rounded-xl p-6 mb-6">
                   <p className="mb-4">
                     <strong>Email:</strong> info@printmegastore.com<br />
                     <strong>Subject Line:</strong> "Do Not Sell My Personal Information"
@@ -84,7 +84,7 @@ export default function DoNotSell() {
                     <li>Request to opt out of sale/sharing of personal information</li>
                   </ul>
                 </div>
-                <Button asChild className="bg-[#37AFE1] hover:bg-[#2d8bb8] text-white mb-6">
+                <Button asChild className="bg-[#FFD93D] hover:bg-[#E6C135] text-white mb-6">
                   <a href="mailto:info@printmegastore.com?subject=Do%20Not%20Sell%20My%20Personal%20Information">
                     Submit Opt-Out Request via Email
                   </a>
@@ -95,9 +95,9 @@ export default function DoNotSell() {
                   You can also opt out directly with our advertising partners:
                 </p>
                 <ul className="list-disc pl-6 space-y-2">
-                  <li><strong>Google:</strong> <a href="https://adssettings.google.com" target="_blank" rel="noopener noreferrer" className="text-[#37AFE1] hover:underline">Google Ad Settings</a></li>
-                  <li><strong>Microsoft:</strong> <a href="https://account.microsoft.com/privacy/ad-settings" target="_blank" rel="noopener noreferrer" className="text-[#37AFE1] hover:underline">Microsoft Privacy Dashboard</a></li>
-                  <li><strong>Meta (Facebook):</strong> <a href="https://www.facebook.com/settings?tab=ads" target="_blank" rel="noopener noreferrer" className="text-[#37AFE1] hover:underline">Facebook Ad Preferences</a></li>
+                  <li><strong>Google:</strong> <a href="https://adssettings.google.com" target="_blank" rel="noopener noreferrer" className="text-[#FFD93D] hover:underline">Google Ad Settings</a></li>
+                  <li><strong>Microsoft:</strong> <a href="https://account.microsoft.com/privacy/ad-settings" target="_blank" rel="noopener noreferrer" className="text-[#FFD93D] hover:underline">Microsoft Privacy Dashboard</a></li>
+                  <li><strong>Meta (Facebook):</strong> <a href="https://www.facebook.com/settings?tab=ads" target="_blank" rel="noopener noreferrer" className="text-[#FFD93D] hover:underline">Facebook Ad Preferences</a></li>
                 </ul>
 
                 <h3 className="text-xl font-semibold text-black mb-3 mt-6">Option 3: Industry Opt-Out Tools</h3>
@@ -105,8 +105,8 @@ export default function DoNotSell() {
                   Use these industry-wide opt-out tools to limit targeted advertising across multiple companies:
                 </p>
                 <ul className="list-disc pl-6 space-y-2">
-                  <li><a href="https://optout.aboutads.info" target="_blank" rel="noopener noreferrer" className="text-[#37AFE1] hover:underline">Digital Advertising Alliance (DAA)</a></li>
-                  <li><a href="https://www.networkadvertising.org/choices/" target="_blank" rel="noopener noreferrer" className="text-[#37AFE1] hover:underline">Network Advertising Initiative (NAI)</a></li>
+                  <li><a href="https://optout.aboutads.info" target="_blank" rel="noopener noreferrer" className="text-[#FFD93D] hover:underline">Digital Advertising Alliance (DAA)</a></li>
+                  <li><a href="https://www.networkadvertising.org/choices/" target="_blank" rel="noopener noreferrer" className="text-[#FFD93D] hover:underline">Network Advertising Initiative (NAI)</a></li>
                 </ul>
 
                 <h3 className="text-xl font-semibold text-black mb-3 mt-6">Option 4: Global Privacy Control</h3>
@@ -155,7 +155,7 @@ export default function DoNotSell() {
                   <li><strong>Right to Limit Use of Sensitive Personal Information:</strong> You can limit our use of sensitive personal information.</li>
                 </ul>
                 <p className="mt-4">
-                  For more information about your privacy rights, please see our <a href="/privacy" className="text-[#37AFE1] hover:underline">Privacy Policy</a>.
+                  For more information about your privacy rights, please see our <a href="/privacy" className="text-[#FFD93D] hover:underline">Privacy Policy</a>.
                 </p>
               </section>
 

@@ -5,7 +5,7 @@
 @tailwind utilities;
 
 :root {
-  /* Primary Cyan #37AFE1 */
+  /* Primary Cyan #FFD93D */
   --primary: 197 75% 55%;
   --primary-foreground: 0 0% 100%;
   --primary-light: 197 75% 65%;
@@ -190,7 +190,7 @@
 /* Ecwid store styling overrides */
 [class*="ecwid"] .form-control__button--add-to-bag,
 [class*="ecwid"] .ec-store .form-control__button--add-to-bag {
-  background-color: #37AFE1 !important;
+  background-color: #FFD93D !important;
   border-radius: 0.375rem !important;
 }
 

@@ -25,9 +25,9 @@ export function Footer() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12">
             <div className="lg:col-span-4 space-y-6">
               <Link href="/" className="flex items-center gap-2">
-                <Printer className="w-8 h-8 text-[#37AFE1]" />
+                <Printer className="w-8 h-8 text-[#FFD93D]" />
                 <span className="text-xl font-bold tracking-tight">
-                  <span className="text-[#37AFE1]">PRINT MEGA</span> <span className="text-white">STORE</span>
+                  <span className="text-[#FFD93D]">PRINT MEGA</span> <span className="text-white">STORE</span>
                 </span>
               </Link>
               <p className="text-base leading-relaxed text-gray-400 max-w-sm">

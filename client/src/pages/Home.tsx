@@ -243,25 +243,25 @@ export default function Home() {
                 icon: <Truck className="w-7 h-7" />,
                 title: "Fast Shipping",
                 desc: "Quick delivery to your door",
-                color: "from-[#37AFE1] to-[#2d8bb8]",
+                color: "from-[#FFD93D] to-[#E6C135]",
               },
               {
                 icon: <Tag className="w-7 h-7" />,
                 title: "Best Prices",
                 desc: "Competitive rates guaranteed",
-                color: "from-[#37AFE1] to-[#2d8bb8]",
+                color: "from-[#FFD93D] to-[#E6C135]",
               },
               {
                 icon: <ShieldCheck className="w-7 h-7" />,
                 title: "Secure Checkout",
                 desc: "SSL encrypted payments",
-                color: "from-[#37AFE1] to-[#2d8bb8]",
+                color: "from-[#FFD93D] to-[#E6C135]",
               },
               {
                 icon: <BadgeCheck className="w-7 h-7" />,
                 title: "Trusted Shopping",
                 desc: "100% buyer protection",
-                color: "from-[#37AFE1] to-[#2d8bb8]",
+                color: "from-[#FFD93D] to-[#E6C135]",
               },
             ].map((benefit, i) => (
               <motion.div
@@ -301,7 +301,7 @@ export default function Home() {
             viewport={{ once: true }}
             className="text-center mb-12"
           >
-            <span className="inline-block text-[#37AFE1] font-semibold text-sm uppercase tracking-wider mb-4">
+            <span className="inline-block text-[#FFD93D] font-semibold text-sm uppercase tracking-wider mb-4">
               About Print Mega Store
             </span>
             <h2 className="text-4xl md:text-5xl font-extrabold mb-6 text-black">
@@ -333,7 +333,7 @@ export default function Home() {
               <div className="flex items-center gap-4 mb-6">
                 <motion.div
                   whileHover={{ scale: 1.1, rotate: 5 }}
-                  className="w-14 h-14 rounded-lg bg-gradient-to-br from-[#37AFE1] to-[#2d8bb8] flex items-center justify-center shadow-lg"
+                  className="w-14 h-14 rounded-lg bg-gradient-to-br from-[#FFD93D] to-[#E6C135] flex items-center justify-center shadow-lg"
                 >
                   <ShieldCheck className="w-7 h-7 text-white" />
                 </motion.div>
@@ -363,7 +363,7 @@ export default function Home() {
               <div className="flex items-center gap-4 mb-6">
                 <motion.div
                   whileHover={{ scale: 1.1, rotate: -5 }}
-                  className="w-14 h-14 rounded-lg bg-gradient-to-br from-[#37AFE1] to-[#2d8bb8] flex items-center justify-center shadow-lg"
+                  className="w-14 h-14 rounded-lg bg-gradient-to-br from-[#FFD93D] to-[#E6C135] flex items-center justify-center shadow-lg"
                 >
                   <Printer className="w-7 h-7 text-white" />
                 </motion.div>
@@ -395,7 +395,7 @@ export default function Home() {
               <div className="flex items-center gap-4 mb-6">
                 <motion.div
                   whileHover={{ scale: 1.1, rotate: 5 }}
-                  className="w-14 h-14 rounded-lg bg-gradient-to-br from-[#37AFE1] to-[#2d8bb8] flex items-center justify-center shadow-lg"
+                  className="w-14 h-14 rounded-lg bg-gradient-to-br from-[#FFD93D] to-[#E6C135] flex items-center justify-center shadow-lg"
                 >
                   <Briefcase className="w-7 h-7 text-white" />
                 </motion.div>
@@ -426,7 +426,7 @@ export default function Home() {
               <div className="flex items-center gap-4 mb-6">
                 <motion.div
                   whileHover={{ scale: 1.1, rotate: -5 }}
-                  className="w-14 h-14 rounded-lg bg-gradient-to-br from-[#37AFE1] to-[#2d8bb8] flex items-center justify-center shadow-lg"
+                  className="w-14 h-14 rounded-lg bg-gradient-to-br from-[#FFD93D] to-[#E6C135] flex items-center justify-center shadow-lg"
                 >
                   <Headphones className="w-7 h-7 text-white" />
                 </motion.div>
@@ -469,7 +469,7 @@ export default function Home() {
             viewport={{ once: true }}
             className="text-center mb-12 md:mb-16"
           >
-            <span className="inline-block text-[#37AFE1] font-semibold text-sm uppercase tracking-wider mb-4">
+            <span className="inline-block text-[#FFD93D] font-semibold text-sm uppercase tracking-wider mb-4">
               Shop By Category
             </span>
             <h2 className="text-4xl md:text-5xl font-extrabold mb-6 text-black">
@@ -499,22 +499,22 @@ export default function Home() {
                   href={getCategoryUrl(category)}
                   data-testid={`card-category-${category.slug}`}
                 >
-                  <Card className="group h-full cursor-pointer border border-gray-200 hover:border-[#37AFE1] hover:shadow-lg transition-all duration-200 bg-white">
+                  <Card className="group h-full cursor-pointer border border-gray-200 hover:border-[#FFD93D] hover:shadow-lg transition-all duration-200 bg-white">
                     <CardContent className="p-6 md:p-8 flex flex-col items-center text-center h-full">
-                      <div className="w-20 h-20 rounded-md bg-[#37AFE1]/10 flex items-center justify-center mb-5 group-hover:bg-[#37AFE1] transition-colors duration-200">
-                        <div className="text-[#37AFE1] group-hover:text-white transition-colors duration-200">
+                      <div className="w-20 h-20 rounded-md bg-[#FFD93D]/10 flex items-center justify-center mb-5 group-hover:bg-[#FFD93D] transition-colors duration-200">
+                        <div className="text-[#FFD93D] group-hover:text-white transition-colors duration-200">
                           {categoryIcons[category.slug] || (
                             <Printer className="w-10 h-10" />
                           )}
                         </div>
                       </div>
-                      <h3 className="text-lg font-bold mb-2 text-black group-hover:text-[#37AFE1] transition-colors">
+                      <h3 className="text-lg font-bold mb-2 text-black group-hover:text-[#FFD93D] transition-colors">
                         {category.name}
                       </h3>
                       <p className="text-sm text-gray-600">
                         {categoryDescriptions[category.slug]}
                       </p>
-                      <div className="mt-4 flex items-center text-[#37AFE1] text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity">
+                      <div className="mt-4 flex items-center text-[#FFD93D] text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity">
                         Shop Now <ArrowRight className="w-4 h-4 ml-1" />
                       </div>
                     </CardContent>
@@ -534,7 +534,7 @@ export default function Home() {
             viewport={{ once: true }}
             className="text-center mb-12 md:mb-16"
           >
-            <span className="inline-block text-[#37AFE1] font-semibold text-sm uppercase tracking-wider mb-4">
+            <span className="inline-block text-[#FFD93D] font-semibold text-sm uppercase tracking-wider mb-4">
               Featured Printers & Scanners
             </span>
             <h2 className="text-4xl md:text-5xl font-extrabold mb-6 text-black">
@@ -584,7 +584,7 @@ export default function Home() {
 
                   <div className={`${!isImageLeft ? "lg:order-1" : ""}`}>
                     <div className="space-y-4">
-                      <span className="inline-block text-xs font-semibold text-[#37AFE1] uppercase tracking-wider">
+                      <span className="inline-block text-xs font-semibold text-[#FFD93D] uppercase tracking-wider">
                         {category?.name ||
                           product.categorySlug.replace("-", " ")}
                       </span>
@@ -600,7 +600,7 @@ export default function Home() {
                       <div className="pt-4">
                         <Button
                           asChild
-                          className="bg-[#37AFE1] hover:bg-[#2d9bc7] text-white"
+                          className="bg-[#FFD93D] hover:bg-[#2d9bc7] text-white"
                         >
                           <a
                             href={product.productUrl}
@@ -631,7 +631,7 @@ export default function Home() {
             viewport={{ once: true }}
             className="text-center mb-12"
           >
-            <span className="inline-block text-[#37AFE1] font-semibold text-sm uppercase tracking-wider mb-4">
+            <span className="inline-block text-[#FFD93D] font-semibold text-sm uppercase tracking-wider mb-4">
               The Print Mega Store Advantage
             </span>
             <h2 className="text-3xl md:text-4xl font-extrabold text-black mb-4">
@@ -649,7 +649,7 @@ export default function Home() {
                 icon: <Printer className="w-8 h-8" />,
                 title: "Wide Selection of Printers",
                 desc: "From home inkjet printers to enterprise laser printers, we offer a comprehensive range of printing solutions. Find wireless printers, all-in-one multifunction printers, and specialized photo printers all in one place.",
-                color: "from-[#37AFE1] to-[#2d8bb8]",
+                color: "from-[#FFD93D] to-[#E6C135]",
               },
               {
                 icon: <ScanLine className="w-8 h-8" />,
@@ -697,7 +697,7 @@ export default function Home() {
                 >
                   <span className="text-white">{item.icon}</span>
                 </motion.div>
-                <h3 className="text-xl font-bold text-black mb-3 group-hover:text-[#37AFE1] transition-colors">
+                <h3 className="text-xl font-bold text-black mb-3 group-hover:text-[#FFD93D] transition-colors">
                   {item.title}
                 </h3>
                 <p className="text-gray-600 leading-relaxed">{item.desc}</p>
@@ -735,7 +735,7 @@ export default function Home() {
               {
                 icon: <ThumbsUp className="w-10 h-10" />,
                 label: "Customer Satisfaction is Our Priority",
-                color: "from-[#37AFE1] to-[#2d8bb8]",
+                color: "from-[#FFD93D] to-[#E6C135]",
               },
               {
                 icon: <Smile className="w-10 h-10" />,
@@ -763,7 +763,7 @@ export default function Home() {
                 >
                   <span className="text-white">{item.icon}</span>
                 </motion.div>
-                <p className="text-sm font-semibold text-gray-700 uppercase tracking-wide leading-relaxed group-hover:text-[#37AFE1] transition-colors">
+                <p className="text-sm font-semibold text-gray-700 uppercase tracking-wide leading-relaxed group-hover:text-[#FFD93D] transition-colors">
                   {item.label}
                 </p>
               </motion.div>
@@ -773,7 +773,7 @@ export default function Home() {
       </section>
 
       <section
-        className="py-16 md:py-24 bg-gradient-to-br from-[#37AFE1]/5 via-white to-purple-50"
+        className="py-16 md:py-24 bg-gradient-to-br from-[#FFD93D]/5 via-white to-purple-50"
         data-testid="seo-content-section"
       >
         <div className="container mx-auto px-6 sm:px-8 lg:px-12">
@@ -783,7 +783,7 @@ export default function Home() {
             viewport={{ once: true }}
             className="text-center mb-12"
           >
-            <span className="inline-block text-[#37AFE1] font-semibold text-sm uppercase tracking-wider mb-4">
+            <span className="inline-block text-[#FFD93D] font-semibold text-sm uppercase tracking-wider mb-4">
               Shop With Confidence
             </span>
             <h2 className="text-3xl md:text-4xl font-extrabold text-black mb-4">
@@ -801,7 +801,7 @@ export default function Home() {
                 icon: <Printer className="w-7 h-7" />,
                 title: "Home & Office Printers",
                 desc: "Our home printers are designed for families and remote workers who need reliable, compact devices. For larger teams, our office printers deliver high-volume printing with multifunction capabilities including printing, scanning, copying, and faxing.",
-                color: "from-[#37AFE1] to-[#2d8bb8]",
+                color: "from-[#FFD93D] to-[#E6C135]",
               },
               {
                 icon: <FileText className="w-7 h-7" />,
@@ -841,7 +841,7 @@ export default function Home() {
                   <span className="text-white">{item.icon}</span>
                 </motion.div>
                 <div>
-                  <h3 className="text-xl font-bold text-black mb-2 group-hover:text-[#37AFE1] transition-colors">
+                  <h3 className="text-xl font-bold text-black mb-2 group-hover:text-[#FFD93D] transition-colors">
                     {item.title}
                   </h3>
                   <p className="text-gray-600 leading-relaxed">{item.desc}</p>
@@ -856,7 +856,7 @@ export default function Home() {
             viewport={{ once: true }}
             className="text-center"
           >
-            <p className="text-lg font-medium text-black bg-[#37AFE1]/10 rounded-xl py-4 px-6 inline-block">
+            <p className="text-lg font-medium text-black bg-[#FFD93D]/10 rounded-xl py-4 px-6 inline-block">
               Shop today and discover why thousands of customers trust Print
               Mega Store for their printing and scanning needs.
             </p>
@@ -875,7 +875,7 @@ export default function Home() {
             viewport={{ once: true }}
             className="text-center mb-12"
           >
-            <span className="inline-block text-[#37AFE1] font-semibold text-sm uppercase tracking-wider mb-4">
+            <span className="inline-block text-[#FFD93D] font-semibold text-sm uppercase tracking-wider mb-4">
               Printer Buying Guide
             </span>
             <h2 className="text-3xl md:text-4xl font-extrabold text-black mb-4">
@@ -899,7 +899,7 @@ export default function Home() {
                 step: "02",
                 title: "Documents & Reports",
                 desc: "If your primary need is printing text documents, reports, or business correspondence, a monochrome laser printer offers the best value with sharp, smudge-free text and lower cost per page.",
-                color: "from-[#37AFE1] to-[#2d8bb8]",
+                color: "from-[#FFD93D] to-[#E6C135]",
               },
               {
                 step: "03",
@@ -925,7 +925,7 @@ export default function Home() {
                   </span>
                 </div>
                 <div className="pt-6">
-                  <h3 className="text-xl font-bold text-black mb-3 group-hover:text-[#37AFE1] transition-colors">
+                  <h3 className="text-xl font-bold text-black mb-3 group-hover:text-[#FFD93D] transition-colors">
                     {item.title}
                   </h3>
                   <p className="text-gray-600 leading-relaxed">{item.desc}</p>
@@ -946,7 +946,7 @@ export default function Home() {
                 <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-indigo-500 to-indigo-600 flex items-center justify-center shadow-lg">
                   <ScanLine className="w-6 h-6 text-white" />
                 </div>
-                <h3 className="text-xl font-bold text-black group-hover:text-[#37AFE1] transition-colors">
+                <h3 className="text-xl font-bold text-black group-hover:text-[#FFD93D] transition-colors">
                   Enterprise Scanning
                 </h3>
               </div>
@@ -963,7 +963,7 @@ export default function Home() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               whileHover={{ y: -6, boxShadow: "0 20px 40px rgba(0,0,0,0.08)" }}
-              className="bg-gradient-to-br from-[#37AFE1] to-[#2d8bb8] rounded-xl p-8 cursor-pointer group text-white"
+              className="bg-gradient-to-br from-[#FFD93D] to-[#E6C135] rounded-xl p-8 cursor-pointer group text-white"
             >
               <div className="flex items-center gap-4 mb-4">
                 <div className="w-12 h-12 rounded-xl bg-white/20 flex items-center justify-center">
@@ -980,7 +980,7 @@ export default function Home() {
               <Button
                 asChild
                 variant="secondary"
-                className="bg-white text-[#37AFE1] hover:bg-gray-100"
+                className="bg-white text-[#FFD93D] hover:bg-gray-100"
               >
                 <a href="/shop">Browse All Products</a>
               </Button>
@@ -989,7 +989,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-16 md:py-24 bg-[#37AFE1]">
+      <section className="py-16 md:py-24 bg-[#FFD93D]">
         <div className="container mx-auto px-6 sm:px-8 lg:px-12 text-center max-w-3xl">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -1029,7 +1029,7 @@ export default function Home() {
             viewport={{ once: true }}
             className="text-center mb-12"
           >
-            <span className="inline-block text-[#37AFE1] font-semibold text-sm uppercase tracking-wider mb-4">
+            <span className="inline-block text-[#FFD93D] font-semibold text-sm uppercase tracking-wider mb-4">
               Our Commitment
             </span>
             <h2 className="text-3xl md:text-4xl font-extrabold text-black mb-4">
@@ -1047,7 +1047,7 @@ export default function Home() {
                 icon: <Award className="w-8 h-8" />,
                 title: "Curated Selection",
                 desc: "Every product in our catalog is carefully selected to ensure quality and reliability for your printing needs.",
-                color: "from-[#37AFE1] to-[#2d8bb8]",
+                color: "from-[#FFD93D] to-[#E6C135]",
               },
               {
                 icon: <ShieldCheck className="w-8 h-8" />,
@@ -1083,7 +1083,7 @@ export default function Home() {
                 >
                   <span className="text-white">{item.icon}</span>
                 </motion.div>
-                <h3 className="text-xl font-bold text-black mb-3 group-hover:text-[#37AFE1] transition-colors">
+                <h3 className="text-xl font-bold text-black mb-3 group-hover:text-[#FFD93D] transition-colors">
                   {item.title}
                 </h3>
                 <p className="text-gray-600 leading-relaxed">{item.desc}</p>
@@ -1106,8 +1106,8 @@ export default function Home() {
               className="text-center"
             >
               <div className="flex justify-center mb-6">
-                <div className="w-20 h-20 bg-[#37AFE1]/10 rounded-full flex items-center justify-center">
-                  <Headphones className="w-10 h-10 text-[#37AFE1]" />
+                <div className="w-20 h-20 bg-[#FFD93D]/10 rounded-full flex items-center justify-center">
+                  <Headphones className="w-10 h-10 text-[#FFD93D]" />
                 </div>
               </div>
               <h3 className="text-lg font-bold text-gray-900 uppercase tracking-wide mb-4">
@@ -1126,7 +1126,7 @@ export default function Home() {
                 compatibility. However, if you cannot find what you are looking
                 for and you have questions about your purchase, simply send us a
                 message through our{" "}
-                <a href="/contact" className="text-[#37AFE1] hover:underline">
+                <a href="/contact" className="text-[#FFD93D] hover:underline">
                   contact page
                 </a>
                 .
@@ -1145,8 +1145,8 @@ export default function Home() {
               className="text-center"
             >
               <div className="flex justify-center mb-6">
-                <div className="w-20 h-20 bg-[#37AFE1]/10 rounded-full flex items-center justify-center">
-                  <BadgeCheck className="w-10 h-10 text-[#37AFE1]" />
+                <div className="w-20 h-20 bg-[#FFD93D]/10 rounded-full flex items-center justify-center">
+                  <BadgeCheck className="w-10 h-10 text-[#FFD93D]" />
                 </div>
               </div>
               <h3 className="text-lg font-bold text-gray-900 uppercase tracking-wide mb-4">
@@ -1179,8 +1179,8 @@ export default function Home() {
               className="text-center"
             >
               <div className="flex justify-center mb-6">
-                <div className="w-20 h-20 bg-[#37AFE1]/10 rounded-full flex items-center justify-center">
-                  <Printer className="w-10 h-10 text-[#37AFE1]" />
+                <div className="w-20 h-20 bg-[#FFD93D]/10 rounded-full flex items-center justify-center">
+                  <Printer className="w-10 h-10 text-[#FFD93D]" />
                 </div>
               </div>
               <h3 className="text-lg font-bold text-gray-900 uppercase tracking-wide mb-4">
@@ -1211,7 +1211,7 @@ export default function Home() {
       </section>
 
       <section
-        className="py-16 md:py-24 bg-gradient-to-br from-gray-50 to-[#37AFE1]/5"
+        className="py-16 md:py-24 bg-gradient-to-br from-gray-50 to-[#FFD93D]/5"
         data-testid="newsletter-section"
       >
         <div className="container mx-auto px-6 sm:px-8 lg:px-12">
@@ -1223,7 +1223,7 @@ export default function Home() {
           >
             <motion.div
               whileHover={{ scale: 1.05, rotate: 5 }}
-              className="w-16 h-16 bg-gradient-to-br from-[#37AFE1] to-[#2d8bb8] rounded-xl flex items-center justify-center mx-auto mb-6 shadow-lg"
+              className="w-16 h-16 bg-gradient-to-br from-[#FFD93D] to-[#E6C135] rounded-xl flex items-center justify-center mx-auto mb-6 shadow-lg"
             >
               <Mail className="w-8 h-8 text-white" />
             </motion.div>
@@ -1238,7 +1238,7 @@ export default function Home() {
             <p className="text-xs text-gray-500 mt-4">
               By subscribing, you agree to receive promotional emails. You can
               unsubscribe anytime. Read our{" "}
-              <a href="/privacy" className="text-[#37AFE1] hover:underline">
+              <a href="/privacy" className="text-[#FFD93D] hover:underline">
                 Privacy Policy
               </a>{" "}
               for more information.

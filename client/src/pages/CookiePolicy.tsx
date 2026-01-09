@@ -119,10 +119,10 @@ export default function CookiePolicy() {
                   Most web browsers allow you to control cookies through their settings. You can usually find these settings in the "Options" or "Preferences" menu of your browser. The following links may be helpful:
                 </p>
                 <ul className="list-disc pl-6 space-y-2 mb-4">
-                  <li><a href="https://support.google.com/chrome/answer/95647" target="_blank" rel="noopener noreferrer" className="text-[#37AFE1] hover:underline">Google Chrome</a></li>
-                  <li><a href="https://support.mozilla.org/en-US/kb/cookies-information-websites-store-on-your-computer" target="_blank" rel="noopener noreferrer" className="text-[#37AFE1] hover:underline">Mozilla Firefox</a></li>
-                  <li><a href="https://support.apple.com/guide/safari/manage-cookies-sfri11471/mac" target="_blank" rel="noopener noreferrer" className="text-[#37AFE1] hover:underline">Apple Safari</a></li>
-                  <li><a href="https://support.microsoft.com/en-us/microsoft-edge/delete-cookies-in-microsoft-edge-63947406-40ac-c3b8-57b9-2a946a29ae09" target="_blank" rel="noopener noreferrer" className="text-[#37AFE1] hover:underline">Microsoft Edge</a></li>
+                  <li><a href="https://support.google.com/chrome/answer/95647" target="_blank" rel="noopener noreferrer" className="text-[#FFD93D] hover:underline">Google Chrome</a></li>
+                  <li><a href="https://support.mozilla.org/en-US/kb/cookies-information-websites-store-on-your-computer" target="_blank" rel="noopener noreferrer" className="text-[#FFD93D] hover:underline">Mozilla Firefox</a></li>
+                  <li><a href="https://support.apple.com/guide/safari/manage-cookies-sfri11471/mac" target="_blank" rel="noopener noreferrer" className="text-[#FFD93D] hover:underline">Apple Safari</a></li>
+                  <li><a href="https://support.microsoft.com/en-us/microsoft-edge/delete-cookies-in-microsoft-edge-63947406-40ac-c3b8-57b9-2a946a29ae09" target="_blank" rel="noopener noreferrer" className="text-[#FFD93D] hover:underline">Microsoft Edge</a></li>
                 </ul>
 
                 <h3 className="text-xl font-semibold text-black mb-3 mt-6">Opt-Out Tools</h3>
@@ -130,9 +130,9 @@ export default function CookiePolicy() {
                   You can also opt out of certain cookies using the following tools:
                 </p>
                 <ul className="list-disc pl-6 space-y-2">
-                  <li><a href="https://optout.aboutads.info" target="_blank" rel="noopener noreferrer" className="text-[#37AFE1] hover:underline">Digital Advertising Alliance (DAA)</a></li>
-                  <li><a href="https://www.networkadvertising.org/choices/" target="_blank" rel="noopener noreferrer" className="text-[#37AFE1] hover:underline">Network Advertising Initiative (NAI)</a></li>
-                  <li><a href="https://www.youronlinechoices.eu/" target="_blank" rel="noopener noreferrer" className="text-[#37AFE1] hover:underline">European Interactive Digital Advertising Alliance (EDAA)</a></li>
+                  <li><a href="https://optout.aboutads.info" target="_blank" rel="noopener noreferrer" className="text-[#FFD93D] hover:underline">Digital Advertising Alliance (DAA)</a></li>
+                  <li><a href="https://www.networkadvertising.org/choices/" target="_blank" rel="noopener noreferrer" className="text-[#FFD93D] hover:underline">Network Advertising Initiative (NAI)</a></li>
+                  <li><a href="https://www.youronlinechoices.eu/" target="_blank" rel="noopener noreferrer" className="text-[#FFD93D] hover:underline">European Interactive Digital Advertising Alliance (EDAA)</a></li>
                 </ul>
               </section>
 
