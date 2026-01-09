@@ -25,7 +25,7 @@ import { useCreateSubscriber } from "@/hooks/use-subscribers";
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { STORE_CATEGORIES, getCategoryUrl } from "@/lib/ecwid";
-import heroBannerImg from "@assets/Banner_meet_smallest_enterprise_-_Desktop@2x.png_1767904533249.avif";
+import heroBannerImg from "@assets/KSP_SMB_3_Desktop.jpg_1767984873397.avif";
 import homePrinterImg from "@assets/61g0ZhtFErL._AC_SL1500__1767904909151.jpg";
 import officePrinterImg from "@assets/HP_OfficeJet_Pro_8135e_Wireless_All-in-One_Printer_with_3_Mont_1767904971940.png";
 import inkjetPrinterImg from "@assets/HP_ENVY_Inspire_7955e_All-in-One_Printer_with_3_Months_of_Inst_1767905095614.jpg";
