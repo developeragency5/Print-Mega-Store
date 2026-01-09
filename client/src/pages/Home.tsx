@@ -183,7 +183,7 @@ const staggerContainer = {
 export default function Home() {
   return (
     <div className="flex flex-col">
-      <section className="relative w-full pt-[88px]" data-testid="hero-section">
+      <section className="relative w-full" data-testid="hero-section">
         <div className="relative w-full">
           <img
             src={heroBannerImg}
