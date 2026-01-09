@@ -96,7 +96,7 @@ export default function Shop() {
   }, []);
 
   return (
-    <div className="bg-gray-50 min-h-screen pt-24 pb-12">
+    <div className="bg-gray-50 min-h-screen pb-12">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <CategoryBanner />
         <div className="bg-white rounded-3xl shadow-sm border border-gray-100 p-6 sm:p-8 min-h-[600px]">
