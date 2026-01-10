@@ -208,7 +208,7 @@ export default function Home() {
                 <img
                   src={banner}
                   alt={`Print Mega Store - Professional Printing Solutions ${index + 1}`}
-                  className="w-full h-auto object-cover"
+                  className="w-full h-[400px] md:h-[500px] lg:h-[600px] object-cover"
                   data-testid={`img-hero-banner-${index}`}
                 />
                 <div className={`absolute inset-0 ${isLeftText ? 'bg-gradient-to-r from-black/80 via-black/50 to-transparent' : 'bg-gradient-to-l from-black/80 via-black/50 to-transparent'}`} />
