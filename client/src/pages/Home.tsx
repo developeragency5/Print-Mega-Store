@@ -8,6 +8,8 @@ import {
   Headphones,
   Briefcase,
   ArrowRight,
+  ChevronLeft,
+  ChevronRight,
   Zap,
   FileText,
   Tag,
@@ -255,6 +257,22 @@ export default function Home() {
             </div>
           ))}
           
+          <button
+            onClick={() => setCurrentSlide((prev) => (prev - 1 + banners.length) % banners.length)}
+            className="absolute left-4 md:left-8 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full border-2 border-white/80 bg-black/20 hover:bg-black/40 flex items-center justify-center transition-all"
+            data-testid="hero-arrow-left"
+          >
+            <ChevronLeft className="w-6 h-6 text-white" />
+          </button>
+          
+          <button
+            onClick={() => setCurrentSlide((prev) => (prev + 1) % banners.length)}
+            className="absolute right-4 md:right-8 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full border-2 border-white/80 bg-black/20 hover:bg-black/40 flex items-center justify-center transition-all"
+            data-testid="hero-arrow-right"
+          >
+            <ChevronRight className="w-6 h-6 text-white" />
+          </button>
+
           <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 flex gap-3">
             {banners.map((_, index) => (
               <button
