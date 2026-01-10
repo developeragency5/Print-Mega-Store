@@ -24,7 +24,7 @@ import {
 } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { useCreateSubscriber } from "@/hooks/use-subscribers";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import { STORE_CATEGORIES, getCategoryUrl } from "@/lib/ecwid";
 import heroBanner1 from "@assets/KSP_SMB_3_Desktop.jpg_1767984873397.avif";
@@ -185,14 +185,39 @@ const staggerContainer = {
 
 export default function Home() {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [autoPlay, setAutoPlay] = useState(true);
   const banners = [heroBanner1, heroBanner2];
+  const timerRef = useRef<NodeJS.Timeout | null>(null);
+
+  const goToSlide = (index: number) => {
+    setCurrentSlide(index);
+    setAutoPlay(false);
+    if (timerRef.current) {
+      clearInterval(timerRef.current);
+    }
+    setTimeout(() => setAutoPlay(true), 5000);
+  };
+
+  const nextSlide = () => {
+    goToSlide((currentSlide + 1) % banners.length);
+  };
+
+  const prevSlide = () => {
+    goToSlide((currentSlide - 1 + banners.length) % banners.length);
+  };
 
   useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % banners.length);
-    }, 5000);
-    return () => clearInterval(timer);
-  }, [banners.length]);
+    if (autoPlay) {
+      timerRef.current = setInterval(() => {
+        setCurrentSlide((prev) => (prev + 1) % banners.length);
+      }, 5000);
+    }
+    return () => {
+      if (timerRef.current) {
+        clearInterval(timerRef.current);
+      }
+    };
+  }, [banners.length, autoPlay]);
 
   return (
     <div className="flex flex-col">
@@ -261,26 +286,26 @@ export default function Home() {
           })}
           
           <button
-            onClick={() => setCurrentSlide((prev) => (prev - 1 + banners.length) % banners.length)}
-            className="absolute left-4 md:left-8 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full border-2 border-white/80 bg-black/20 hover:bg-black/40 flex items-center justify-center transition-all"
+            onClick={prevSlide}
+            className="absolute left-4 md:left-8 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full border-2 border-white/80 bg-black/20 hover:bg-black/40 flex items-center justify-center transition-all z-20"
             data-testid="hero-arrow-left"
           >
             <ChevronLeft className="w-6 h-6 text-white" />
           </button>
           
           <button
-            onClick={() => setCurrentSlide((prev) => (prev + 1) % banners.length)}
-            className="absolute right-4 md:right-8 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full border-2 border-white/80 bg-black/20 hover:bg-black/40 flex items-center justify-center transition-all"
+            onClick={nextSlide}
+            className="absolute right-4 md:right-8 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full border-2 border-white/80 bg-black/20 hover:bg-black/40 flex items-center justify-center transition-all z-20"
             data-testid="hero-arrow-right"
           >
             <ChevronRight className="w-6 h-6 text-white" />
           </button>
 
-          <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 flex gap-3">
+          <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 flex gap-3 z-20">
             {banners.map((_, index) => (
               <button
                 key={index}
-                onClick={() => setCurrentSlide(index)}
+                onClick={() => goToSlide(index)}
                 className={`w-3 h-3 rounded-full transition-all ${
                   index === currentSlide 
                     ? 'bg-white scale-125' 
