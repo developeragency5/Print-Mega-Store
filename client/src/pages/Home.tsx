@@ -318,56 +318,22 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-12 md:py-16 bg-white border-b border-gray-100">
-        <div className="container mx-auto px-6 sm:px-8 lg:px-12">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
+      <section className="py-4 bg-gray-50 border-b border-gray-100">
+        <div className="container mx-auto px-4">
+          <div className="flex flex-wrap justify-center md:justify-between items-center gap-4 md:gap-2">
             {[
-              {
-                icon: <Truck className="w-7 h-7" />,
-                title: "Fast Shipping",
-                desc: "Quick delivery to your door",
-                color: "from-[#37AFE1] to-[#2d8bb8]",
-              },
-              {
-                icon: <Tag className="w-7 h-7" />,
-                title: "Best Prices",
-                desc: "Competitive rates guaranteed",
-                color: "from-[#37AFE1] to-[#2d8bb8]",
-              },
-              {
-                icon: <ShieldCheck className="w-7 h-7" />,
-                title: "Secure Checkout",
-                desc: "SSL encrypted payments",
-                color: "from-[#37AFE1] to-[#2d8bb8]",
-              },
-              {
-                icon: <BadgeCheck className="w-7 h-7" />,
-                title: "Trusted Shopping",
-                desc: "100% buyer protection",
-                color: "from-[#37AFE1] to-[#2d8bb8]",
-              },
+              { icon: <Truck className="w-5 h-5" />, title: "Fast Shipping" },
+              { icon: <Tag className="w-5 h-5" />, title: "Best Prices" },
+              { icon: <ShieldCheck className="w-5 h-5" />, title: "Secure Checkout" },
+              { icon: <BadgeCheck className="w-5 h-5" />, title: "Trusted Shopping" },
             ].map((benefit, i) => (
-              <motion.div
+              <div
                 key={i}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.1 }}
-                whileHover={{ y: -6, boxShadow: "0 15px 30px rgba(0,0,0,0.1)" }}
-                className="bg-white border border-gray-200 rounded-lg p-6 md:p-8 flex flex-col items-center text-center cursor-pointer"
+                className="flex items-center gap-2 text-gray-700"
               >
-                <motion.div
-                  whileHover={{ scale: 1.15, rotate: 10 }}
-                  transition={{ duration: 0.3 }}
-                  className={`w-16 h-16 rounded-xl bg-gradient-to-br ${benefit.color} flex items-center justify-center shadow-lg mb-4`}
-                >
-                  <span className="text-white">{benefit.icon}</span>
-                </motion.div>
-                <h3 className="font-bold text-base text-black mb-1">
-                  {benefit.title}
-                </h3>
-                <p className="text-sm text-gray-600">{benefit.desc}</p>
-              </motion.div>
+                <span className="text-[#37AFE1]">{benefit.icon}</span>
+                <span className="text-sm font-medium">{benefit.title}</span>
+              </div>
             ))}
           </div>
         </div>
