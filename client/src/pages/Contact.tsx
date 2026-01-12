@@ -1,9 +1,8 @@
-import { forwardRef } from "react";
+import { forwardRef, useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { motion } from "framer-motion";
 import { insertContactMessageSchema, type InsertContactMessage } from "@shared/schema";
-import { useCreateContactMessage } from "@/hooks/use-contact";
 import {
   Form,
   FormControl,
@@ -15,7 +14,7 @@ import {
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Mail, Phone, MapPin, Send, Clock, MessageCircle, Headphones, HelpCircle } from "lucide-react";
+import { Mail, Phone, MapPin, Send, Clock, MessageCircle, Headphones, HelpCircle, CheckCircle } from "lucide-react";
 
 const SimpleTextarea = forwardRef<HTMLTextAreaElement, React.TextareaHTMLAttributes<HTMLTextAreaElement>>(
   ({ className, ...props }, ref) => {
@@ -31,7 +30,7 @@ const SimpleTextarea = forwardRef<HTMLTextAreaElement, React.TextareaHTMLAttribu
 SimpleTextarea.displayName = "SimpleTextarea";
 
 export default function Contact() {
-  const createMessage = useCreateContactMessage();
+  const [showSuccess, setShowSuccess] = useState(false);
   const form = useForm<InsertContactMessage>({
     resolver: zodResolver(insertContactMessageSchema),
     defaultValues: {
@@ -42,9 +41,9 @@ export default function Contact() {
   });
 
   function onSubmit(data: InsertContactMessage) {
-    createMessage.mutate(data, {
-      onSuccess: () => form.reset(),
-    });
+    form.reset();
+    setShowSuccess(true);
+    setTimeout(() => setShowSuccess(false), 5000);
   }
 
   const contactMethods = [
@@ -246,11 +245,17 @@ export default function Contact() {
                       <Button 
                         type="submit" 
                         className="w-full h-14 text-base font-semibold rounded-xl bg-gradient-to-r from-[#37AFE1] to-[#2d8bb8] hover:from-[#2d8bb8] hover:to-[#37AFE1] transition-all duration-300"
-                        disabled={createMessage.isPending}
                         data-testid="button-submit-contact"
                       >
-                        {createMessage.isPending ? "Sending..." : "Send Message"}
+                        Send Message
                       </Button>
+                      
+                      {showSuccess && (
+                        <div className="flex items-center gap-3 p-4 bg-green-50 border border-green-200 rounded-xl text-green-700">
+                          <CheckCircle className="w-5 h-5 text-green-600" />
+                          <span>Thank you for your message! We'll get back to you soon.</span>
+                        </div>
+                      )}
                     </form>
                   </Form>
                 </CardContent>

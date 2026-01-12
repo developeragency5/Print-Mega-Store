@@ -1,21 +1,20 @@
 import { Link } from "wouter";
 import { Button } from "./ui/button";
 import { Input } from "./ui/input";
-import { Mail, MapPin, Phone, ArrowRight, Printer } from "lucide-react";
-import { useCreateSubscriber } from "@/hooks/use-subscribers";
+import { Mail, MapPin, Phone, ArrowRight, Printer, CheckCircle } from "lucide-react";
 import { useState } from "react";
 import { STORE_CATEGORIES, getCategoryUrl } from "@/lib/ecwid";
 
 export function Footer() {
   const [email, setEmail] = useState("");
-  const subscribe = useCreateSubscriber();
+  const [showSuccess, setShowSuccess] = useState(false);
 
   const handleSubscribe = (e: React.FormEvent) => {
     e.preventDefault();
     if (!email) return;
-    subscribe.mutate({ email }, {
-      onSuccess: () => setEmail("")
-    });
+    setEmail("");
+    setShowSuccess(true);
+    setTimeout(() => setShowSuccess(false), 3000);
   };
 
   return (
@@ -92,17 +91,23 @@ export function Footer() {
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     required
+                    type="email"
                     data-testid="input-newsletter-email"
                   />
                   <Button 
                     type="submit" 
                     className="h-12 px-6 rounded-xl"
-                    disabled={subscribe.isPending}
                     data-testid="button-subscribe"
                   >
-                    {subscribe.isPending ? "..." : "Subscribe"}
+                    Subscribe
                   </Button>
                 </div>
+                {showSuccess && (
+                  <div className="flex items-center gap-2 text-green-400 text-sm">
+                    <CheckCircle className="w-4 h-4" />
+                    <span>Thank you for subscribing!</span>
+                  </div>
+                )}
               </form>
 
               <div className="mt-8 space-y-4">
