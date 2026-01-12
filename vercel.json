@@ -1,15 +1,14 @@
 {
   "version": 2,
-  "buildCommand": "cd client && npm install && npm run build",
-  "outputDirectory": "client/dist",
+  "buildCommand": "npx vite build",
+  "outputDirectory": "dist/public",
   "installCommand": "npm install",
-  "framework": null,
   "rewrites": [
-    { "source": "/api/(.*)", "destination": "/api/index.js" },
+    { "source": "/api/(.*)", "destination": "/api" },
     { "source": "/(.*)", "destination": "/index.html" }
   ],
   "functions": {
-    "api/index.js": {
+    "api/index.ts": {
       "memory": 1024,
       "maxDuration": 10
     }
