@@ -318,20 +318,20 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-4 bg-gray-50 border-b border-gray-100">
+      <section className="py-3 bg-[#37AFE1]">
         <div className="container mx-auto px-4">
-          <div className="flex flex-wrap justify-center md:justify-between items-center gap-4 md:gap-2">
+          <div className="flex flex-wrap justify-center items-center gap-6 md:gap-12">
             {[
-              { icon: <Truck className="w-5 h-5" />, title: "Fast Shipping" },
-              { icon: <Tag className="w-5 h-5" />, title: "Best Prices" },
-              { icon: <ShieldCheck className="w-5 h-5" />, title: "Secure Checkout" },
-              { icon: <BadgeCheck className="w-5 h-5" />, title: "Trusted Shopping" },
+              { icon: <Truck className="w-4 h-4" />, title: "Fast Shipping" },
+              { icon: <Tag className="w-4 h-4" />, title: "Best Prices" },
+              { icon: <ShieldCheck className="w-4 h-4" />, title: "Secure Checkout" },
+              { icon: <BadgeCheck className="w-4 h-4" />, title: "Trusted Shopping" },
             ].map((benefit, i) => (
               <div
                 key={i}
-                className="flex items-center gap-2 text-gray-700"
+                className="flex items-center gap-2 text-white"
               >
-                <span className="text-[#37AFE1]">{benefit.icon}</span>
+                {benefit.icon}
                 <span className="text-sm font-medium">{benefit.title}</span>
               </div>
             ))}
