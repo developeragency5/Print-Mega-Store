@@ -584,103 +584,49 @@ export default function Home() {
             </p>
           </motion.div>
 
-          <motion.div
-            variants={staggerContainer}
-            initial="initial"
-            whileInView="animate"
-            viewport={{ once: true }}
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8"
-          >
-            {featuredProducts.slice(0, 3).map((product, i) => (
+          <div className="space-y-12 md:space-y-16 max-w-5xl mx-auto">
+            {featuredProducts.map((product, i) => (
               <motion.div
                 key={product.productId}
-                variants={fadeInUp}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
+                className={`flex flex-col ${i % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'} items-center gap-8 md:gap-12 pb-12 md:pb-16 ${i < featuredProducts.length - 1 ? 'border-b border-gray-200' : ''}`}
               >
-                <a href={product.productUrl} data-testid={`card-product-${product.productId}`}>
-                  <Card className="group h-full cursor-pointer border border-gray-200 hover:border-[#33cccc] hover:shadow-lg transition-all duration-200 bg-white overflow-hidden">
-                    <div className="aspect-[4/3] overflow-hidden bg-gray-100">
-                      <img
-                        src={product.image}
-                        alt={product.name}
-                        className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300"
-                      />
-                    </div>
-                    <CardContent className="p-6">
-                      <span className="text-xs font-medium text-[#33cccc] uppercase tracking-wider">
-                        {product.categorySlug.replace("-", " ")}
-                      </span>
-                      <h3 className="text-lg font-bold text-gray-900 mt-2 mb-3 group-hover:text-[#33cccc] transition-colors line-clamp-2">
-                        {product.name}
-                      </h3>
-                      <p className="text-sm text-gray-600 mb-4 line-clamp-2">
-                        {product.description}
-                      </p>
-                      <div className="flex flex-wrap gap-2">
-                        {product.features.map((feature, idx) => (
-                          <span
-                            key={idx}
-                            className="text-xs bg-gray-100 text-gray-700 px-2 py-1 rounded"
-                          >
-                            {feature}
-                          </span>
-                        ))}
+                <div className="w-full md:w-1/2">
+                  <a href={product.productUrl} data-testid={`card-product-${product.productId}`}>
+                    <Card className="group cursor-pointer border border-gray-200 hover:border-[#33cccc] hover:shadow-lg transition-all duration-200 bg-white overflow-hidden">
+                      <div className="aspect-[4/3] overflow-hidden bg-gray-50 p-6">
+                        <img
+                          src={product.image}
+                          alt={product.name}
+                          className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300"
+                        />
                       </div>
-                    </CardContent>
-                  </Card>
-                </a>
+                    </Card>
+                  </a>
+                </div>
+                <div className="w-full md:w-1/2">
+                  <span className="text-sm font-semibold text-[#33cccc] uppercase tracking-wider">
+                    {product.categorySlug.replace("-", " ")}
+                  </span>
+                  <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mt-2 mb-4">
+                    {product.name}
+                  </h3>
+                  <p className="text-gray-600 mb-6 leading-relaxed">
+                    {product.description}
+                  </p>
+                  <Button asChild className="group">
+                    <a href={product.productUrl}>
+                      View Product
+                      <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                    </a>
+                  </Button>
+                </div>
               </motion.div>
             ))}
-          </motion.div>
-
-          <motion.div
-            variants={staggerContainer}
-            initial="initial"
-            whileInView="animate"
-            viewport={{ once: true }}
-            className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 mt-8 max-w-4xl mx-auto"
-          >
-            {featuredProducts.slice(3).map((product, i) => (
-              <motion.div
-                key={product.productId}
-                variants={fadeInUp}
-                transition={{ delay: i * 0.1 }}
-              >
-                <a href={product.productUrl} data-testid={`card-product-${product.productId}`}>
-                  <Card className="group h-full cursor-pointer border border-gray-200 hover:border-[#33cccc] hover:shadow-lg transition-all duration-200 bg-white overflow-hidden">
-                    <div className="aspect-[4/3] overflow-hidden bg-gray-100">
-                      <img
-                        src={product.image}
-                        alt={product.name}
-                        className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300"
-                      />
-                    </div>
-                    <CardContent className="p-6">
-                      <span className="text-xs font-medium text-[#33cccc] uppercase tracking-wider">
-                        {product.categorySlug.replace("-", " ")}
-                      </span>
-                      <h3 className="text-lg font-bold text-gray-900 mt-2 mb-3 group-hover:text-[#33cccc] transition-colors line-clamp-2">
-                        {product.name}
-                      </h3>
-                      <p className="text-sm text-gray-600 mb-4 line-clamp-2">
-                        {product.description}
-                      </p>
-                      <div className="flex flex-wrap gap-2">
-                        {product.features.map((feature, idx) => (
-                          <span
-                            key={idx}
-                            className="text-xs bg-gray-100 text-gray-700 px-2 py-1 rounded"
-                          >
-                            {feature}
-                          </span>
-                        ))}
-                      </div>
-                    </CardContent>
-                  </Card>
-                </a>
-              </motion.div>
-            ))}
-          </motion.div>
+          </div>
 
           <motion.div
             initial={{ opacity: 0, y: 20 }}
