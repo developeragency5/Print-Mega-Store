@@ -57,6 +57,7 @@ import smallBusinessIcon from "@assets/building_(1)_1768345193049.png";
 import enterpriseIcon from "@assets/house_1768345234701.png";
 import notesIcon from "@assets/notes_1768345353946.png";
 import printerIcon2 from "@assets/printer_(2)_1768345577169.png";
+import heartIcon from "@assets/heart_1768345716062.png";
 
 const categoryIcons: Record<string, React.ReactNode> = {
   "Home-Printers": <img src={printerIcon} alt="Home Printers" className="w-10 h-10" />,
@@ -948,11 +949,11 @@ export default function Home() {
                 highlighted: true,
               },
               {
-                icon: <Heart className="w-6 h-6" />,
+                icon: <img src={heartIcon} alt="Customer First" className="w-6 h-6" />,
                 title: "Customer First",
                 desc: "Your satisfaction is our priority. We go above and beyond to ensure a seamless shopping experience.",
                 bgColor: "bg-white",
-                iconColor: "text-pink-500",
+                iconColor: "",
                 highlighted: false,
               },
             ].map((item, i) => (
