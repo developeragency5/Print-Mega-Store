@@ -62,6 +62,7 @@ import waitIcon from "@assets/wait_1768345794716.png";
 import shieldCheckIcon from "@assets/shield_1768345835578.png";
 import packageIcon from "@assets/package_1768345905611.png";
 import helpdeskIcon from "@assets/helpdesk_1768346033428.png";
+import medalIcon from "@assets/medal-_1768346130467.png";
 
 const categoryIcons: Record<string, React.ReactNode> = {
   "Home-Printers": <img src={printerIcon} alt="Home Printers" className="w-10 h-10" />,
@@ -1017,8 +1018,8 @@ export default function Home() {
               transition={{ delay: 0.1 }}
               className="text-center"
             >
-              <div className="w-16 h-16 bg-[#33cccc]/10 rounded-full flex items-center justify-center mx-auto mb-6">
-                <CheckCircle2 className="w-8 h-8 text-[#33cccc]" />
+              <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
+                <img src={medalIcon} alt="Quality Products" className="w-8 h-8" />
               </div>
               <h3 className="text-lg font-bold text-gray-900 uppercase tracking-wide mb-4">
                 Quality Products You Can Trust
