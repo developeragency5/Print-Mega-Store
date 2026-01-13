@@ -340,7 +340,7 @@ export default function Shop() {
               <h2 className="text-xl md:text-2xl font-bold text-gray-900 text-center mb-4">Product Authenticity & Warranty</h2>
               <div className="space-y-4 text-center">
                 <p className="text-gray-700 leading-relaxed">
-                  All products sold by Print Mega Store are genuine HP products sourced from U.S.-based commercial distribution partners. Every printer and scanner is new and factory sealed.
+                  All products sold by Print Mega Store are new, factory-sealed products sourced from independent U.S. distributors.
                 </p>
                 <p className="text-gray-700 leading-relaxed">
                   Manufacturer warranty coverage may be available and is provided by the manufacturer according to their terms.
