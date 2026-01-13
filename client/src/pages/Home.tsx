@@ -59,6 +59,7 @@ import notesIcon from "@assets/notes_1768345353946.png";
 import printerIcon2 from "@assets/printer_(2)_1768345577169.png";
 import heartIcon from "@assets/heart_1768345716062.png";
 import waitIcon from "@assets/wait_1768345794716.png";
+import shieldCheckIcon from "@assets/shield_1768345835578.png";
 
 const categoryIcons: Record<string, React.ReactNode> = {
   "Home-Printers": <img src={printerIcon} alt="Home Printers" className="w-10 h-10" />,
@@ -934,11 +935,11 @@ export default function Home() {
                 highlighted: false,
               },
               {
-                icon: <ShieldCheck className="w-6 h-6" />,
+                icon: <img src={shieldCheckIcon} alt="Secure Checkout" className="w-6 h-6" />,
                 title: "Secure Checkout",
                 desc: "Shop with confidence using our safe and encrypted payment processing for all transactions.",
                 bgColor: "bg-white",
-                iconColor: "text-[#33cccc]",
+                iconColor: "",
                 highlighted: false,
               },
               {
