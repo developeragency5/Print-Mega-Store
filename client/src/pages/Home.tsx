@@ -55,6 +55,7 @@ import shieldGif from "@assets/shield_1768343929996.gif";
 import homeIconImg from "@assets/home_1768345063969.png";
 import smallBusinessIcon from "@assets/building_(1)_1768345193049.png";
 import enterpriseIcon from "@assets/house_1768345234701.png";
+import notesIcon from "@assets/notes_1768345353946.png";
 
 const categoryIcons: Record<string, React.ReactNode> = {
   "Home-Printers": <img src={printerIcon} alt="Home Printers" className="w-10 h-10" />,
@@ -831,8 +832,8 @@ export default function Home() {
               className="bg-white rounded-xl border border-gray-100 p-8 cursor-pointer group"
             >
               <div className="flex items-center gap-4 mb-4">
-                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-orange-500 to-orange-600 flex items-center justify-center shadow-lg">
-                  <FileText className="w-6 h-6 text-white" />
+                <div className="w-12 h-12 rounded-xl bg-white flex items-center justify-center shadow-lg">
+                  <img src={notesIcon} alt="Notes" className="w-6 h-6" />
                 </div>
                 <h3 className="text-xl font-bold text-black group-hover:text-[#33cccc] transition-colors">
                   Inkjet vs Laser Printers
