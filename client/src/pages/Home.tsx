@@ -58,6 +58,7 @@ import enterpriseIcon from "@assets/house_1768345234701.png";
 import notesIcon from "@assets/notes_1768345353946.png";
 import printerIcon2 from "@assets/printer_(2)_1768345577169.png";
 import heartIcon from "@assets/heart_1768345716062.png";
+import waitIcon from "@assets/wait_1768345794716.png";
 
 const categoryIcons: Record<string, React.ReactNode> = {
   "Home-Printers": <img src={printerIcon} alt="Home Printers" className="w-10 h-10" />,
@@ -941,11 +942,11 @@ export default function Home() {
                 highlighted: false,
               },
               {
-                icon: <Clock className="w-6 h-6" />,
+                icon: <img src={waitIcon} alt="Quick Processing" className="w-6 h-6" />,
                 title: "Quick Processing",
                 desc: "We process orders promptly to ensure your new printing equipment arrives when you need it most.",
                 bgColor: "bg-white",
-                iconColor: "text-green-600",
+                iconColor: "",
                 highlighted: true,
               },
               {
