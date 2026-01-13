@@ -398,9 +398,9 @@ export default function Home() {
               <div className="flex items-center gap-4 mb-6">
                 <motion.div
                   whileHover={{ scale: 1.1, rotate: 5 }}
-                  className="w-14 h-14 rounded-lg bg-gradient-to-br from-[#37AFE1] to-[#2d8bb8] flex items-center justify-center shadow-lg overflow-hidden"
+                  className="w-14 h-14 flex items-center justify-center"
                 >
-                  <Lottie animationData={briefcaseAnimation} loop={true} className="w-10 h-10" />
+                  <Lottie animationData={briefcaseAnimation} loop={true} className="w-14 h-14" />
                 </motion.div>
                 <h3 className="text-xl font-bold text-black">Who We Are</h3>
               </div>
@@ -428,9 +428,9 @@ export default function Home() {
               <div className="flex items-center gap-4 mb-6">
                 <motion.div
                   whileHover={{ scale: 1.1, rotate: -5 }}
-                  className="w-14 h-14 rounded-lg bg-gradient-to-br from-[#37AFE1] to-[#2d8bb8] flex items-center justify-center shadow-lg overflow-hidden"
+                  className="w-14 h-14 flex items-center justify-center"
                 >
-                  <Lottie animationData={giftAnimation} loop={true} className="w-10 h-10" />
+                  <Lottie animationData={giftAnimation} loop={true} className="w-14 h-14" />
                 </motion.div>
                 <h3 className="text-xl font-bold text-black">What We Offer</h3>
               </div>
@@ -460,9 +460,9 @@ export default function Home() {
               <div className="flex items-center gap-4 mb-6">
                 <motion.div
                   whileHover={{ scale: 1.1, rotate: 5 }}
-                  className="w-14 h-14 rounded-lg bg-gradient-to-br from-[#37AFE1] to-[#2d8bb8] flex items-center justify-center shadow-lg overflow-hidden"
+                  className="w-14 h-14 flex items-center justify-center"
                 >
-                  <Lottie animationData={ideaAnimation} loop={true} className="w-10 h-10" />
+                  <Lottie animationData={ideaAnimation} loop={true} className="w-14 h-14" />
                 </motion.div>
                 <h3 className="text-xl font-bold text-black">
                   Solutions for Everyone
@@ -491,9 +491,9 @@ export default function Home() {
               <div className="flex items-center gap-4 mb-6">
                 <motion.div
                   whileHover={{ scale: 1.1, rotate: -5 }}
-                  className="w-14 h-14 rounded-lg bg-gradient-to-br from-[#37AFE1] to-[#2d8bb8] flex items-center justify-center shadow-lg overflow-hidden"
+                  className="w-14 h-14 flex items-center justify-center"
                 >
-                  <Lottie animationData={shoppingCartAnimation} loop={true} className="w-10 h-10" />
+                  <Lottie animationData={shoppingCartAnimation} loop={true} className="w-14 h-14" />
                 </motion.div>
                 <h3 className="text-xl font-bold text-black">
                   Easy Online Shopping
