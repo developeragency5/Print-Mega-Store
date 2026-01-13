@@ -56,6 +56,7 @@ import homeIconImg from "@assets/home_1768345063969.png";
 import smallBusinessIcon from "@assets/building_(1)_1768345193049.png";
 import enterpriseIcon from "@assets/house_1768345234701.png";
 import notesIcon from "@assets/notes_1768345353946.png";
+import printerIcon2 from "@assets/printer_(2)_1768345577169.png";
 
 const categoryIcons: Record<string, React.ReactNode> = {
   "Home-Printers": <img src={printerIcon} alt="Home Printers" className="w-10 h-10" />,
@@ -714,7 +715,7 @@ export default function Home() {
                 color: "from-[#33cccc] to-[#29a3a3]",
               },
               {
-                icon: <Printer className="w-8 h-8" />,
+                icon: <img src={printerIcon2} alt="High Quality Printing" className="w-8 h-8" />,
                 title: "High Quality Printing",
                 desc: "Our printers are designed to produce high quality prints with consistent performance.",
                 color: "from-blue-500 to-blue-600",
