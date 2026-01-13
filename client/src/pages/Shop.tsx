@@ -115,6 +115,45 @@ export default function Shop() {
           </div>
         </div>
 
+        {/* How to Choose Section */}
+        <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 sm:p-8 mb-6">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-2xl font-bold text-gray-900 text-center mb-6">How to Choose the Right Printer or Scanner</h2>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div className="space-y-2">
+                <h3 className="font-semibold text-gray-900">Home Printers</h3>
+                <p className="text-gray-600 text-sm leading-relaxed">
+                  Ideal for everyday printing, homework, photos, and occasional scanning. These models are compact, affordable, and designed for light to moderate use.
+                </p>
+              </div>
+              <div className="space-y-2">
+                <h3 className="font-semibold text-gray-900">Office Printers</h3>
+                <p className="text-gray-600 text-sm leading-relaxed">
+                  Built for higher workloads, shared use, and business environments. These models support faster speeds, larger paper trays, and higher monthly duty cycles.
+                </p>
+              </div>
+              <div className="space-y-2">
+                <h3 className="font-semibold text-gray-900">Inkjet Printers</h3>
+                <p className="text-gray-600 text-sm leading-relaxed">
+                  Best for color printing, photos, and mixed media. Inkjet printers are popular for homes, students, and creative projects.
+                </p>
+              </div>
+              <div className="space-y-2">
+                <h3 className="font-semibold text-gray-900">Laser Printers</h3>
+                <p className="text-gray-600 text-sm leading-relaxed">
+                  Designed for fast, high-volume text printing. Laser printers are more cost-efficient for offices and businesses that print frequently.
+                </p>
+              </div>
+              <div className="space-y-2">
+                <h3 className="font-semibold text-gray-900">Document Scanners</h3>
+                <p className="text-gray-600 text-sm leading-relaxed">
+                  Professional scanners for digitizing paperwork, invoices, contracts, and archives. Ideal for offices and document management.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <div className="bg-white rounded-3xl shadow-sm border border-gray-100 p-6 sm:p-8 min-h-[600px]">
           {isLoading && (
             <div className="flex flex-col items-center justify-center h-96 text-muted-foreground">
