@@ -339,6 +339,17 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="py-6 bg-white border-b border-gray-100" data-testid="identity-section">
+        <div className="container mx-auto px-6 sm:px-8 lg:px-12">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-lg font-bold text-black mb-2">Independent Online Retailer</h2>
+            <p className="text-gray-600 text-sm leading-relaxed">
+              We are an independent online retailer specializing in printers and scanning devices. We currently offer a selection of HP® printers. We are not affiliated with, endorsed by, or sponsored by HP.
+            </p>
+          </div>
+        </div>
+      </section>
+
       <section
         className="py-16 md:py-24 bg-gray-50"
         data-testid="about-section"

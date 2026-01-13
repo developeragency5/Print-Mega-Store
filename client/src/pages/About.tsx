@@ -19,7 +19,13 @@ export default function About() {
                 About Print Mega Store
               </h1>
               <p className="text-xl text-gray-600">
-                Your Trusted Partner for Professional Printing Solutions
+                Independent Online Retailer
+              </p>
+            </div>
+
+            <div className="bg-gradient-to-br from-[#37AFE1]/10 to-[#37AFE1]/5 rounded-xl p-8 mb-12 border border-[#37AFE1]/20">
+              <p className="text-lg text-gray-700 text-center leading-relaxed">
+                We are an independent online retailer offering printer and scanning products. Our current catalog includes HP-branded printers. We operate independently and are not affiliated with, endorsed by, or sponsored by HP or any manufacturer.
               </p>
             </div>
 
@@ -57,10 +63,10 @@ export default function About() {
               <section>
                 <h2 className="text-2xl font-bold text-black mb-4">Who We Are</h2>
                 <p className="mb-4">
-                  Print Mega Store is a dedicated online retailer specializing in professional printing and scanning equipment for homes, offices, and businesses across the United States. We are a passionate team of printing technology enthusiasts committed to helping our customers find the perfect printing solutions for their unique needs.
+                  Print Mega Store is an independent online retailer specializing in printer and scanning products. Our current catalog includes HP-branded printers and scanning devices for homes, offices, and businesses across the United States.
                 </p>
                 <p>
-                  Founded with the vision of making quality printing equipment accessible to everyone, Print Mega Store has grown to become a trusted destination for printers, scanners, and multifunction devices. Our team brings together years of experience in consumer electronics and e-commerce to provide an exceptional shopping experience.
+                  We operate independently and are not affiliated with, endorsed by, or sponsored by HP or any manufacturer. Our team is dedicated to helping customers find the right printing solutions for their unique needs at competitive prices.
                 </p>
               </section>
 
