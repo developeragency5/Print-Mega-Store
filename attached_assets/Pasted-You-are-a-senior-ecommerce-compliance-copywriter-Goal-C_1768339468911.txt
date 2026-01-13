@@ -1,0 +1,98 @@
+You are a senior ecommerce compliance copywriter.
+
+Goal:
+Create 3 detailed, trust-building policy pages for my website Print Mega Store (www.printmegastore.net) that are consistent with each other and optimized to reduce Google Ads and Microsoft Ads “Misrepresentation / Unacceptable Business Practices” risk.
+
+Business facts you MUST follow (do not invent anything):
+- Store name: Print Mega Store
+- Website: www.printmegastore.net
+- Business model: Independent online retailer selling printers and scanners (primarily HP products)
+- We are NOT affiliated with, endorsed by, sponsored by, or authorized by HP or any manufacturer
+- Platform: Lightspeed / Ecwid ecommerce system
+- Market: United States customers
+- Contact method: Email only → info@printmegastore.com
+- Do NOT include any phone number or physical address
+- We do NOT provide manufacturer warranty service, technical support, or repairs
+- Warranty and technical support are provided by the manufacturer (e.g., HP)
+- Payment methods must be secure electronic payments only
+- We do NOT accept cash on delivery, checks, wire transfers, or cryptocurrency
+- Prices are in USD and may be promotional or limited-time
+- Avoid “Save XX%” language in policies; use “promotional price”
+- Include “Last updated: January 2026” at the top of each page
+
+Deliverables:
+Create THREE separate policy pages. Each page must include:
+- A short SEO Meta Title
+- A short SEO Meta Description
+- A Summary section at the top (3–6 bullet points)
+- Clearly labeled sections with headings
+- Professional, clear, customer-friendly language
+- No HTML, no CSS, no technical markup — text content only
+
+The three pages must use consistent wording, tone, and rules.
+
+=============================
+PAGE 1 — Warranty Information
+=============================
+
+Include these sections:
+
+1. Overview — what “manufacturer warranty” means for products sold by Print Mega Store  
+2. Who provides warranty and support — manufacturer only (e.g., HP)  
+3. What Print Mega Store can help with (order issues, shipping problems, wrong or missing items, damaged-in-transit process)  
+4. What Print Mega Store does not provide (repairs, technical troubleshooting, warranty approvals, or manufacturer service)  
+5. Warranty coverage may vary by model, region, registration, serial number, and manufacturer rules  
+6. Enterprise and commercial products note (LaserJet Enterprise, ScanJet Enterprise, etc.) — warranty eligibility and support may vary; customer must verify with manufacturer before purchase  
+7. Step-by-step process for customers to make a warranty claim with the manufacturer  
+8. Dead-on-arrival (DOA) or damaged-in-transit process (how soon to report, photo requirements, packaging, replacement vs return)  
+9. Limitation of liability in simple, customer-friendly language  
+10. Contact section (email only)
+
+=========================
+PAGE 2 — Payment Policy
+=========================
+
+Include these sections:
+
+1. Payment security overview (encrypted checkout, secure processing, we do not store full card numbers)  
+2. Accepted payment methods (credit & debit cards, PayPal, Apple Pay, Google Pay, and other secure options shown at checkout)  
+3. Not accepted payment methods (cash on delivery, checks, wire transfers, cryptocurrency)  
+4. When customers are charged and order verification rights (we may cancel or refund orders for fraud, pricing errors, or stock issues)  
+5. Billing information accuracy requirement  
+6. Currency (USD), taxes, and shipping charges calculated at checkout  
+7. Chargebacks and disputes (customers should contact us first; refunds go back to original payment method)  
+8. Refund method and timing summary (must match a standard ecommerce 30-day return model — refund to original payment method after inspection)  
+9. Mini FAQ with at least 7 questions and answers, including:
+   - Why don’t you offer cash on delivery?
+   - Is checkout secure?
+   - Can I pay with PayPal?
+   - When will my card be charged?
+   - Can I change my payment method after ordering?
+   - Why was my order canceled?
+   - How do refunds work?
+
+============================
+PAGE 3 — Price Disclaimer
+============================
+
+Include these sections:
+
+1. Pricing overview (USD, promotional pricing, limited-time offers, may differ from MSRP)  
+2. MSRP and comparison pricing explanation (MSRP is informational and not a guarantee of market price)  
+3. Promotional pricing duration (no guarantee how long an offer will last)  
+4. Pricing errors and typo policy (right to correct prices and cancel/refund orders if an error occurs)  
+5. Taxes and shipping calculated at checkout  
+6. Price and stock availability may change without notice  
+7. Enterprise and business-grade equipment note — pricing and eligibility may vary and should be verified before purchase  
+8. Mini FAQ with at least 7 questions and answers, including:
+   - Why did the price change?
+   - Do you price match?
+   - What if a price was wrong?
+   - Is the old price guaranteed?
+   - Are discounts always available?
+   - Why is MSRP different?
+   - Why was my order canceled?
+9. A clearly labeled “Site Admin Note — Not for ads” recommending that product pages use “Promotional price” instead of “Save XX%” to reduce ad-policy risk
+
+Output:
+Present the three pages one after another, clearly labeled, with their Meta Title, Meta Description, Summary, and full content. Do not include any code or technical formatting.
