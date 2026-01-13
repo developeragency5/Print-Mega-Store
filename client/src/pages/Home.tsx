@@ -42,12 +42,13 @@ import printerIcon from "@assets/printer_1768342581018.png";
 import telephoneAnimation from "@assets/telephone_1768342750520.json";
 import buildingIcon from "@assets/building_1768342862353.png";
 import inkjetIcon from "@assets/3d-printer_1768343011444.png";
+import laserIcon from "@assets/printer_(1)_1768343182930.png";
 
 const categoryIcons: Record<string, React.ReactNode> = {
   "Home-Printers": <img src={printerIcon} alt="Home Printers" className="w-10 h-10" />,
   "Office-Printers": <img src={buildingIcon} alt="Office Printers" className="w-10 h-10" />,
   "Inkjet-Printers": <img src={inkjetIcon} alt="Inkjet Printers" className="w-10 h-10" />,
-  "Laser-Printers": <img src={printerIcon} alt="Laser Printers" className="w-10 h-10" />,
+  "Laser-Printers": <img src={laserIcon} alt="Laser Printers" className="w-10 h-10" />,
   "Document-Scanners": <ScanLine className="w-10 h-10" />,
 };
 
