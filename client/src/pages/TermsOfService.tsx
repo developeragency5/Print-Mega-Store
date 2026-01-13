@@ -10,146 +10,208 @@ export default function TermsOfService() {
             animate={{ opacity: 1, y: 0 }}
             className="max-w-4xl mx-auto"
           >
-            <h1 className="text-4xl md:text-5xl font-extrabold text-black mb-8" data-testid="heading-terms-of-service">
+            <h1 className="text-4xl md:text-5xl font-extrabold text-black mb-4" data-testid="heading-terms-of-service">
               Terms of Service
             </h1>
+            <p className="text-xl text-gray-600 mb-2">Print Mega Store</p>
+            <p className="text-gray-600 mb-8">Last updated: January 2026</p>
+
             <p className="text-gray-600 mb-8">
-              Last updated: January 2026
+              These Terms of Service ("Terms") govern your use of the website www.printmegastore.net and the purchase of products from Print Mega Store ("we," "us," or "our"). By accessing our website or placing an order, you agree to be bound by these Terms.
             </p>
 
             <div className="space-y-8 text-gray-600 leading-relaxed">
               <section>
-                <h2 className="text-2xl font-bold text-black mb-4" data-testid="heading-acceptance">Acceptance of Terms</h2>
+                <h2 className="text-2xl font-bold text-black mb-4">1. About Print Mega Store</h2>
                 <p>
-                  Welcome to Print Mega Store. By accessing or using our website, you agree to be bound by these Terms of Service and all applicable laws and regulations. If you do not agree with any of these terms, you are prohibited from using or accessing this site. Print Mega Store is an independent printer retailer serving customers across the United States, and these terms govern your use of our services and website.
-                </p>
-                <p className="mt-4">
-                  These Terms of Service constitute a legally binding agreement between you and Print Mega Store. Your continued use of the website following any changes to these terms constitutes acceptance of those changes.
+                  Print Mega Store is an independent online retailer selling printers, scanners, and related products. We are not affiliated with, endorsed by, or sponsored by HP or any manufacturer. All trademarks belong to their respective owners.
                 </p>
               </section>
 
               <section>
-                <h2 className="text-2xl font-bold text-black mb-4" data-testid="heading-use-of-website">Use of Website</h2>
-                <p className="mb-4">By using our website, you agree to:</p>
-                <ul className="list-disc pl-6 space-y-2">
-                  <li>Use the website only for lawful purposes and in accordance with these Terms</li>
-                  <li>Not use the website in any way that violates any applicable federal, state, or local law or regulation</li>
-                  <li>Not attempt to interfere with the proper working of the website</li>
-                  <li>Not use any robot, spider, or other automatic device to access the website</li>
-                  <li>Not introduce any viruses, trojan horses, worms, or other malicious material</li>
-                  <li>Not attempt to gain unauthorized access to any portion of the website</li>
+                <h2 className="text-2xl font-bold text-black mb-4">2. Eligibility</h2>
+                <p>
+                  You must be at least 18 years old to place an order. By using this site, you confirm that you are legally able to enter into a binding agreement.
+                </p>
+              </section>
+
+              <section>
+                <h2 className="text-2xl font-bold text-black mb-4">3. Products & Availability</h2>
+                <p className="mb-4">All products are subject to availability. We reserve the right to:</p>
+                <ul className="list-disc pl-6 space-y-2 mb-4">
+                  <li>Limit quantities</li>
+                  <li>Discontinue products</li>
+                  <li>Refuse or cancel orders at our discretion</li>
                 </ul>
-                <p className="mt-4">
-                  We reserve the right to terminate or suspend your access to the website immediately, without prior notice, for any breach of these Terms.
+                <p>
+                  Product images and descriptions are provided for reference only. We do our best to ensure accuracy but cannot guarantee that all information is error-free.
                 </p>
               </section>
 
               <section>
-                <h2 className="text-2xl font-bold text-black mb-4" data-testid="heading-account-responsibilities">Account Responsibilities</h2>
+                <h2 className="text-2xl font-bold text-black mb-4">4. Pricing</h2>
+                <p className="mb-4">All prices are listed in U.S. dollars (USD) unless stated otherwise.</p>
+                <p className="mb-2">Prices:</p>
+                <ul className="list-disc pl-6 space-y-2 mb-4">
+                  <li>May change without notice</li>
+                  <li>May differ from manufacturer's suggested retail price (MSRP)</li>
+                  <li>Reflect promotional or limited-time offers</li>
+                </ul>
+                <p>
+                  Print Mega Store is not responsible for pricing errors and reserves the right to cancel any order placed at an incorrect price.
+                </p>
+              </section>
+
+              <section>
+                <h2 className="text-2xl font-bold text-black mb-4">5. Orders & Payment</h2>
                 <p className="mb-4">
-                  When you create an account with Print Mega Store, you are responsible for:
+                  Orders are processed through our secure checkout powered by Lightspeed / Ecwid.
                 </p>
+                <p className="mb-4">
+                  By placing an order, you authorize us to charge your selected payment method for the total amount including taxes and shipping (if applicable).
+                </p>
+                <p className="mb-2">We reserve the right to:</p>
                 <ul className="list-disc pl-6 space-y-2">
-                  <li>Maintaining the confidentiality of your account and password</li>
-                  <li>Restricting access to your computer and account</li>
-                  <li>Accepting responsibility for all activities that occur under your account</li>
-                  <li>Providing accurate, current, and complete information during registration</li>
-                  <li>Updating your information to keep it accurate and current</li>
-                  <li>Notifying us immediately of any unauthorized use of your account</li>
-                </ul>
-                <p className="mt-4">
-                  You must be at least 18 years old to create an account and make purchases on our website. Print Mega Store reserves the right to refuse service, terminate accounts, or cancel orders at our sole discretion.
-                </p>
-              </section>
-
-              <section>
-                <h2 className="text-2xl font-bold text-black mb-4" data-testid="heading-product-information">Product Information Disclaimer</h2>
-                <p>
-                  Print Mega Store strives to provide accurate product descriptions, specifications, and pricing information. However, we do not warrant that product descriptions, pricing, or other content on our website is accurate, complete, reliable, current, or error-free. Product images are for illustrative purposes only and may not exactly represent the actual product.
-                </p>
-                <p className="mt-4">
-                  If a product offered by Print Mega Store is not as described, your sole remedy is to return it in unused condition in accordance with our Return Policy. We reserve the right to correct any errors, inaccuracies, or omissions and to change or update information at any time without prior notice.
-                </p>
-              </section>
-
-              <section>
-                <h2 className="text-2xl font-bold text-black mb-4" data-testid="heading-intellectual-property">Intellectual Property</h2>
-                <p>
-                  All content on this website, including but not limited to text, graphics, logos, images, audio clips, digital downloads, and software, is the property of Print Mega Store or its content suppliers and is protected by United States and international copyright laws.
-                </p>
-                <p className="mt-4">
-                  The Print Mega Store name, logo, and all related names, logos, product and service names, designs, and slogans are trademarks of Print Mega Store. You may not use such marks without our prior written permission. All other names, logos, product and service names, designs, and slogans on this website are the trademarks of their respective owners.
-                </p>
-              </section>
-
-              <section>
-                <h2 className="text-2xl font-bold text-black mb-4" data-testid="heading-limitation-liability">Limitation of Liability</h2>
-                <p>
-                  TO THE FULLEST EXTENT PERMITTED BY APPLICABLE LAW, PRINT MEGA STORE SHALL NOT BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES, INCLUDING BUT NOT LIMITED TO LOSS OF PROFITS, DATA, USE, GOODWILL, OR OTHER INTANGIBLE LOSSES, RESULTING FROM:
-                </p>
-                <ul className="list-disc pl-6 space-y-2 mt-4">
-                  <li>Your access to or use of (or inability to access or use) the website</li>
-                  <li>Any conduct or content of any third party on the website</li>
-                  <li>Any content obtained from the website</li>
-                  <li>Unauthorized access, use, or alteration of your transmissions or content</li>
-                </ul>
-                <p className="mt-4">
-                  In no event shall Print Mega Store's total liability exceed the amount you paid for the products giving rise to the claim.
-                </p>
-              </section>
-
-              <section>
-                <h2 className="text-2xl font-bold text-black mb-4" data-testid="heading-indemnification">Indemnification</h2>
-                <p>
-                  You agree to defend, indemnify, and hold harmless Print Mega Store, its affiliates, licensors, and service providers, and its and their respective officers, directors, employees, contractors, agents, licensors, suppliers, successors, and assigns from and against any claims, liabilities, damages, judgments, awards, losses, costs, expenses, or fees (including reasonable attorneys' fees) arising out of or relating to:
-                </p>
-                <ul className="list-disc pl-6 space-y-2 mt-4">
-                  <li>Your violation of these Terms of Service</li>
-                  <li>Your use of the website</li>
-                  <li>Your violation of any third-party rights, including intellectual property rights</li>
-                  <li>Any claim that your use of the website caused damage to a third party</li>
+                  <li>Cancel or refuse any order</li>
+                  <li>Request additional verification before fulfillment</li>
                 </ul>
               </section>
 
               <section>
-                <h2 className="text-2xl font-bold text-black mb-4" data-testid="heading-governing-law">Governing Law</h2>
-                <p>
-                  These Terms of Service and any separate agreements whereby we provide you services shall be governed by and construed in accordance with the laws of the United States of America and the State of New York, without regard to its conflict of law provisions.
+                <h2 className="text-2xl font-bold text-black mb-4">6. Shipping & Delivery</h2>
+                <p className="mb-4">
+                  Orders are typically processed within 1–2 business days.
                 </p>
-                <p className="mt-4">
-                  Any legal action or proceeding arising out of or relating to these Terms shall be brought exclusively in the federal or state courts located in New York County, New York, and you consent to the personal jurisdiction of such courts.
+                <p className="mb-4">
+                  Estimated delivery times are provided for convenience only and are not guaranteed.
+                </p>
+                <p className="mb-2">Once your order ships:</p>
+                <ul className="list-disc pl-6 space-y-2 mb-4">
+                  <li>You will receive tracking information by email</li>
+                  <li>Responsibility for delivery passes to the carrier</li>
+                </ul>
+                <p>
+                  Print Mega Store is not responsible for delays caused by carriers, weather, customs, or incorrect shipping information provided by the customer.
                 </p>
               </section>
 
               <section>
-                <h2 className="text-2xl font-bold text-black mb-4" data-testid="heading-dispute-resolution">Dispute Resolution</h2>
-                <p>
-                  Any dispute, controversy, or claim arising out of or relating to these Terms of Service shall first be attempted to be resolved through good-faith negotiation between the parties. If the dispute cannot be resolved through negotiation within thirty (30) days, either party may pursue binding arbitration administered by the American Arbitration Association in accordance with its Commercial Arbitration Rules.
+                <h2 className="text-2xl font-bold text-black mb-4">7. Returns & Refunds</h2>
+                <p className="mb-4">We offer a 30-day return policy.</p>
+                <p className="mb-2">To be eligible:</p>
+                <ul className="list-disc pl-6 space-y-2 mb-4">
+                  <li>Items must be unused</li>
+                  <li>In original packaging</li>
+                  <li>With all accessories included</li>
+                </ul>
+                <p className="mb-4">
+                  Return shipping costs may be the responsibility of the customer unless the product was defective or incorrect.
                 </p>
-                <p className="mt-4">
-                  The arbitration shall take place in New York, New York. The decision of the arbitrator shall be final and binding on both parties. Judgment on the award may be entered in any court having jurisdiction. You agree that any dispute resolution proceedings will be conducted only on an individual basis and not in a class, consolidated, or representative action.
+                <p className="mb-4">
+                  Refunds are issued to the original payment method after the returned item is inspected.
+                </p>
+                <p className="mb-4">
+                  Certain items (including special-order, clearance, or opened electronics) may not be eligible for return.
+                </p>
+                <p>
+                  Full return details are available on our <a href="/returns" className="text-[#33cccc] hover:underline">Returns & Refunds</a> page.
                 </p>
               </section>
 
               <section>
-                <h2 className="text-2xl font-bold text-black mb-4" data-testid="heading-modifications">Modifications to Terms</h2>
-                <p>
-                  Print Mega Store reserves the right to modify or replace these Terms of Service at any time at our sole discretion. If a revision is material, we will provide at least 30 days' notice prior to any new terms taking effect. What constitutes a material change will be determined at our sole discretion.
+                <h2 className="text-2xl font-bold text-black mb-4">8. Manufacturer Warranty</h2>
+                <p className="mb-4">
+                  All products are covered by the manufacturer's warranty, where applicable.
                 </p>
-                <p className="mt-4">
-                  By continuing to access or use our website after any revisions become effective, you agree to be bound by the revised terms. If you do not agree to the new terms, you are no longer authorized to use the website.
+                <p className="mb-4">
+                  Print Mega Store does not provide manufacturer warranty service. Warranty claims, support, and repairs must be handled directly through the manufacturer (e.g., HP).
+                </p>
+                <p>
+                  Warranty coverage may vary by product, region, and registration status.
                 </p>
               </section>
 
               <section>
-                <h2 className="text-2xl font-bold text-black mb-4" data-testid="heading-contact-terms">Contact Us</h2>
-                <p>
-                  If you have any questions about these Terms of Service, please contact us at:
+                <h2 className="text-2xl font-bold text-black mb-4">9. Enterprise & Professional Products</h2>
+                <p className="mb-4">
+                  Some printers and scanners sold on this site may be classified as enterprise, commercial, or professional equipment.
                 </p>
-                <p className="mt-4">
-                  <strong>Email:</strong> info@printmegastore.com<br />
-                  <strong>Phone:</strong> +1 (555) 123-4567<br />
-                  <strong>Address:</strong> 123 Printer Avenue, Tech District, NY 10001
+                <p className="mb-2">These products:</p>
+                <ul className="list-disc pl-6 space-y-2 mb-4">
+                  <li>May have region-specific warranty terms</li>
+                  <li>May require manufacturer registration</li>
+                  <li>May not be eligible for consumer-grade support</li>
+                </ul>
+                <p>
+                  Customers are responsible for verifying warranty and compatibility with the manufacturer before purchase.
+                </p>
+              </section>
+
+              <section>
+                <h2 className="text-2xl font-bold text-black mb-4">10. Intellectual Property</h2>
+                <p className="mb-4">
+                  All product names, trademarks, logos, and brand names (including HP®) are the property of their respective owners and are used for identification purposes only.
+                </p>
+                <p>
+                  Nothing on this website grants you any license to use any trademark or copyrighted content.
+                </p>
+              </section>
+
+              <section>
+                <h2 className="text-2xl font-bold text-black mb-4">11. Prohibited Use</h2>
+                <p className="mb-2">You agree not to:</p>
+                <ul className="list-disc pl-6 space-y-2 mb-4">
+                  <li>Use this website for unlawful purposes</li>
+                  <li>Attempt to interfere with site security</li>
+                  <li>Copy, resell, or exploit any portion of the website without permission</li>
+                </ul>
+                <p>
+                  We may terminate access for violations of these Terms.
+                </p>
+              </section>
+
+              <section>
+                <h2 className="text-2xl font-bold text-black mb-4">12. Limitation of Liability</h2>
+                <p className="mb-2">Print Mega Store is not liable for:</p>
+                <ul className="list-disc pl-6 space-y-2 mb-4">
+                  <li>Indirect or consequential damages</li>
+                  <li>Loss of profits or data</li>
+                  <li>Delays, delivery failures, or manufacturer defects</li>
+                </ul>
+                <p>
+                  Our maximum liability is limited to the amount paid for the product.
+                </p>
+              </section>
+
+              <section>
+                <h2 className="text-2xl font-bold text-black mb-4">13. Privacy</h2>
+                <p>
+                  Your use of this site is also governed by our <a href="/privacy" className="text-[#33cccc] hover:underline">Privacy Policy</a>.
+                </p>
+              </section>
+
+              <section>
+                <h2 className="text-2xl font-bold text-black mb-4">14. Governing Law</h2>
+                <p>
+                  These Terms are governed by the laws applicable to online commerce in the United States.
+                </p>
+              </section>
+
+              <section>
+                <h2 className="text-2xl font-bold text-black mb-4">15. Changes to These Terms</h2>
+                <p>
+                  We may update these Terms at any time. Changes take effect once posted on this page.
+                </p>
+              </section>
+
+              <section>
+                <h2 className="text-2xl font-bold text-black mb-4">16. Contact</h2>
+                <p className="mb-4">For questions about these Terms:</p>
+                <p>
+                  Email: <a href="mailto:info@printmegastore.com" className="text-[#33cccc] hover:underline">info@printmegastore.com</a>
+                </p>
+                <p className="mt-4 text-sm text-gray-500">
+                  Print Mega Store — Independent Online Retailer
                 </p>
               </section>
             </div>
