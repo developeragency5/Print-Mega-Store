@@ -53,6 +53,7 @@ import dollarGif from "@assets/dollar_1768343622664.gif";
 import layersGif from "@assets/layers-selection-tool_1768343797554.gif";
 import shieldGif from "@assets/shield_1768343929996.gif";
 import homeIconImg from "@assets/home_1768345063969.png";
+import smallBusinessIcon from "@assets/building_(1)_1768345193049.png";
 
 const categoryIcons: Record<string, React.ReactNode> = {
   "Home-Printers": <img src={printerIcon} alt="Home Printers" className="w-10 h-10" />,
@@ -787,7 +788,7 @@ export default function Home() {
                 desc: "A compact inkjet home printer with wireless printing and ink tanks is ideal for everyday use.",
               },
               {
-                icon: <Building className="w-8 h-8 text-[#33cccc]" />,
+                icon: <img src={smallBusinessIcon} alt="Small Business" className="w-8 h-8" />,
                 title: "Small Business & Home Offices",
                 desc: "Multifunction printers with automatic duplexing and printing and scanning capabilities offer flexibility.",
               },
