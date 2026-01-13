@@ -40,10 +40,11 @@ import laserPrinterImg from "@assets/HP_LaserJet_M110w_Wireless_Black_&_White_Pr
 import scannerImg from "@assets/9000_s1_1767905236089.jpg";
 import printerIcon from "@assets/printer_1768342581018.png";
 import telephoneAnimation from "@assets/telephone_1768342750520.json";
+import buildingIcon from "@assets/building_1768342862353.png";
 
 const categoryIcons: Record<string, React.ReactNode> = {
   "Home-Printers": <img src={printerIcon} alt="Home Printers" className="w-10 h-10" />,
-  "Office-Printers": <img src={printerIcon} alt="Office Printers" className="w-10 h-10" />,
+  "Office-Printers": <img src={buildingIcon} alt="Office Printers" className="w-10 h-10" />,
   "Inkjet-Printers": <img src={printerIcon} alt="Inkjet Printers" className="w-10 h-10" />,
   "Laser-Printers": <img src={printerIcon} alt="Laser Printers" className="w-10 h-10" />,
   "Document-Scanners": <ScanLine className="w-10 h-10" />,
