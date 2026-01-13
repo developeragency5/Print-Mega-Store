@@ -759,164 +759,6 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-16 md:py-24 bg-gray-100" data-testid="trust-section">
-        <div className="container mx-auto px-6 sm:px-8 lg:px-12">
-          <div className="grid md:grid-cols-3 gap-8 md:gap-12">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="text-center"
-            >
-              <div className="w-16 h-16 bg-[#33cccc]/10 rounded-full flex items-center justify-center mx-auto mb-6">
-                <Headphones className="w-8 h-8 text-[#33cccc]" />
-              </div>
-              <h3 className="text-lg font-bold text-gray-900 uppercase tracking-wide mb-4">
-                Customer Satisfaction Is Our Priority
-              </h3>
-              <div className="text-gray-600 text-sm leading-relaxed space-y-4">
-                <p>
-                  We aim to deliver exceptional customer service along every step of the way. Whether you need to know which printer is right for your home office, how to set up your new scanner, or how to troubleshoot printing issues, our friendly and professional team is ready to assist you.
-                </p>
-                <p>
-                  You may also browse through our product categories to find detailed information about specifications, features, and compatibility. However, if you cannot find what you are looking for and you have questions about your purchase, simply send us a message through our <a href="/contact" className="text-[#33cccc] hover:underline">contact page</a>.
-                </p>
-                <p>
-                  If we are unavailable, leave a message and we will get back to you as soon as we can. You can also reach us via phone or email.
-                </p>
-              </div>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.1 }}
-              className="text-center"
-            >
-              <div className="w-16 h-16 bg-[#33cccc]/10 rounded-full flex items-center justify-center mx-auto mb-6">
-                <CheckCircle2 className="w-8 h-8 text-[#33cccc]" />
-              </div>
-              <h3 className="text-lg font-bold text-gray-900 uppercase tracking-wide mb-4">
-                Quality Products You Can Trust
-              </h3>
-              <div className="text-gray-600 text-sm leading-relaxed space-y-4">
-                <p>
-                  Print Mega Store has always offered quality printers and scanners from trusted manufacturers. From the beginning, we have provided reliable printing equipment to households and businesses at competitive prices. We take pride in offering products that deliver consistent results.
-                </p>
-                <p>
-                  That is why we carefully select each product in our catalog. If you are not completely satisfied with your purchase, please read our return policy for more information on how we can help resolve any concerns.
-                </p>
-                <p>
-                  For any questions about product specifications or compatibility, feel free to reach out to us for assistance.
-                </p>
-              </div>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.2 }}
-              className="text-center"
-            >
-              <div className="w-16 h-16 bg-[#33cccc]/10 rounded-full flex items-center justify-center mx-auto mb-6">
-                <Printer className="w-8 h-8 text-[#33cccc]" />
-              </div>
-              <h3 className="text-lg font-bold text-gray-900 uppercase tracking-wide mb-4">
-                Why Choose Print Mega Store?
-              </h3>
-              <div className="text-gray-600 text-sm leading-relaxed space-y-4">
-                <p>
-                  Print Mega Store is your reliable independent destination for high-quality printers and scanners at budget-friendly prices. We have a wide selection of products that work perfectly for home offices, small businesses, and enterprise environments.
-                </p>
-                <p>
-                  We only offer products from reputable manufacturers to ensure the best printing results for every page. Our curated catalog includes home printers, office printers, inkjet printers, laser printers, and document scanners from leading brands.
-                </p>
-                <p>
-                  Print Mega Store has established a track record of dependability and excellence. Our prices are competitive but we never cut corners when it comes to quality. We aim to make it easier for our customers to quickly find affordable solutions to their printing needs. Shop now and find the perfect printer today.
-                </p>
-              </div>
-            </motion.div>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-16 md:py-24 bg-white" data-testid="commitment-section">
-        <div className="container mx-auto px-6 sm:px-8 lg:px-12">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-12"
-          >
-            <span className="inline-block text-[#33cccc] font-semibold text-sm uppercase tracking-wider mb-4">
-              Our Commitment
-            </span>
-            <h2 className="text-4xl md:text-5xl font-extrabold mb-6 text-black">
-              What Sets Us Apart
-            </h2>
-            <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-              Experience the Print Mega Store difference with our dedication to quality, service, and customer satisfaction.
-            </p>
-          </motion.div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {[
-              {
-                icon: <Package className="w-6 h-6" />,
-                title: "Curated Selection",
-                desc: "Every product in our catalog is carefully selected to ensure quality and reliability for your printing needs.",
-                bgColor: "bg-[#33cccc]/10",
-                iconColor: "text-[#33cccc]",
-                highlighted: false,
-              },
-              {
-                icon: <ShieldCheck className="w-6 h-6" />,
-                title: "Secure Checkout",
-                desc: "Shop with confidence using our safe and encrypted payment processing for all transactions.",
-                bgColor: "bg-[#33cccc]/10",
-                iconColor: "text-[#33cccc]",
-                highlighted: false,
-              },
-              {
-                icon: <Clock className="w-6 h-6" />,
-                title: "Quick Processing",
-                desc: "We process orders promptly to ensure your new printing equipment arrives when you need it most.",
-                bgColor: "bg-green-100",
-                iconColor: "text-green-600",
-                highlighted: true,
-              },
-              {
-                icon: <Heart className="w-6 h-6" />,
-                title: "Customer First",
-                desc: "Your satisfaction is our priority. We go above and beyond to ensure a seamless shopping experience.",
-                bgColor: "bg-pink-100",
-                iconColor: "text-pink-500",
-                highlighted: false,
-              },
-            ].map((item, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.1 }}
-                className={`rounded-2xl p-6 text-center ${item.highlighted ? 'bg-[#33cccc]/5 border-2 border-[#33cccc]/20' : 'bg-gray-50'}`}
-              >
-                <div className={`w-14 h-14 ${item.bgColor} rounded-xl flex items-center justify-center mx-auto mb-4`}>
-                  <span className={item.iconColor}>{item.icon}</span>
-                </div>
-                <h3 className={`text-lg font-bold mb-3 ${item.highlighted ? 'text-[#33cccc]' : 'text-gray-900'}`}>
-                  {item.title}
-                </h3>
-                <p className="text-gray-600 text-sm leading-relaxed">{item.desc}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       <section className="py-16 md:py-24 bg-gray-50" data-testid="buyers-guide-section">
         <div className="container mx-auto px-6 sm:px-8 lg:px-12">
           <motion.div
@@ -1055,6 +897,164 @@ export default function Home() {
               </a>
             </Button>
           </motion.div>
+        </div>
+      </section>
+
+      <section className="py-16 md:py-24 bg-white" data-testid="commitment-section">
+        <div className="container mx-auto px-6 sm:px-8 lg:px-12">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-12"
+          >
+            <span className="inline-block text-[#33cccc] font-semibold text-sm uppercase tracking-wider mb-4">
+              Our Commitment
+            </span>
+            <h2 className="text-4xl md:text-5xl font-extrabold mb-6 text-black">
+              What Sets Us Apart
+            </h2>
+            <p className="text-gray-600 text-lg max-w-2xl mx-auto">
+              Experience the Print Mega Store difference with our dedication to quality, service, and customer satisfaction.
+            </p>
+          </motion.div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {[
+              {
+                icon: <Package className="w-6 h-6" />,
+                title: "Curated Selection",
+                desc: "Every product in our catalog is carefully selected to ensure quality and reliability for your printing needs.",
+                bgColor: "bg-[#33cccc]/10",
+                iconColor: "text-[#33cccc]",
+                highlighted: false,
+              },
+              {
+                icon: <ShieldCheck className="w-6 h-6" />,
+                title: "Secure Checkout",
+                desc: "Shop with confidence using our safe and encrypted payment processing for all transactions.",
+                bgColor: "bg-[#33cccc]/10",
+                iconColor: "text-[#33cccc]",
+                highlighted: false,
+              },
+              {
+                icon: <Clock className="w-6 h-6" />,
+                title: "Quick Processing",
+                desc: "We process orders promptly to ensure your new printing equipment arrives when you need it most.",
+                bgColor: "bg-green-100",
+                iconColor: "text-green-600",
+                highlighted: true,
+              },
+              {
+                icon: <Heart className="w-6 h-6" />,
+                title: "Customer First",
+                desc: "Your satisfaction is our priority. We go above and beyond to ensure a seamless shopping experience.",
+                bgColor: "bg-pink-100",
+                iconColor: "text-pink-500",
+                highlighted: false,
+              },
+            ].map((item, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.1 }}
+                className={`rounded-2xl p-6 text-center ${item.highlighted ? 'bg-[#33cccc]/5 border-2 border-[#33cccc]/20' : 'bg-gray-50'}`}
+              >
+                <div className={`w-14 h-14 ${item.bgColor} rounded-xl flex items-center justify-center mx-auto mb-4`}>
+                  <span className={item.iconColor}>{item.icon}</span>
+                </div>
+                <h3 className={`text-lg font-bold mb-3 ${item.highlighted ? 'text-[#33cccc]' : 'text-gray-900'}`}>
+                  {item.title}
+                </h3>
+                <p className="text-gray-600 text-sm leading-relaxed">{item.desc}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-16 md:py-24 bg-gray-100" data-testid="trust-section">
+        <div className="container mx-auto px-6 sm:px-8 lg:px-12">
+          <div className="grid md:grid-cols-3 gap-8 md:gap-12">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="text-center"
+            >
+              <div className="w-16 h-16 bg-[#33cccc]/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                <Headphones className="w-8 h-8 text-[#33cccc]" />
+              </div>
+              <h3 className="text-lg font-bold text-gray-900 uppercase tracking-wide mb-4">
+                Customer Satisfaction Is Our Priority
+              </h3>
+              <div className="text-gray-600 text-sm leading-relaxed space-y-4">
+                <p>
+                  We aim to deliver exceptional customer service along every step of the way. Whether you need to know which printer is right for your home office, how to set up your new scanner, or how to troubleshoot printing issues, our friendly and professional team is ready to assist you.
+                </p>
+                <p>
+                  You may also browse through our product categories to find detailed information about specifications, features, and compatibility. However, if you cannot find what you are looking for and you have questions about your purchase, simply send us a message through our <a href="/contact" className="text-[#33cccc] hover:underline">contact page</a>.
+                </p>
+                <p>
+                  If we are unavailable, leave a message and we will get back to you as soon as we can. You can also reach us via phone or email.
+                </p>
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.1 }}
+              className="text-center"
+            >
+              <div className="w-16 h-16 bg-[#33cccc]/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                <CheckCircle2 className="w-8 h-8 text-[#33cccc]" />
+              </div>
+              <h3 className="text-lg font-bold text-gray-900 uppercase tracking-wide mb-4">
+                Quality Products You Can Trust
+              </h3>
+              <div className="text-gray-600 text-sm leading-relaxed space-y-4">
+                <p>
+                  Print Mega Store has always offered quality printers and scanners from trusted manufacturers. From the beginning, we have provided reliable printing equipment to households and businesses at competitive prices. We take pride in offering products that deliver consistent results.
+                </p>
+                <p>
+                  That is why we carefully select each product in our catalog. If you are not completely satisfied with your purchase, please read our return policy for more information on how we can help resolve any concerns.
+                </p>
+                <p>
+                  For any questions about product specifications or compatibility, feel free to reach out to us for assistance.
+                </p>
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.2 }}
+              className="text-center"
+            >
+              <div className="w-16 h-16 bg-[#33cccc]/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                <Printer className="w-8 h-8 text-[#33cccc]" />
+              </div>
+              <h3 className="text-lg font-bold text-gray-900 uppercase tracking-wide mb-4">
+                Why Choose Print Mega Store?
+              </h3>
+              <div className="text-gray-600 text-sm leading-relaxed space-y-4">
+                <p>
+                  Print Mega Store is your reliable independent destination for high-quality printers and scanners at budget-friendly prices. We have a wide selection of products that work perfectly for home offices, small businesses, and enterprise environments.
+                </p>
+                <p>
+                  We only offer products from reputable manufacturers to ensure the best printing results for every page. Our curated catalog includes home printers, office printers, inkjet printers, laser printers, and document scanners from leading brands.
+                </p>
+                <p>
+                  Print Mega Store has established a track record of dependability and excellence. Our prices are competitive but we never cut corners when it comes to quality. We aim to make it easier for our customers to quickly find affordable solutions to their printing needs. Shop now and find the perfect printer today.
+                </p>
+              </div>
+            </motion.div>
+          </div>
         </div>
       </section>
 
