@@ -1,10 +1,11 @@
 import { useState, useEffect, useRef } from "react";
 import { Link, useLocation } from "wouter";
-import { Menu, X, Phone, User } from "lucide-react";
+import { Menu, X, User } from "lucide-react";
 import { Button } from "./ui/button";
 import { cn } from "@/lib/utils";
 import { STORE_CATEGORIES, getCategoryUrl, STORE_ID } from "@/lib/ecwid";
 import logoImg from "@/assets/logo.png";
+import phoneGif from "@assets/telephone_1768343349662.gif";
 
 export function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -103,7 +104,7 @@ export function Header() {
                 className="hidden md:flex items-center gap-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
                 data-testid="link-phone"
               >
-                <Phone className="w-4 h-4" />
+                <img src={phoneGif} alt="Phone" className="w-5 h-5" />
                 <span className="hidden lg:inline">+1 (555) 123-4567</span>
               </a>
 
