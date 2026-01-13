@@ -46,6 +46,7 @@ import laserIcon from "@assets/printer_(1)_1768343182930.png";
 import scannerIcon from "@assets/scanner_1768343254954.png";
 import dollarGif from "@assets/dollar_1768343622664.gif";
 import layersGif from "@assets/layers-selection-tool_1768343797554.gif";
+import shieldGif from "@assets/shield_1768343929996.gif";
 
 const categoryIcons: Record<string, React.ReactNode> = {
   "Home-Printers": <img src={printerIcon} alt="Home Printers" className="w-10 h-10" />,
@@ -722,7 +723,7 @@ export default function Home() {
                 color: "from-green-500 to-green-600",
               },
               {
-                icon: <ShieldCheck className="w-8 h-8" />,
+                icon: <img src={shieldGif} alt="Secure Shopping" className="w-8 h-8" />,
                 title: "Fast & Secure Shopping",
                 desc: "Secure checkout, fast delivery, and trusted customer care.",
                 color: "from-orange-500 to-orange-600",
