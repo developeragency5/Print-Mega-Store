@@ -10,171 +10,145 @@ export default function ReturnPolicy() {
             animate={{ opacity: 1, y: 0 }}
             className="max-w-4xl mx-auto"
           >
-            <h1 className="text-4xl md:text-5xl font-extrabold text-black mb-8" data-testid="heading-return-policy">
-              Return & Refund Policy
+            <h1 className="text-4xl md:text-5xl font-extrabold text-black mb-4" data-testid="heading-return-policy">
+              Returns & Refunds Policy
             </h1>
-            <p className="text-gray-600 mb-8">
-              Last updated: January 2026
-            </p>
+            <p className="text-xl text-gray-600 mb-2">Print Mega Store</p>
+            <p className="text-gray-600 mb-8">Last Updated: January 2026</p>
 
-            <div className="bg-white rounded-xl border border-gray-100 p-6 mb-8">
-              <p className="text-gray-700">
-                <strong>Business Name:</strong> Print Mega Store<br />
-                <strong>Email:</strong> info@printmegastore.com<br />
-                <strong>Phone:</strong> +1 (555) 123-4567<br />
-                <strong>Address:</strong> 123 Printer Avenue, Tech District, NY 10001, United States
-              </p>
-            </div>
+            <p className="text-gray-600 mb-8">
+              Thank you for shopping at Print Mega Store. We want you to be completely satisfied with your purchase of printers, scanners, and accessories. Please read this Returns & Refunds Policy carefully before placing an order.
+            </p>
 
             <div className="space-y-8 text-gray-600 leading-relaxed">
               <section>
-                <h2 className="text-2xl font-bold text-black mb-4">Return Policy Overview</h2>
-                <p>
-                  At Print Mega Store, we want you to be completely satisfied with your purchase. If for any reason you are not satisfied with your printer, scanner, or other printing equipment, we offer a comprehensive return and refund policy. Please read this policy carefully to understand your rights and the conditions for returns.
-                </p>
-              </section>
-
-              <section>
-                <h2 className="text-2xl font-bold text-black mb-4">30-Day Return Window</h2>
+                <h2 className="text-2xl font-bold text-black mb-4">1. Eligibility for Returns</h2>
                 <p className="mb-4">
-                  You may return most new, unopened items within <strong>30 days of delivery</strong> for a full refund of the purchase price. Opened items may be returned within <strong>30 days</strong> if they are defective or not as described. The 30-day period begins from the date your order is delivered, as indicated by the carrier's tracking information.
+                  You may request a return and refund for most products within 30 days of delivery.
                 </p>
+                <p className="mb-2">To be eligible for a return:</p>
+                <ul className="list-disc pl-6 space-y-2 mb-4">
+                  <li>The item must be unused</li>
+                  <li>The item must include original packaging</li>
+                  <li>All accessories, manuals, and included parts must be returned</li>
+                  <li>The item must not show signs of damage caused by the customer</li>
+                </ul>
                 <p>
-                  To be eligible for a return, items must be in their original packaging with all accessories, manuals, and documentation included. Items that have been damaged by the customer, modified, or are missing parts may not be eligible for a full refund.
+                  Items that do not meet these conditions may be refused a return or may incur a restocking fee.
                 </p>
               </section>
 
               <section>
-                <h2 className="text-2xl font-bold text-black mb-4">Items Eligible for Return</h2>
-                <p className="mb-4">The following items are eligible for return within the 30-day window:</p>
+                <h2 className="text-2xl font-bold text-black mb-4">2. How to Initiate a Return</h2>
+                <p className="mb-2">To start a return:</p>
+                <ol className="list-decimal pl-6 space-y-2 mb-4">
+                  <li>Email us at <a href="mailto:info@printmegastore.com" className="text-[#33cccc] hover:underline">info@printmegastore.com</a> with your order number and reason for return.</li>
+                  <li>We will respond with a Return Merchandise Authorization (RMA) number and instructions.</li>
+                  <li>Pack the item securely and ship it back according to our instructions.</li>
+                </ol>
+                <p>
+                  Do not send items back without an RMA number. Returns without an RMA may be refused.
+                </p>
+              </section>
+
+              <section>
+                <h2 className="text-2xl font-bold text-black mb-4">3. Return Shipping Costs</h2>
                 <ul className="list-disc pl-6 space-y-2">
-                  <li>Printers (inkjet, laser, all-in-one, photo printers)</li>
-                  <li>Document scanners and photo scanners</li>
-                  <li>Multifunction devices</li>
-                  <li>Printer accessories and cables</li>
-                  <li>Defective or damaged items (within warranty period)</li>
-                  <li>Items that do not match the product description</li>
+                  <li>If the return is due to a defect or error on our part, we will provide a prepaid return shipping label.</li>
+                  <li>If the return is for any other reason (e.g., changed mind, ordered wrong model), the customer is responsible for return shipping costs.</li>
+                  <li>For international returns (if allowed), the customer is responsible for all return shipping charges.</li>
                 </ul>
               </section>
 
               <section>
-                <h2 className="text-2xl font-bold text-black mb-4">Non-Returnable Items</h2>
-                <p className="mb-4">The following items cannot be returned:</p>
-                <ul className="list-disc pl-6 space-y-2">
-                  <li>Ink cartridges and toner cartridges (due to potential tampering)</li>
-                  <li>Opened software or digital products</li>
-                  <li>Items purchased more than 30 days ago</li>
-                  <li>Items damaged due to misuse, neglect, or unauthorized modifications</li>
-                  <li>Items without original packaging or missing accessories</li>
-                  <li>Clearance or final sale items (unless defective)</li>
-                  <li>Gift cards</li>
+                <h2 className="text-2xl font-bold text-black mb-4">4. Refunds</h2>
+                <p className="mb-2">Once your return is received and inspected:</p>
+                <ul className="list-disc pl-6 space-y-2 mb-4">
+                  <li>Approved returns will be refunded to your original payment method.</li>
+                  <li>Refund processing may take 3–7 business days after we receive the returned item.</li>
+                  <li>You will receive an email confirmation when your refund has been issued.</li>
                 </ul>
+                <p>
+                  Original shipping charges are not refundable unless the return is due to a defect or our error.
+                </p>
               </section>
 
               <section>
-                <h2 className="text-2xl font-bold text-black mb-4">How to Initiate a Return</h2>
-                <p className="mb-4">To start a return, please follow these steps:</p>
-                <ol className="list-decimal pl-6 space-y-3">
-                  <li>
-                    <strong>Contact Us:</strong> Email us at info@printmegastore.com or call +1 (555) 123-4567 with your order number and reason for return.
-                  </li>
-                  <li>
-                    <strong>Receive Return Authorization:</strong> Our team will review your request and provide a Return Merchandise Authorization (RMA) number within 1-2 business days.
-                  </li>
-                  <li>
-                    <strong>Pack Your Item:</strong> Securely pack the item in its original packaging with all accessories and documentation. Include the RMA number on the outside of the package.
-                  </li>
-                  <li>
-                    <strong>Ship Your Return:</strong> Ship the package to the address provided in your return authorization. We recommend using a trackable shipping method.
-                  </li>
-                  <li>
-                    <strong>Receive Your Refund:</strong> Once we receive and inspect your return, we will process your refund within 5-7 business days.
-                  </li>
+                <h2 className="text-2xl font-bold text-black mb-4">5. Defective or Damaged Products</h2>
+                <p className="mb-2">If a product arrives damaged or defective:</p>
+                <ol className="list-decimal pl-6 space-y-2 mb-4">
+                  <li>Email us at <a href="mailto:info@printmegastore.com" className="text-[#33cccc] hover:underline">info@printmegastore.com</a> within 7 days of delivery.</li>
+                  <li>Include photos of the damage and the packaging.</li>
+                  <li>We will provide instructions for return or replacement.</li>
+                </ol>
+                <p className="mb-2">Damaged products may be eligible for:</p>
+                <ul className="list-disc pl-6 space-y-2 mb-4">
+                  <li>Replacement</li>
+                  <li>Refund</li>
+                  <li>Credit toward a future purchase</li>
+                </ul>
+                <p>
+                  Depending on your preference and stock availability.
+                </p>
+              </section>
+
+              <section>
+                <h2 className="text-2xl font-bold text-black mb-4">6. Restocking Fees</h2>
+                <p className="mb-2">For non-defective returns, a restocking fee of up to 15% may apply for:</p>
+                <ul className="list-disc pl-6 space-y-2 mb-4">
+                  <li>Large or bulky equipment</li>
+                  <li>Items returned without original accessories</li>
+                  <li>Opened software, consumables, or bundled items</li>
+                </ul>
+                <p>
+                  The restocking fee will be deducted from your refund.
+                </p>
+              </section>
+
+              <section>
+                <h2 className="text-2xl font-bold text-black mb-4">7. Exchanges</h2>
+                <p className="mb-2">We do not automatically exchange items. If you want a different model:</p>
+                <ol className="list-decimal pl-6 space-y-2">
+                  <li>Return the original item for a refund.</li>
+                  <li>Place a new order on our website.</li>
                 </ol>
               </section>
 
               <section>
-                <h2 className="text-2xl font-bold text-black mb-4">Return Shipping Costs</h2>
+                <h2 className="text-2xl font-bold text-black mb-4">8. Warranty Claims</h2>
                 <p className="mb-4">
-                  <strong>Defective or Incorrect Items:</strong> If you received a defective, damaged, or incorrect item, Print Mega Store will cover the return shipping costs. We will provide a prepaid return shipping label.
-                </p>
-                <p className="mb-4">
-                  <strong>Change of Mind Returns:</strong> If you are returning an item because you changed your mind or no longer need it, you are responsible for return shipping costs. The original shipping cost (if any) is non-refundable.
+                  All products are covered by the manufacturer's warranty where applicable (e.g., HP warranty).
                 </p>
                 <p>
-                  We recommend using a trackable shipping service and purchasing shipping insurance for returns, especially for high-value items. Print Mega Store is not responsible for items lost or damaged during return shipping.
+                  Print Mega Store does not provide manufacturer warranty service. Warranty claims must be made directly with the manufacturer and are subject to their terms and conditions.
                 </p>
               </section>
 
               <section>
-                <h2 className="text-2xl font-bold text-black mb-4">Refund Process</h2>
-                <p className="mb-4">
-                  Once we receive your returned item, our team will inspect it within 3-5 business days. After inspection, we will notify you via email about the status of your refund.
-                </p>
-                <p className="mb-4">
-                  <strong>Approved Refunds:</strong> If approved, your refund will be processed to your original payment method within 5-7 business days. Depending on your bank or credit card company, it may take additional time for the refund to appear on your statement.
-                </p>
-                <p>
-                  <strong>Partial Refunds:</strong> In some cases, we may issue a partial refund if the item shows signs of use, is missing parts, or is not in its original condition. We will notify you of the refund amount before processing.
-                </p>
-              </section>
-
-              <section>
-                <h2 className="text-2xl font-bold text-black mb-4">Exchanges</h2>
-                <p>
-                  If you received a defective item or would like to exchange for a different product, please contact our team. We will arrange for the return of your original item and ship the replacement as quickly as possible. Exchanges are subject to product availability. If the replacement item has a different price, we will charge or refund the difference accordingly.
-                </p>
-              </section>
-
-              <section>
-                <h2 className="text-2xl font-bold text-black mb-4">Damaged or Defective Items</h2>
-                <p className="mb-4">
-                  If you receive an item that is damaged during shipping or is defective, please contact us within 48 hours of delivery. Please provide the following information:
-                </p>
+                <h2 className="text-2xl font-bold text-black mb-4">9. Return Exceptions</h2>
+                <p className="mb-2">The following items cannot be returned unless defective:</p>
                 <ul className="list-disc pl-6 space-y-2">
-                  <li>Your order number</li>
-                  <li>Photos of the damaged item and packaging</li>
-                  <li>A description of the damage or defect</li>
+                  <li>Opened consumables (ink cartridges, toner)</li>
+                  <li>Software and digital downloads</li>
+                  <li>Clearance or special-order products</li>
                 </ul>
-                <p className="mt-4">
-                  We will work with you to resolve the issue as quickly as possible, either by sending a replacement or issuing a full refund including shipping costs.
-                </p>
               </section>
 
               <section>
-                <h2 className="text-2xl font-bold text-black mb-4">Warranty Claims</h2>
-                <p className="mb-4">
-                  Many products sold by Print Mega Store include manufacturer warranties. Warranty coverage and duration vary by product and manufacturer. For warranty claims, you may need to contact the manufacturer directly. However, our team can assist you in understanding your warranty options and provide guidance on the claims process.
-                </p>
+                <h2 className="text-2xl font-bold text-black mb-4">10. Changes to This Policy</h2>
                 <p>
-                  Print Mega Store is not the manufacturer of the products we sell and cannot extend or modify manufacturer warranty terms. Please refer to the product documentation for specific warranty information.
-                </p>
-              </section>
-
-              <section>
-                <h2 className="text-2xl font-bold text-black mb-4">Restocking Fees</h2>
-                <p>
-                  We do not charge restocking fees for returns that meet our return policy conditions. However, items returned without original packaging, missing accessories, or showing signs of use may be subject to a restocking fee of up to 15% of the purchase price. You will be notified of any applicable fees before your refund is processed.
-                </p>
-              </section>
-
-              <section>
-                <h2 className="text-2xl font-bold text-black mb-4">Cancellations</h2>
-                <p>
-                  If you need to cancel your order, please contact us as soon as possible. Orders that have not yet been shipped can be cancelled for a full refund. Once an order has shipped, it cannot be cancelled and must be returned according to our return policy.
+                  We may update this Returns & Refunds Policy at any time. Changes take effect when posted on this page with an updated "Last Updated" date.
                 </p>
               </section>
 
               <section>
                 <h2 className="text-2xl font-bold text-black mb-4">Contact Us</h2>
+                <p className="mb-4">If you have questions about returns, refunds, or your eligibility:</p>
                 <p>
-                  If you have any questions about our Return & Refund Policy, please contact our team:
+                  Email: <a href="mailto:info@printmegastore.com" className="text-[#33cccc] hover:underline">info@printmegastore.com</a>
                 </p>
                 <p className="mt-4">
-                  <strong>Email:</strong> info@printmegastore.com<br />
-                  <strong>Phone:</strong> +1 (555) 123-4567<br />
-                  <strong>Hours:</strong> Monday - Friday, 9:00 AM - 6:00 PM EST<br />
-                  <strong>Address:</strong> 123 Printer Avenue, Tech District, NY 10001, United States
+                  We are happy to assist you with any concerns.
                 </p>
               </section>
             </div>
