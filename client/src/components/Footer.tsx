@@ -4,7 +4,7 @@ import { Input } from "./ui/input";
 import { Mail, MapPin, Phone, ArrowRight, CheckCircle } from "lucide-react";
 import { useState } from "react";
 import { STORE_CATEGORIES, getCategoryUrl } from "@/lib/ecwid";
-import logoImg from "@/assets/footer-logo.png";
+import logoImg from "@/assets/logo.png";
 
 export function Footer() {
   const [email, setEmail] = useState("");
