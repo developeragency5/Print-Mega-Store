@@ -46,6 +46,60 @@ interface BuyerGuideData {
   paragraphs: string[];
 }
 
+interface ProductRangeData {
+  title: string;
+  intro: string;
+  items: { name: string; description: string }[];
+}
+
+const categoryProductRanges: Record<string, ProductRangeData> = {
+  "Home-Printers": {
+    title: "Our Home Printer Selection",
+    intro: "We stock a range of HP DeskJet, Envy, and Smart Tank printers to match different home printing needs:",
+    items: [
+      { name: "DeskJet models", description: "are budget-friendly all-in-one printers for light everyday use." },
+      { name: "Envy models", description: "are ideal for families and photo printing with higher print quality." },
+      { name: "Smart Tank printers", description: "are designed for high-volume home printing with refillable ink tanks that reduce long-term ink costs." }
+    ]
+  },
+  "Office-Printers": {
+    title: "Our Office Printer Selection",
+    intro: "We stock a range of HP OfficeJet and LaserJet printers to match different business printing needs:",
+    items: [
+      { name: "OfficeJet models", description: "are versatile all-in-one printers for small offices and home businesses." },
+      { name: "OfficeJet Pro models", description: "offer faster speeds, higher capacity, and professional-quality output for busy offices." },
+      { name: "LaserJet models", description: "are designed for high-volume text printing with low cost per page and fast output." }
+    ]
+  },
+  "Inkjet-Printers": {
+    title: "Our Inkjet Printer Selection",
+    intro: "We stock a range of HP inkjet printers to match different color printing needs:",
+    items: [
+      { name: "DeskJet models", description: "are compact and affordable for everyday home printing." },
+      { name: "ENVY models", description: "offer enhanced photo quality and stylish designs for creative users." },
+      { name: "Smart Tank models", description: "feature refillable ink tanks for high-volume printing at a lower cost per page." }
+    ]
+  },
+  "Laser-Printers": {
+    title: "Our Laser Printer Selection",
+    intro: "We stock a range of HP LaserJet printers to match different business printing needs:",
+    items: [
+      { name: "LaserJet models", description: "are compact monochrome printers ideal for home offices and small workgroups." },
+      { name: "LaserJet Pro models", description: "offer faster speeds and higher capacity for demanding business environments." },
+      { name: "LaserJet Enterprise models", description: "are built for high-volume, mission-critical printing with advanced security features." }
+    ]
+  },
+  "Document-Scanners": {
+    title: "Our Document Scanner Selection",
+    intro: "We stock a range of HP ScanJet scanners to match different document digitization needs:",
+    items: [
+      { name: "ScanJet Pro models", description: "are compact scanners for small offices and individual users." },
+      { name: "ScanJet Enterprise models", description: "offer high-speed scanning with automatic document feeders for busy offices." },
+      { name: "ScanJet Enterprise Flow models", description: "are designed for enterprise-level document capture and workflow integration." }
+    ]
+  }
+};
+
 const categoryBuyerGuides: Record<string, BuyerGuideData> = {
   "Home-Printers": {
     title: "Choosing the Right Home Printer",
@@ -122,6 +176,7 @@ export function CategoryBanner() {
   };
 
   const buyerGuide = categoryBuyerGuides[categorySlug];
+  const productRange = categoryProductRanges[categorySlug];
 
   return (
     <>
@@ -178,6 +233,27 @@ export function CategoryBanner() {
               </p>
             ))}
           </div>
+        </section>
+      )}
+
+      {productRange && (
+        <section 
+          className="bg-white rounded-xl border border-gray-100 p-6 md:p-8 mb-6"
+          data-testid={`product-range-${categorySlug}`}
+        >
+          <h2 className="text-xl md:text-2xl font-bold text-gray-900 mb-4">
+            {productRange.title}
+          </h2>
+          <p className="text-gray-600 leading-relaxed mb-4">
+            {productRange.intro}
+          </p>
+          <ul className="space-y-2">
+            {productRange.items.map((item, index) => (
+              <li key={index} className="text-gray-600 leading-relaxed">
+                <span className="font-semibold text-gray-900">{item.name}</span> {item.description}
+              </li>
+            ))}
+          </ul>
         </section>
       )}
     </>
