@@ -60,6 +60,7 @@ import printerIcon2 from "@assets/printer_(2)_1768345577169.png";
 import heartIcon from "@assets/heart_1768345716062.png";
 import waitIcon from "@assets/wait_1768345794716.png";
 import shieldCheckIcon from "@assets/shield_1768345835578.png";
+import packageIcon from "@assets/package_1768345905611.png";
 
 const categoryIcons: Record<string, React.ReactNode> = {
   "Home-Printers": <img src={printerIcon} alt="Home Printers" className="w-10 h-10" />,
@@ -927,11 +928,11 @@ export default function Home() {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
               {
-                icon: <Package className="w-6 h-6" />,
+                icon: <img src={packageIcon} alt="Curated Selection" className="w-6 h-6" />,
                 title: "Curated Selection",
                 desc: "Every product in our catalog is carefully selected to ensure quality and reliability for your printing needs.",
                 bgColor: "bg-white",
-                iconColor: "text-[#33cccc]",
+                iconColor: "",
                 highlighted: false,
               },
               {
