@@ -5,7 +5,7 @@ import { Button } from "./ui/button";
 import { cn } from "@/lib/utils";
 import { STORE_CATEGORIES, getCategoryUrl, STORE_ID } from "@/lib/ecwid";
 import logoImg from "@/assets/logo.png";
-import phoneGif from "@assets/telephone_1768343349662.gif";
+import phoneIcon from "@assets/phone_1768348600813.png";
 
 export function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -104,7 +104,7 @@ export function Header() {
                 className="hidden md:flex items-center gap-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
                 data-testid="link-phone"
               >
-                <img src={phoneGif} alt="Phone" className="w-5 h-5" />
+                <img src={phoneIcon} alt="Phone" className="w-5 h-5" />
                 <span className="hidden lg:inline">+1 (555) 123-4567</span>
               </a>
 
