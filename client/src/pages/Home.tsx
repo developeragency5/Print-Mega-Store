@@ -262,11 +262,11 @@ export default function Home() {
                         transition={{ duration: 0.6, delay: 0.1 }}
                         className="text-base sm:text-lg text-white/90 mb-6 leading-relaxed"
                       >
-                        Welcome to Print Mega Store, your trusted online destination
-                        to buy high-quality inkjet printers, laser printers, and
-                        document scanners for home and office use. We make it easy to
-                        find the right home printer or office printer with reliable
-                        performance, modern features, and competitive pricing.
+                        Welcome to Print Mega Store. We are a reliable online store
+                        where you can buy high-quality inkjet printers, laser printers,
+                        and document scanners for home and office use. We help you find
+                        the right printer with reliable performance, modern features,
+                        and good prices.
                       </motion.p>
 
                       <motion.div
@@ -362,12 +362,11 @@ export default function Home() {
               Your Trusted Source for Home and Office Printers
             </h2>
             <p className="text-gray-600 text-lg max-w-4xl mx-auto leading-relaxed">
-              Print Mega Store is a specialized online retailer dedicated to
-              helping customers find the right printers and scanners for their
-              everyday and professional needs. We focus on offering reliable
-              home printers, office printers, inkjet printers, and laser
-              printers at competitive prices, backed by transparent information
-              and customer-first service.
+              Print Mega Store is an online shop that helps customers find the
+              right printers and scanners. We cater to both everyday and
+              professional needs. We offer reliable home printers, office
+              printers, inkjet printers, and laser printers at good prices. Our
+              service is clear and puts customers first.
             </p>
           </motion.div>
 
@@ -394,10 +393,10 @@ export default function Home() {
               </div>
               <p className="text-gray-600 leading-relaxed">
                 Print Mega Store was built to remove confusion from printer
-                shopping. We specialize in inkjet printers for versatile color
-                printing, laser printers for fast and efficient document output,
-                multifunction all-in-one printers for productivity, and
-                professional document scanners for digitization.
+                shopping. We focus on inkjet printers for colorful printing,
+                laser printers for quick document output, multifunction
+                all-in-one printers that boost productivity, and professional
+                document scanners for digitizing files.
               </p>
             </motion.div>
 
@@ -457,9 +456,9 @@ export default function Home() {
               </div>
               <p className="text-gray-600 leading-relaxed">
                 Print Mega Store provides tailored printing solutions for a
-                wide range of users. Home users benefit from inkjet home
-                printers with wireless connectivity, mobile printing support,
-                and compact designs that fit easily into any space.
+                wide range of users. Home users enjoy inkjet printers that
+                connect wirelessly, support mobile printing, and have compact
+                designs that fit easily into any space.
               </p>
             </motion.div>
 
@@ -489,7 +488,8 @@ export default function Home() {
                 Buying printers and scanners online should be simple,
                 transparent, and secure. Print Mega Store offers clear pricing,
                 detailed product information, and a secure checkout process
-                protected by industry-standard encryption.
+                protected by industry-standard encryption. We provide fast
+                shipping and hassle-free returns.
               </p>
             </motion.div>
           </div>
