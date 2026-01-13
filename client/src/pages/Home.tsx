@@ -1059,67 +1059,6 @@ export default function Home() {
       </section>
 
       <section
-        className="py-16 md:py-24 bg-white"
-        data-testid="testimonials-section"
-      >
-        <div className="container mx-auto px-6 sm:px-8 lg:px-12">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-12"
-          >
-            <span className="inline-block text-[#33cccc] font-semibold text-sm uppercase tracking-wider mb-4">
-              What Our Customers Say
-            </span>
-            <h2 className="text-3xl md:text-4xl font-extrabold text-black mb-4">
-              Trusted by Thousands of Satisfied Customers
-            </h2>
-            <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-              Home and Office Printing Solutions
-            </p>
-          </motion.div>
-
-          <div className="grid md:grid-cols-3 gap-6 md:gap-8">
-            {[
-              {
-                name: "Sarah M.",
-                role: "Home Office User",
-                text: "Print Mega Store made it easy to find the right printer for my home office. The ordering process was simple and delivery was fast.",
-              },
-              {
-                name: "David L.",
-                role: "Small Business Owner",
-                text: "We upgraded our office printers through Print Mega Store. Great selection of multifunction devices at competitive prices.",
-              },
-              {
-                name: "Jennifer K.",
-                role: "Remote Worker",
-                text: "Found a compact wireless printer that works perfectly for my needs. The product information helped me make the right choice.",
-              },
-            ].map((testimonial, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.1 }}
-                className="bg-gray-50 rounded-xl p-8"
-              >
-                <p className="text-gray-600 leading-relaxed mb-6 italic">
-                  "{testimonial.text}"
-                </p>
-                <div>
-                  <p className="font-bold text-black">{testimonial.name}</p>
-                  <p className="text-sm text-gray-500">{testimonial.role}</p>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section
         className="py-16 md:py-24 bg-gradient-to-br from-gray-50 to-[#33cccc]/5"
         data-testid="newsletter-section"
       >
