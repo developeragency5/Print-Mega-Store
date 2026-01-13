@@ -195,6 +195,7 @@ const featuredProducts = [
     productId: "scanner-1",
     productUrl:
       "/shop#!/HP-ScanJet-Enterprise-Flow-9000-s1-High-Volume-Document-Scanner/p/806466632",
+    isEnterprise: true,
   },
 ];
 
@@ -614,9 +615,14 @@ export default function Home() {
                   <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mt-2 mb-4">
                     {product.name}
                   </h3>
-                  <p className="text-gray-600 mb-6 leading-relaxed">
+                  <p className="text-gray-600 mb-4 leading-relaxed">
                     {product.description}
                   </p>
+                  {product.isEnterprise && (
+                    <p className="text-xs text-gray-500 italic mb-4">
+                      Enterprise and commercial HP products may require manufacturer-approved service agreements and warranty eligibility may vary by model and region.
+                    </p>
+                  )}
                   <Button asChild className="group">
                     <a href={product.productUrl}>
                       View Product
