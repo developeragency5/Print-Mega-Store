@@ -968,8 +968,8 @@ export default function Home() {
                   viewport={{ once: true }}
                   className="flex flex-col overflow-hidden shadow-xl rounded-lg"
                 >
-                  <div className="flex flex-col justify-between flex-1 p-6 bg-white lg:py-8 lg:px-7">
-                    <div className="flex items-center mb-2">
+                  <div className="flex flex-col justify-between flex-1 p-6 bg-white lg:py-6 lg:px-7">
+                    <div className="flex items-center mb-4">
                       <div className="w-10 h-10 bg-[#33cccc]/10 rounded-full flex items-center justify-center">
                         <img src={helpdeskIcon} alt="Customer Satisfaction" className="w-5 h-5" />
                       </div>
@@ -977,7 +977,7 @@ export default function Home() {
                         Customer Satisfaction Is Our Priority
                       </h3>
                     </div>
-                    <div className="text-gray-600 text-sm leading-relaxed space-y-3">
+                    <div className="text-gray-600 text-sm leading-relaxed space-y-2">
                       <p>
                         We aim to deliver exceptional customer service along every step of the way. Whether you need to know which printer is right for your home office, how to set up your new scanner, or how to troubleshoot printing issues, our friendly and professional team is ready to assist you.
                       </p>
@@ -998,8 +998,8 @@ export default function Home() {
                   transition={{ delay: 0.1 }}
                   className="flex flex-col overflow-hidden shadow-xl rounded-lg"
                 >
-                  <div className="flex flex-col justify-between flex-1 p-6 bg-white lg:py-8 lg:px-7">
-                    <div className="flex items-center mb-2">
+                  <div className="flex flex-col justify-between flex-1 p-6 bg-white lg:py-6 lg:px-7">
+                    <div className="flex items-center mb-4">
                       <div className="w-10 h-10 bg-[#33cccc]/10 rounded-full flex items-center justify-center">
                         <img src={medalIcon} alt="Quality Products" className="w-5 h-5" />
                       </div>
@@ -1007,7 +1007,7 @@ export default function Home() {
                         Quality Products You Can Trust
                       </h3>
                     </div>
-                    <div className="text-gray-600 text-sm leading-relaxed space-y-3">
+                    <div className="text-gray-600 text-sm leading-relaxed space-y-2">
                       <p>
                         Print Mega Store has always offered quality printers and scanners from trusted manufacturers. From the beginning, we have provided reliable printing equipment to households and businesses at competitive prices. We take pride in offering products that deliver consistent results.
                       </p>
@@ -1028,8 +1028,8 @@ export default function Home() {
                   transition={{ delay: 0.2 }}
                   className="flex flex-col overflow-hidden shadow-xl rounded-lg"
                 >
-                  <div className="flex flex-col justify-between flex-1 p-6 bg-white lg:py-8 lg:px-7">
-                    <div className="flex items-center mb-2">
+                  <div className="flex flex-col justify-between flex-1 p-6 bg-white lg:py-6 lg:px-7">
+                    <div className="flex items-center mb-4">
                       <div className="w-10 h-10 bg-[#33cccc]/10 rounded-full flex items-center justify-center">
                         <img src={printerIcon3} alt="Why Choose Us" className="w-5 h-5" />
                       </div>
@@ -1037,7 +1037,7 @@ export default function Home() {
                         Why Choose Print Mega Store?
                       </h3>
                     </div>
-                    <div className="text-gray-600 text-sm leading-relaxed space-y-3">
+                    <div className="text-gray-600 text-sm leading-relaxed space-y-2">
                       <p>
                         Print Mega Store is your reliable independent destination for high-quality printers and scanners at budget-friendly prices. We have a wide selection of products that work perfectly for home offices, small businesses, and enterprise environments.
                       </p>
