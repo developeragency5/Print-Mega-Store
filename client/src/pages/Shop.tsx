@@ -4,6 +4,7 @@ import { STORE_ID } from "@/lib/ecwid";
 import { CategoryBanner } from "@/components/CategoryBanner";
 import { motion } from "framer-motion";
 import shopBannerImg from "@assets/HP_OfficeJet_8015e_All-in-One_Printer_with_6_Months_of_Instant_1767897902002.jpg";
+import cartBannerImg from "@assets/Ecommerce_checkout_laptop-bro_1768350860859.png";
 
 function parseCategorySlugFromHash(hash: string): string | null {
   const match = hash.match(/^#!\/([^/]+)\/c\//);
@@ -12,6 +13,10 @@ function parseCategorySlugFromHash(hash: string): string | null {
 
 function isProductPageHash(hash: string): boolean {
   return hash.includes('/p/') || hash.includes('#!/~/');
+}
+
+function isCartPageHash(hash: string): boolean {
+  return hash.includes('#!/~/cart');
 }
 
 declare global {
@@ -31,12 +36,16 @@ export default function Shop() {
   const [isProductPage, setIsProductPage] = useState<boolean>(() => 
     isProductPageHash(window.location.hash)
   );
+  const [isCartPage, setIsCartPage] = useState<boolean>(() => 
+    isCartPageHash(window.location.hash)
+  );
   const widgetInitialized = useRef(false);
 
   useEffect(() => {
     const handleHashChange = () => {
       setCategorySlug(parseCategorySlugFromHash(window.location.hash));
       setIsProductPage(isProductPageHash(window.location.hash));
+      setIsCartPage(isCartPageHash(window.location.hash));
     };
     window.addEventListener("hashchange", handleHashChange);
     return () => window.removeEventListener("hashchange", handleHashChange);
@@ -131,6 +140,23 @@ export default function Shop() {
   return (
     <div className="bg-gray-50 min-h-screen pb-12">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Cart Page Banner - shows only on cart page */}
+        {isCartPage && (
+          <motion.section 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="flex justify-center py-6"
+            data-testid="cart-banner"
+          >
+            <img
+              src={cartBannerImg}
+              alt="Shopping Cart Checkout"
+              className="max-h-[200px] md:max-h-[280px] w-auto object-contain"
+              data-testid="cart-banner-image"
+            />
+          </motion.section>
+        )}
+
         {/* Shop Page Hero Banner - shows when no category selected and not on product/cart pages */}
         {!categorySlug && !isProductPage && (
           <motion.section 
