@@ -208,19 +208,22 @@ export default function Shop() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.1 }}
-          className="bg-gradient-to-br from-white to-gray-50 rounded-2xl shadow-sm border border-gray-100 p-8 sm:p-10 mb-6"
+          className="p-6 bg-white rounded-xl shadow-md mb-6"
         >
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">About Print Mega Store</h2>
-            <div className="space-y-4">
-              <p className="text-gray-700 leading-relaxed text-lg">Print Mega Store is an independent online retailer serving customers in the United States. We offer printers and document scanners for home, office, and business use.</p>
-              <p className="text-gray-700 leading-relaxed">
-                We offer a curated selection of HP inkjet printers, laser printers, and professional scanners designed for everyday printing, home offices, small businesses, and enterprise environments.
-              </p>
-              <p className="text-gray-700 leading-relaxed">
-                Every product listed in our catalog is new and factory-sealed. Orders are fulfilled by third-party logistics and distribution partners.
-              </p>
+          <div className="flex items-center gap-3 mb-4">
+            <div className="flex items-center justify-center w-10 h-10 rounded-full bg-teal-50">
+              <ShieldCheck className="w-5 h-5 text-[#33cccc]" />
             </div>
+            <h2 className="text-sm font-semibold tracking-wide text-gray-900 uppercase">About Print Mega Store</h2>
+          </div>
+          <div className="text-sm leading-relaxed text-gray-600 space-y-4">
+            <p>Print Mega Store is an independent online retailer serving customers in the United States. We offer printers and document scanners for home, office, and business use.</p>
+            <p>
+              We offer a curated selection of HP inkjet printers, laser printers, and professional scanners designed for everyday printing, home offices, small businesses, and enterprise environments.
+            </p>
+            <p>
+              Every product listed in our catalog is new and factory-sealed. Orders are fulfilled by third-party logistics and distribution partners.
+            </p>
           </div>
         </motion.div>
         )}
@@ -231,56 +234,62 @@ export default function Shop() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}
-          className="bg-white rounded-2xl shadow-sm border border-gray-100 p-8 sm:p-10 mb-6"
+          className="p-6 bg-white rounded-xl shadow-md mb-6"
         >
-          <div className="max-w-5xl mx-auto">
-            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 text-center mb-8">How to Choose the Right Printer or Scanner</h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              <div className="bg-gray-50 rounded-xl p-6 border border-gray-100 hover:border-[#33cccc] hover:shadow-md transition-all">
-                <div className="w-12 h-12 bg-[#33cccc]/10 rounded-lg flex items-center justify-center mb-4">
-                  <span className="text-[#33cccc] text-xl font-bold">1</span>
-                </div>
-                <h3 className="font-bold text-gray-900 text-lg mb-2">Home Printers</h3>
-                <p className="text-gray-600 text-sm leading-relaxed">
-                  Ideal for everyday printing, homework, photos, and occasional scanning. Compact, affordable, and designed for light to moderate use.
-                </p>
+          <div className="flex items-center gap-3 mb-4">
+            <div className="flex items-center justify-center w-10 h-10 rounded-full bg-teal-50">
+              <ShieldCheck className="w-5 h-5 text-[#33cccc]" />
+            </div>
+            <h2 className="text-sm font-semibold tracking-wide text-gray-900 uppercase">How to Choose the Right Printer or Scanner</h2>
+          </div>
+          <p className="text-sm leading-relaxed text-gray-600 mb-6">
+            Select the category that best fits your printing and scanning needs:
+          </p>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <div className="bg-gray-50 rounded-xl p-5 border border-gray-100 hover:border-[#33cccc] hover:shadow-md transition-all">
+              <div className="flex items-center justify-center w-8 h-8 rounded-full bg-teal-50 mb-3">
+                <span className="text-[#33cccc] font-bold text-sm">1</span>
               </div>
-              <div className="bg-gray-50 rounded-xl p-6 border border-gray-100 hover:border-[#33cccc] hover:shadow-md transition-all">
-                <div className="w-12 h-12 bg-[#33cccc]/10 rounded-lg flex items-center justify-center mb-4">
-                  <span className="text-[#33cccc] text-xl font-bold">2</span>
-                </div>
-                <h3 className="font-bold text-gray-900 text-lg mb-2">Office Printers</h3>
-                <p className="text-gray-600 text-sm leading-relaxed">
-                  Built for higher workloads and business environments. Faster speeds, larger paper trays, and higher monthly duty cycles.
-                </p>
+              <h3 className="font-semibold text-gray-900 text-sm mb-2">Home Printers</h3>
+              <p className="text-gray-600 text-sm leading-relaxed">
+                Ideal for everyday printing, homework, photos, and occasional scanning. Compact, affordable, and designed for light to moderate use.
+              </p>
+            </div>
+            <div className="bg-gray-50 rounded-xl p-5 border border-gray-100 hover:border-[#33cccc] hover:shadow-md transition-all">
+              <div className="flex items-center justify-center w-8 h-8 rounded-full bg-teal-50 mb-3">
+                <span className="text-[#33cccc] font-bold text-sm">2</span>
               </div>
-              <div className="bg-gray-50 rounded-xl p-6 border border-gray-100 hover:border-[#33cccc] hover:shadow-md transition-all">
-                <div className="w-12 h-12 bg-[#33cccc]/10 rounded-lg flex items-center justify-center mb-4">
-                  <span className="text-[#33cccc] text-xl font-bold">3</span>
-                </div>
-                <h3 className="font-bold text-gray-900 text-lg mb-2">Inkjet Printers</h3>
-                <p className="text-gray-600 text-sm leading-relaxed">
-                  Best for color printing, photos, and mixed media. Popular for homes, students, and creative projects.
-                </p>
+              <h3 className="font-semibold text-gray-900 text-sm mb-2">Office Printers</h3>
+              <p className="text-gray-600 text-sm leading-relaxed">
+                Built for higher workloads and business environments. Faster speeds, larger paper trays, and higher monthly duty cycles.
+              </p>
+            </div>
+            <div className="bg-gray-50 rounded-xl p-5 border border-gray-100 hover:border-[#33cccc] hover:shadow-md transition-all">
+              <div className="flex items-center justify-center w-8 h-8 rounded-full bg-teal-50 mb-3">
+                <span className="text-[#33cccc] font-bold text-sm">3</span>
               </div>
-              <div className="bg-gray-50 rounded-xl p-6 border border-gray-100 hover:border-[#33cccc] hover:shadow-md transition-all">
-                <div className="w-12 h-12 bg-[#33cccc]/10 rounded-lg flex items-center justify-center mb-4">
-                  <span className="text-[#33cccc] text-xl font-bold">4</span>
-                </div>
-                <h3 className="font-bold text-gray-900 text-lg mb-2">Laser Printers</h3>
-                <p className="text-gray-600 text-sm leading-relaxed">
-                  Designed for fast, high-volume text printing. More cost-efficient for offices and businesses that print frequently.
-                </p>
+              <h3 className="font-semibold text-gray-900 text-sm mb-2">Inkjet Printers</h3>
+              <p className="text-gray-600 text-sm leading-relaxed">
+                Best for color printing, photos, and mixed media. Popular for homes, students, and creative projects.
+              </p>
+            </div>
+            <div className="bg-gray-50 rounded-xl p-5 border border-gray-100 hover:border-[#33cccc] hover:shadow-md transition-all">
+              <div className="flex items-center justify-center w-8 h-8 rounded-full bg-teal-50 mb-3">
+                <span className="text-[#33cccc] font-bold text-sm">4</span>
               </div>
-              <div className="bg-gray-50 rounded-xl p-6 border border-gray-100 hover:border-[#33cccc] hover:shadow-md transition-all">
-                <div className="w-12 h-12 bg-[#33cccc]/10 rounded-lg flex items-center justify-center mb-4">
-                  <span className="text-[#33cccc] text-xl font-bold">5</span>
-                </div>
-                <h3 className="font-bold text-gray-900 text-lg mb-2">Document Scanners</h3>
-                <p className="text-gray-600 text-sm leading-relaxed">
-                  Professional scanners for digitizing paperwork, invoices, contracts, and archives. Ideal for offices and document management.
-                </p>
+              <h3 className="font-semibold text-gray-900 text-sm mb-2">Laser Printers</h3>
+              <p className="text-gray-600 text-sm leading-relaxed">
+                Designed for fast, high-volume text printing. More cost-efficient for offices and businesses that print frequently.
+              </p>
+            </div>
+            <div className="bg-gray-50 rounded-xl p-5 border border-gray-100 hover:border-[#33cccc] hover:shadow-md transition-all">
+              <div className="flex items-center justify-center w-8 h-8 rounded-full bg-teal-50 mb-3">
+                <span className="text-[#33cccc] font-bold text-sm">5</span>
               </div>
+              <h3 className="font-semibold text-gray-900 text-sm mb-2">Document Scanners</h3>
+              <p className="text-gray-600 text-sm leading-relaxed">
+                Professional scanners for digitizing paperwork, invoices, contracts, and archives. Ideal for offices and document management.
+              </p>
             </div>
           </div>
         </motion.div>
@@ -306,56 +315,59 @@ export default function Shop() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3 }}
-          className="bg-gradient-to-br from-[#33cccc]/5 to-white rounded-2xl shadow-sm border border-gray-100 p-8 sm:p-10 mt-6"
+          className="p-6 bg-white rounded-xl shadow-md mt-6"
         >
-          <div className="max-w-5xl mx-auto">
-            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 text-center mb-8">Ordering, Shipping & Warranty</h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              <div className="bg-white rounded-xl p-6 border border-gray-100 shadow-sm">
-                <div className="w-10 h-10 bg-[#33cccc]/10 rounded-lg flex items-center justify-center mb-4">
-                  <ShieldCheck className="w-5 h-5 text-[#33cccc]" />
-                </div>
-                <h3 className="font-bold text-gray-900 mb-2">Secure Orders</h3>
-                <p className="text-gray-600 text-sm leading-relaxed">
-                  Orders are processed securely online and shipped within the United States.
-                </p>
+          <div className="flex items-center gap-3 mb-4">
+            <div className="flex items-center justify-center w-10 h-10 rounded-full bg-teal-50">
+              <ShieldCheck className="w-5 h-5 text-[#33cccc]" />
+            </div>
+            <h2 className="text-sm font-semibold tracking-wide text-gray-900 uppercase">Ordering, Shipping & Warranty</h2>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <div className="bg-gray-50 rounded-xl p-5 border border-gray-100 hover:border-[#33cccc] hover:shadow-md transition-all">
+              <div className="flex items-center justify-center w-8 h-8 rounded-full bg-teal-50 mb-3">
+                <ShieldCheck className="w-4 h-4 text-[#33cccc]" />
               </div>
-              <div className="bg-white rounded-xl p-6 border border-gray-100 shadow-sm">
-                <div className="w-10 h-10 bg-[#33cccc]/10 rounded-lg flex items-center justify-center mb-4">
-                  <ShieldCheck className="w-5 h-5 text-[#33cccc]" />
-                </div>
-                <h3 className="font-bold text-gray-900 mb-2">Order Tracking</h3>
-                <p className="text-gray-600 text-sm leading-relaxed">
-                  Tracking information is provided after purchase for all shipments.
-                </p>
+              <h3 className="font-semibold text-gray-900 text-sm mb-2">Secure Orders</h3>
+              <p className="text-gray-600 text-sm leading-relaxed">
+                Orders are processed securely online and shipped within the United States.
+              </p>
+            </div>
+            <div className="bg-gray-50 rounded-xl p-5 border border-gray-100 hover:border-[#33cccc] hover:shadow-md transition-all">
+              <div className="flex items-center justify-center w-8 h-8 rounded-full bg-teal-50 mb-3">
+                <ShieldCheck className="w-4 h-4 text-[#33cccc]" />
               </div>
-              <div className="bg-white rounded-xl p-6 border border-gray-100 shadow-sm">
-                <div className="w-10 h-10 bg-[#33cccc]/10 rounded-lg flex items-center justify-center mb-4">
-                  <ShieldCheck className="w-5 h-5 text-[#33cccc]" />
-                </div>
-                <h3 className="font-bold text-gray-900 mb-2">Returns & Refunds</h3>
-                <p className="text-gray-600 text-sm leading-relaxed">
-                  Handled according to our <a href="/returns" className="text-[#33cccc] hover:underline font-medium">Return & Refund Policy</a>.
-                </p>
+              <h3 className="font-semibold text-gray-900 text-sm mb-2">Order Tracking</h3>
+              <p className="text-gray-600 text-sm leading-relaxed">
+                Tracking information is provided after purchase for all shipments.
+              </p>
+            </div>
+            <div className="bg-gray-50 rounded-xl p-5 border border-gray-100 hover:border-[#33cccc] hover:shadow-md transition-all">
+              <div className="flex items-center justify-center w-8 h-8 rounded-full bg-teal-50 mb-3">
+                <ShieldCheck className="w-4 h-4 text-[#33cccc]" />
               </div>
-              <div className="bg-white rounded-xl p-6 border border-gray-100 shadow-sm">
-                <div className="w-10 h-10 bg-[#33cccc]/10 rounded-lg flex items-center justify-center mb-4">
-                  <ShieldCheck className="w-5 h-5 text-[#33cccc]" />
-                </div>
-                <h3 className="font-bold text-gray-900 mb-2">Warranty Coverage</h3>
-                <p className="text-gray-600 text-sm leading-relaxed">
-                  Warranty and technical support are provided by the manufacturer in accordance with their warranty policies.
-                </p>
+              <h3 className="font-semibold text-gray-900 text-sm mb-2">Returns & Refunds</h3>
+              <p className="text-gray-600 text-sm leading-relaxed">
+                Handled according to our <a href="/returns" className="text-[#33cccc] hover:underline font-medium">Return & Refund Policy</a>.
+              </p>
+            </div>
+            <div className="bg-gray-50 rounded-xl p-5 border border-gray-100 hover:border-[#33cccc] hover:shadow-md transition-all">
+              <div className="flex items-center justify-center w-8 h-8 rounded-full bg-teal-50 mb-3">
+                <ShieldCheck className="w-4 h-4 text-[#33cccc]" />
               </div>
-              <div className="bg-white rounded-xl p-6 border border-gray-100 shadow-sm">
-                <div className="w-10 h-10 bg-[#33cccc]/10 rounded-lg flex items-center justify-center mb-4">
-                  <ShieldCheck className="w-5 h-5 text-[#33cccc]" />
-                </div>
-                <h3 className="font-bold text-gray-900 mb-2">Order Assistance</h3>
-                <p className="text-gray-600 text-sm leading-relaxed">
-                  Our team is available to assist with order status, billing, and product information.
-                </p>
+              <h3 className="font-semibold text-gray-900 text-sm mb-2">Warranty Coverage</h3>
+              <p className="text-gray-600 text-sm leading-relaxed">
+                Warranty and technical support are provided by the manufacturer in accordance with their warranty policies.
+              </p>
+            </div>
+            <div className="bg-gray-50 rounded-xl p-5 border border-gray-100 hover:border-[#33cccc] hover:shadow-md transition-all">
+              <div className="flex items-center justify-center w-8 h-8 rounded-full bg-teal-50 mb-3">
+                <ShieldCheck className="w-4 h-4 text-[#33cccc]" />
               </div>
+              <h3 className="font-semibold text-gray-900 text-sm mb-2">Order Assistance</h3>
+              <p className="text-gray-600 text-sm leading-relaxed">
+                Our team is available to assist with order status, billing, and product information.
+              </p>
             </div>
           </div>
         </motion.div>
