@@ -185,7 +185,7 @@ export default function Shop() {
                 We offer a curated selection of HP inkjet printers, laser printers, and professional scanners designed for everyday printing, home offices, small businesses, and enterprise environments.
               </p>
               <p className="text-gray-700 leading-relaxed">
-                Every product listed in our catalog is new and factory-sealed. Orders are shipped from U.S.-based fulfillment partners to ensure fast delivery and authentic products.
+                Every product listed in our catalog is new and factory-sealed. Orders are fulfilled by authorized third-party logistics and distribution partners.
               </p>
             </div>
           </div>
