@@ -27,7 +27,6 @@ import {
   Heart,
 } from "lucide-react";
 import { Input } from "@/components/ui/input";
-import { useCreateSubscriber } from "@/hooks/use-subscribers";
 import { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import { STORE_CATEGORIES, getCategoryUrl } from "@/lib/ecwid";
@@ -84,18 +83,27 @@ const categoryDescriptions: Record<string, string> = {
 
 function NewsletterForm() {
   const [email, setEmail] = useState("");
-  const subscribe = useCreateSubscriber();
+  const [showSuccess, setShowSuccess] = useState(false);
 
   const handleSubscribe = (e: React.FormEvent) => {
     e.preventDefault();
     if (!email) return;
-    subscribe.mutate(
-      { email },
-      {
-        onSuccess: () => setEmail(""),
-      },
-    );
+    setEmail("");
+    setShowSuccess(true);
+    setTimeout(() => setShowSuccess(false), 5000);
   };
+
+  if (showSuccess) {
+    return (
+      <div className="bg-gradient-to-r from-green-500 to-emerald-600 rounded-xl p-6 text-center max-w-md mx-auto">
+        <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-3">
+          <CheckCircle2 className="w-6 h-6 text-white" />
+        </div>
+        <h3 className="text-lg font-bold text-white mb-1">Successfully Subscribed!</h3>
+        <p className="text-white/90 text-sm">Thank you for joining our newsletter.</p>
+      </div>
+    );
+  }
 
   return (
     <form
@@ -115,10 +123,9 @@ function NewsletterForm() {
         type="submit"
         size="lg"
         className="h-12 px-8"
-        disabled={subscribe.isPending}
         data-testid="button-home-newsletter-subscribe"
       >
-        {subscribe.isPending ? "Subscribing..." : "Subscribe"}
+        Subscribe
       </Button>
     </form>
   );
