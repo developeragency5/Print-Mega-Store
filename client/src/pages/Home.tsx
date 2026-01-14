@@ -925,8 +925,8 @@ export default function Home() {
                 transition={{ delay: i * 0.1 }}
                 className={`rounded-2xl p-6 text-center ${item.highlighted ? 'bg-[#33cccc]/5 border-2 border-[#33cccc]/20' : 'bg-gray-50'}`}
               >
-                <div className={`w-14 h-14 ${item.bgColor} rounded-xl flex items-center justify-center mx-auto mb-4 shadow-lg`}>
-                  <span className={item.iconColor}>{item.icon}</span>
+                <div className="w-14 h-14 flex items-center justify-center mx-auto mb-4">
+                  {item.icon}
                 </div>
                 <h3 className={`text-lg font-bold mb-3 ${item.highlighted ? 'text-[#33cccc]' : 'text-gray-900'}`}>
                   {item.title}
