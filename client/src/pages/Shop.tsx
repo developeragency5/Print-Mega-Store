@@ -7,6 +7,7 @@ import shopBannerImg from "@assets/HP_OfficeJet_8015e_All-in-One_Printer_with_6_
 import cartBannerImg from "@assets/Screenshot_2026-01-13_at_7.41.50_pm_1768351312770.png";
 import shieldCheckIcon from "@assets/shield_1768411139946.png";
 import orderTrackingIcon from "@assets/bag_1768411308083.png";
+import returnsIcon from "@assets/return-of-investment_1768411607924.png";
 
 function parseCategorySlugFromHash(hash: string): string | null {
   const match = hash.match(/^#!\/([^/]+)\/c\//);
@@ -346,7 +347,7 @@ export default function Shop() {
               </div>
               <div className="bg-gray-50 rounded-xl p-6 border border-gray-100 hover:border-[#33cccc] hover:shadow-lg transition-all">
                 <div className="w-10 h-10 flex items-center justify-center mb-4">
-                  <img src={shieldCheckIcon} alt="Returns" className="w-6 h-6" />
+                  <img src={returnsIcon} alt="Returns" className="w-6 h-6" />
                 </div>
                 <h3 className="text-lg font-bold text-gray-900 mb-2">Returns & Refunds</h3>
                 <p className="text-gray-600 leading-relaxed">
