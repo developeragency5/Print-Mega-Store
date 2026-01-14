@@ -1057,12 +1057,9 @@ export default function Home() {
             viewport={{ once: true }}
             className="max-w-2xl mx-auto text-center"
           >
-            <motion.div
-              whileHover={{ scale: 1.05, rotate: 5 }}
-              className="w-16 h-16 bg-white rounded-xl flex items-center justify-center mx-auto mb-6 shadow-lg"
-            >
-              <img src={emailIcon} alt="Newsletter" className="w-8 h-8" />
-            </motion.div>
+            <div className="w-16 h-16 flex items-center justify-center mx-auto mb-6">
+              <img src={emailIcon} alt="Newsletter" className="w-10 h-10" />
+            </div>
             <h2 className="text-3xl md:text-4xl font-extrabold text-black mb-4">
               Subscribe to Our Newsletter
             </h2>
