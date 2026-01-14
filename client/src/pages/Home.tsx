@@ -68,6 +68,7 @@ import helpdeskIcon from "@assets/helpdesk_1768346033428.png";
 import medalIcon from "@assets/medal-_1768346130467.png";
 import printerIcon3 from "@assets/printer_(2)_1768346159706.png";
 import emailIcon from "@assets/email_1768346242116.png";
+import { CookieConsent } from "@/components/CookieConsent";
 
 const categoryIcons: Record<string, React.ReactNode> = {
   "Home-Printers": <img src={printerIcon} alt="Home Printers" className="w-10 h-10" />,
@@ -1077,6 +1078,8 @@ export default function Home() {
           </motion.div>
         </div>
       </section>
+
+      <CookieConsent />
     </div>
   );
 }
