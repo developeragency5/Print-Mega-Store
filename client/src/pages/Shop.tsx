@@ -1,5 +1,5 @@
 import { useEffect, useState, useRef } from "react";
-import { Loader2, ArrowDown } from "lucide-react";
+import { Loader2, ArrowDown, ShieldCheck } from "lucide-react";
 import { STORE_ID } from "@/lib/ecwid";
 import { CategoryBanner } from "@/components/CategoryBanner";
 import { motion } from "framer-motion";
