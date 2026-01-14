@@ -151,7 +151,7 @@ export default function Shop() {
             <img
               src={cartBannerImg}
               alt="Shopping Cart Checkout"
-              className="w-[80%] max-w-none object-contain"
+              className="w-[60%] max-w-none object-contain"
               data-testid="cart-banner-image"
             />
           </motion.section>
