@@ -4,7 +4,7 @@ import { Input } from "./ui/input";
 import { Mail, MapPin, Phone, ArrowRight, CheckCircle } from "lucide-react";
 import { useState } from "react";
 import { STORE_CATEGORIES, getCategoryUrl } from "@/lib/ecwid";
-import logoImg from "@assets/ChatGPT_Image_Jan_13,_2026,_07_26_12_PM(1)_1768350429570.png";
+import logoImg from "@assets/ChatGPT_Image_Jan_13,_2026,_07_50_24_PM(1)_1768351875558.png";
 
 export function Footer() {
   const [email, setEmail] = useState("");

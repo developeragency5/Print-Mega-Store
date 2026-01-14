@@ -4,7 +4,7 @@ import { Menu, X, User } from "lucide-react";
 import { Button } from "./ui/button";
 import { cn } from "@/lib/utils";
 import { STORE_CATEGORIES, getCategoryUrl, STORE_ID } from "@/lib/ecwid";
-import logoImg from "@assets/ChatGPT_Image_Jan_13,_2026,_07_26_12_PM(1)_1768350429570.png";
+import logoImg from "@assets/ChatGPT_Image_Jan_13,_2026,_07_50_24_PM(1)_1768351875558.png";
 import phoneIcon from "@assets/phone_1768348600813.png";
 
 export function Header() {
