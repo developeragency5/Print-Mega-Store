@@ -127,6 +127,12 @@ export function Header() {
                 data-testid="ecwid-cart"
               />
 
+              {/* Ecwid Favorites Widget */}
+              <div 
+                className="ec-favorites-widget"
+                data-testid="ecwid-favorites"
+              />
+
               {/* Mobile Menu Button */}
               <Button
                 variant="ghost"
