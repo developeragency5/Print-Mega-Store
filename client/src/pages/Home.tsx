@@ -796,9 +796,7 @@ export default function Home() {
               className="bg-white rounded-xl border border-gray-100 p-8 cursor-pointer group"
             >
               <div className="flex items-center gap-4 mb-4">
-                <div className="w-12 h-12 rounded-xl bg-white flex items-center justify-center shadow-lg">
-                  <img src={notesIcon} alt="Notes" className="w-6 h-6" />
-                </div>
+                <img src={notesIcon} alt="Notes" className="w-8 h-8" />
                 <h3 className="text-xl font-bold text-black group-hover:text-[#33cccc] transition-colors">
                   Inkjet vs Laser Printers
                 </h3>
