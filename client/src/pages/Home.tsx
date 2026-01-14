@@ -678,31 +678,31 @@ export default function Home() {
           <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-6 md:gap-8">
             {[
               {
-                icon: <img src={wideRangePrinterIcon} alt="Wide Range" className="w-8 h-8" />,
+                icon: <img src={wideRangePrinterIcon} alt="Wide Range" className="w-12 h-12" />,
                 title: "Wide Range of Printers",
                 desc: "Choose from a wide range of inkjet and laser printers designed for home, small business, and office use.",
                 color: "from-[#33cccc] to-[#29a3a3]",
               },
               {
-                icon: <img src={printerIcon2} alt="High Quality Printing" className="w-8 h-8" />,
+                icon: <img src={printerIcon2} alt="High Quality Printing" className="w-12 h-12" />,
                 title: "High Quality Printing",
                 desc: "Our printers are designed to produce high quality prints with consistent performance.",
                 color: "from-blue-500 to-blue-600",
               },
               {
-                icon: <img src={modernFeaturesIcon} alt="Modern Features" className="w-8 h-8" />,
+                icon: <img src={modernFeaturesIcon} alt="Modern Features" className="w-12 h-12" />,
                 title: "Modern Features",
                 desc: "Enjoy automatic duplex printing, mobile printing from a smartphone or tablet, and efficient paper tray handling.",
                 color: "from-purple-500 to-purple-600",
               },
               {
-                icon: <img src={costIcon} alt="Competitive Pricing" className="w-8 h-8" />,
+                icon: <img src={costIcon} alt="Competitive Pricing" className="w-12 h-12" />,
                 title: "Competitive Pricing",
                 desc: "We offer excellent value compared to the suggested retail price.",
                 color: "from-green-500 to-green-600",
               },
               {
-                icon: <img src={shieldIcon} alt="Secure Shopping" className="w-8 h-8" />,
+                icon: <img src={shieldIcon} alt="Secure Shopping" className="w-12 h-12" />,
                 title: "Fast & Secure Shopping",
                 desc: "Secure checkout, fast delivery, and trusted customer care.",
                 color: "from-orange-500 to-orange-600",
@@ -752,17 +752,17 @@ export default function Home() {
           <div className="grid md:grid-cols-3 gap-6 md:gap-8">
             {[
               {
-                icon: <img src={homeIconImg} alt="Home Users" className="w-8 h-8" />,
+                icon: <img src={homeIconImg} alt="Home Users" className="w-12 h-12" />,
                 title: "Home Users",
                 desc: "A compact inkjet home printer with wireless printing and ink tanks is ideal for everyday use.",
               },
               {
-                icon: <img src={smallBusinessIcon} alt="Small Business" className="w-8 h-8" />,
+                icon: <img src={smallBusinessIcon} alt="Small Business" className="w-12 h-12" />,
                 title: "Small Business & Home Offices",
                 desc: "Multifunction printers with automatic duplexing and printing and scanning capabilities offer flexibility.",
               },
               {
-                icon: <img src={enterpriseIcon} alt="Enterprise" className="w-8 h-8" />,
+                icon: <img src={enterpriseIcon} alt="Enterprise" className="w-12 h-12" />,
                 title: "Busy Office & Enterprise",
                 desc: "Laser printers that print many pages per minute, hold a lot of paper, and scan quickly are best for busy places.",
               },
@@ -796,7 +796,7 @@ export default function Home() {
               className="bg-white rounded-xl border border-gray-100 p-8 cursor-pointer group"
             >
               <div className="flex items-center gap-4 mb-4">
-                <img src={notesIcon} alt="Notes" className="w-8 h-8" />
+                <img src={notesIcon} alt="Notes" className="w-10 h-10" />
                 <h3 className="text-xl font-bold text-black group-hover:text-[#33cccc] transition-colors">
                   Inkjet vs Laser Printers
                 </h3>
@@ -885,7 +885,7 @@ export default function Home() {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
               {
-                icon: <img src={packageIcon} alt="Curated Selection" className="w-6 h-6" />,
+                icon: <img src={packageIcon} alt="Curated Selection" className="w-10 h-10" />,
                 title: "Curated Selection",
                 desc: "Every product in our catalog is carefully selected to ensure quality and reliability for your printing needs.",
                 bgColor: "bg-white",
@@ -893,7 +893,7 @@ export default function Home() {
                 highlighted: false,
               },
               {
-                icon: <img src={shieldCheckIcon} alt="Secure Checkout" className="w-6 h-6" />,
+                icon: <img src={shieldCheckIcon} alt="Secure Checkout" className="w-10 h-10" />,
                 title: "Secure Checkout",
                 desc: "Shop with confidence using our safe and encrypted payment processing for all transactions.",
                 bgColor: "bg-white",
@@ -901,7 +901,7 @@ export default function Home() {
                 highlighted: false,
               },
               {
-                icon: <img src={waitIcon} alt="Fast Order Processing" className="w-6 h-6" />,
+                icon: <img src={waitIcon} alt="Fast Order Processing" className="w-10 h-10" />,
                 title: "Fast Order Processing",
                 desc: "We process orders promptly to ensure your new printing equipment arrives when you need it most.",
                 bgColor: "bg-white",
@@ -909,7 +909,7 @@ export default function Home() {
                 highlighted: false,
               },
               {
-                icon: <img src={heartIcon} alt="Customer First" className="w-6 h-6" />,
+                icon: <img src={heartIcon} alt="Customer First" className="w-10 h-10" />,
                 title: "Customer First",
                 desc: "Your satisfaction is our priority. We go above and beyond to ensure a seamless shopping experience.",
                 bgColor: "bg-white",
