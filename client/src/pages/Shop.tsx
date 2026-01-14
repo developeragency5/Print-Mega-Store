@@ -1,10 +1,11 @@
 import { useEffect, useState, useRef } from "react";
-import { Loader2, ShieldCheck, ArrowDown } from "lucide-react";
+import { Loader2, ArrowDown } from "lucide-react";
 import { STORE_ID } from "@/lib/ecwid";
 import { CategoryBanner } from "@/components/CategoryBanner";
 import { motion } from "framer-motion";
 import shopBannerImg from "@assets/HP_OfficeJet_8015e_All-in-One_Printer_with_6_Months_of_Instant_1767897902002.jpg";
 import cartBannerImg from "@assets/Screenshot_2026-01-13_at_7.41.50_pm_1768351312770.png";
+import shieldCheckIcon from "@assets/shield_1768411139946.png";
 
 function parseCategorySlugFromHash(hash: string): string | null {
   const match = hash.match(/^#!\/([^/]+)\/c\//);
@@ -325,8 +326,8 @@ export default function Shop() {
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               <div className="bg-gray-50 rounded-xl p-6 border border-gray-100 hover:border-[#33cccc] hover:shadow-lg transition-all">
-                <div className="w-10 h-10 bg-[#33cccc]/10 rounded-lg flex items-center justify-center mb-4">
-                  <ShieldCheck className="w-5 h-5 text-[#33cccc]" />
+                <div className="w-10 h-10 flex items-center justify-center mb-4">
+                  <img src={shieldCheckIcon} alt="Secure" className="w-6 h-6" />
                 </div>
                 <h3 className="text-lg font-bold text-gray-900 mb-2">Secure Orders</h3>
                 <p className="text-gray-600 leading-relaxed">
@@ -334,8 +335,8 @@ export default function Shop() {
                 </p>
               </div>
               <div className="bg-gray-50 rounded-xl p-6 border border-gray-100 hover:border-[#33cccc] hover:shadow-lg transition-all">
-                <div className="w-10 h-10 bg-[#33cccc]/10 rounded-lg flex items-center justify-center mb-4">
-                  <ShieldCheck className="w-5 h-5 text-[#33cccc]" />
+                <div className="w-10 h-10 flex items-center justify-center mb-4">
+                  <img src={shieldCheckIcon} alt="Tracking" className="w-6 h-6" />
                 </div>
                 <h3 className="text-lg font-bold text-gray-900 mb-2">Order Tracking</h3>
                 <p className="text-gray-600 leading-relaxed">
@@ -343,8 +344,8 @@ export default function Shop() {
                 </p>
               </div>
               <div className="bg-gray-50 rounded-xl p-6 border border-gray-100 hover:border-[#33cccc] hover:shadow-lg transition-all">
-                <div className="w-10 h-10 bg-[#33cccc]/10 rounded-lg flex items-center justify-center mb-4">
-                  <ShieldCheck className="w-5 h-5 text-[#33cccc]" />
+                <div className="w-10 h-10 flex items-center justify-center mb-4">
+                  <img src={shieldCheckIcon} alt="Returns" className="w-6 h-6" />
                 </div>
                 <h3 className="text-lg font-bold text-gray-900 mb-2">Returns & Refunds</h3>
                 <p className="text-gray-600 leading-relaxed">
@@ -352,8 +353,8 @@ export default function Shop() {
                 </p>
               </div>
               <div className="bg-gray-50 rounded-xl p-6 border border-gray-100 hover:border-[#33cccc] hover:shadow-lg transition-all">
-                <div className="w-10 h-10 bg-[#33cccc]/10 rounded-lg flex items-center justify-center mb-4">
-                  <ShieldCheck className="w-5 h-5 text-[#33cccc]" />
+                <div className="w-10 h-10 flex items-center justify-center mb-4">
+                  <img src={shieldCheckIcon} alt="Warranty" className="w-6 h-6" />
                 </div>
                 <h3 className="text-lg font-bold text-gray-900 mb-2">Warranty Coverage</h3>
                 <p className="text-gray-600 leading-relaxed">
@@ -361,8 +362,8 @@ export default function Shop() {
                 </p>
               </div>
               <div className="bg-gray-50 rounded-xl p-6 border border-gray-100 hover:border-[#33cccc] hover:shadow-lg transition-all">
-                <div className="w-10 h-10 bg-[#33cccc]/10 rounded-lg flex items-center justify-center mb-4">
-                  <ShieldCheck className="w-5 h-5 text-[#33cccc]" />
+                <div className="w-10 h-10 flex items-center justify-center mb-4">
+                  <img src={shieldCheckIcon} alt="Assistance" className="w-6 h-6" />
                 </div>
                 <h3 className="text-lg font-bold text-gray-900 mb-2">Order Assistance</h3>
                 <p className="text-gray-600 leading-relaxed">
@@ -383,8 +384,8 @@ export default function Shop() {
             data-testid="warranty-authenticity-block"
           >
             <div className="flex items-center gap-4 mb-6">
-              <div className="w-14 h-14 rounded-xl bg-[#33cccc]/10 flex items-center justify-center">
-                <ShieldCheck className="w-7 h-7 text-[#33cccc]" />
+              <div className="w-14 h-14 flex items-center justify-center">
+                <img src={shieldCheckIcon} alt="Authenticity" className="w-8 h-8" />
               </div>
               <h2 className="text-lg font-bold text-black">Product Authenticity & Warranty</h2>
             </div>
