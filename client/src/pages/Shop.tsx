@@ -9,6 +9,7 @@ import shieldCheckIcon from "@assets/shield_1768411139946.png";
 import orderTrackingIcon from "@assets/bag_1768411308083.png";
 import returnsIcon from "@assets/return-of-investment_1768411607924.png";
 import warrantyIcon from "@assets/warranty_1768412263395.png";
+import orderAssistIcon from "@assets/customer-support_1768412449273.png";
 
 function parseCategorySlugFromHash(hash: string): string | null {
   const match = hash.match(/^#!\/([^/]+)\/c\//);
@@ -366,7 +367,7 @@ export default function Shop() {
               </div>
               <div className="bg-gray-50 rounded-xl p-6 border border-gray-100 hover:border-[#33cccc] hover:shadow-lg transition-all">
                 <div className="w-10 h-10 flex items-center justify-center mb-4">
-                  <img src={shieldCheckIcon} alt="Assistance" className="w-6 h-6" />
+                  <img src={orderAssistIcon} alt="Assistance" className="w-6 h-6" />
                 </div>
                 <h3 className="text-lg font-bold text-gray-900 mb-2">Order Assistance</h3>
                 <p className="text-gray-600 leading-relaxed">
