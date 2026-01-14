@@ -52,6 +52,7 @@ import dollarGif from "@assets/dollar_1768343622664.gif";
 import costIcon from "@assets/cost_1768350355934.png";
 import layersGif from "@assets/layers-selection-tool_1768343797554.gif";
 import wideRangePrinterIcon from "@assets/printer_(3)_1768350657224.png";
+import modernFeaturesIcon from "@assets/package_1768350951562.png";
 import shieldGif from "@assets/shield_1768343929996.gif";
 import shieldIcon from "@assets/shield_1768349371391.png";
 import homeIconImg from "@assets/home_1768345063969.png";
@@ -691,7 +692,7 @@ export default function Home() {
                 color: "from-blue-500 to-blue-600",
               },
               {
-                icon: <Lottie animationData={telephoneAnimation} loop={true} className="w-8 h-8" />,
+                icon: <img src={modernFeaturesIcon} alt="Modern Features" className="w-8 h-8" />,
                 title: "Modern Features",
                 desc: "Enjoy automatic duplex printing, mobile printing from a smartphone or tablet, and efficient paper tray handling.",
                 color: "from-purple-500 to-purple-600",
