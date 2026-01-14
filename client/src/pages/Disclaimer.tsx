@@ -23,7 +23,7 @@ export default function Disclaimer() {
             <div className="space-y-8 text-gray-600 leading-relaxed">
               <section>
                 <h2 className="text-2xl font-bold text-black mb-4">1. No Manufacturer Affiliation</h2>
-                <p className="mb-2">Print Mega Store is an independent online retailer and is not:</p>
+                <p className="mb-2">Print Mega Store is an independent online retailer serving customers in the United States and is not:</p>
                 <ul className="list-disc pl-6 space-y-2 mb-4">
                   <li>Affiliated with</li>
                   <li>Endorsed by</li>

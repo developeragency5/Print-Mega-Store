@@ -25,7 +25,7 @@ export default function About() {
 
             <div className="bg-gradient-to-br from-[#33cccc]/10 to-[#33cccc]/5 rounded-xl p-8 mb-12 border border-[#33cccc]/20">
               <p className="text-lg text-gray-700 text-center leading-relaxed">
-                We are an independent online retailer offering printer and scanning products. Our current catalog includes HP-branded printers. We operate independently and are not affiliated with, endorsed by, or sponsored by HP or any manufacturer.
+                Print Mega Store is an independent online retailer serving customers in the United States. Our current catalog includes HP-branded printers. We operate independently and are not affiliated with, endorsed by, or sponsored by HP or any manufacturer.
               </p>
             </div>
 
@@ -63,7 +63,7 @@ export default function About() {
               <section>
                 <h2 className="text-2xl font-bold text-black mb-4">Who We Are</h2>
                 <p className="mb-4">
-                  Print Mega Store is an independent online retailer specializing in printer and scanning products. Our current catalog includes HP-branded printers and scanning devices for homes, offices, and businesses across the United States.
+                  Print Mega Store is an independent online retailer serving customers in the United States. Our catalog includes HP-branded printers and scanning devices for homes, offices, and businesses.
                 </p>
                 <p>
                   We operate independently and are not affiliated with, endorsed by, or sponsored by HP or any manufacturer. Our team is dedicated to helping customers find the right printing solutions for their unique needs at competitive prices.

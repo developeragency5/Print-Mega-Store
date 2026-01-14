@@ -187,7 +187,7 @@ export default function Shop() {
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">About Print Mega Store</h2>
             <div className="space-y-4">
-              <p className="text-gray-700 leading-relaxed text-lg">Print Mega Store is a U.S.-based independent online retailer of printers and document scanners for home, office, and business use.</p>
+              <p className="text-gray-700 leading-relaxed text-lg">Print Mega Store is an independent online retailer serving customers in the United States. We offer printers and document scanners for home, office, and business use.</p>
               <p className="text-gray-700 leading-relaxed">
                 We offer a curated selection of HP inkjet printers, laser printers, and professional scanners designed for everyday printing, home offices, small businesses, and enterprise environments.
               </p>

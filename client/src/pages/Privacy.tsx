@@ -17,7 +17,7 @@ export default function Privacy() {
               Last updated: January 2026
             </p>
             <p className="text-gray-600 mb-8">
-              Print Mega Store ("we", "our", or "us") operates as an independent online retailer providing printers and document scanning products to customers in the United States. We are not affiliated with, endorsed by, or sponsored by any manufacturer, including HP Inc.
+              Print Mega Store ("we", "our", or "us") is an independent online retailer serving customers in the United States. We provide printers and document scanning products. We are not affiliated with, endorsed by, or sponsored by any manufacturer, including HP Inc.
             </p>
             <p className="text-gray-600 mb-8">
               This Privacy Policy explains how we collect, use, and protect your information when you visit our website or make a purchase.

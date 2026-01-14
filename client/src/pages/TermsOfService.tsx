@@ -24,7 +24,7 @@ export default function TermsOfService() {
               <section>
                 <h2 className="text-2xl font-bold text-black mb-4">1. About Print Mega Store</h2>
                 <p>
-                  Print Mega Store is an independent online retailer selling printers, scanners, and related products. We are not affiliated with, endorsed by, or sponsored by HP or any manufacturer. All trademarks belong to their respective owners.
+                  Print Mega Store is an independent online retailer serving customers in the United States. We sell printers, scanners, and related products. We are not affiliated with, endorsed by, or sponsored by HP or any manufacturer. All trademarks belong to their respective owners.
                 </p>
               </section>
 
