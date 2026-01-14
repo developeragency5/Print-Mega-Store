@@ -236,7 +236,7 @@ export function CategoryBanner() {
             <div className="w-14 h-14 rounded-xl bg-[#33cccc]/10 flex items-center justify-center">
               <CheckCircle className="w-7 h-7 text-[#33cccc]" />
             </div>
-            <h2 className="text-xl font-bold text-black">
+            <h2 className="text-lg font-bold text-black">
               {buyerGuide.title}
             </h2>
           </div>
@@ -262,7 +262,7 @@ export function CategoryBanner() {
             <div className="w-14 h-14 rounded-xl bg-[#33cccc]/10 flex items-center justify-center">
               <Layers className="w-7 h-7 text-[#33cccc]" />
             </div>
-            <h2 className="text-xl font-bold text-black">
+            <h2 className="text-lg font-bold text-black">
               {productRange.title}
             </h2>
           </div>

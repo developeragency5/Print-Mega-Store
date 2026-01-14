@@ -211,10 +211,10 @@ export default function Shop() {
           className="bg-white rounded-lg border border-gray-200 p-8 mb-8"
         >
           <div className="max-w-4xl mx-auto text-center">
-            <span className="inline-block text-[#33cccc] font-semibold text-sm uppercase tracking-wider mb-4">
+            <span className="inline-block text-[#33cccc] font-semibold text-sm uppercase tracking-wider mb-3">
               About Print Mega Store
             </span>
-            <h2 className="text-4xl md:text-5xl font-extrabold text-black mb-6">Your Trusted Printer Source</h2>
+            <h2 className="text-2xl md:text-3xl font-bold text-black mb-4">Your Trusted Printer Source</h2>
             <div className="space-y-4">
               <p className="text-gray-600 text-lg leading-relaxed">Print Mega Store is an independent online retailer serving customers in the United States. We offer printers and document scanners for home, office, and business use.</p>
               <p className="text-gray-600 leading-relaxed">
@@ -237,11 +237,11 @@ export default function Shop() {
           className="bg-white rounded-lg border border-gray-200 p-8 mb-8"
         >
           <div className="max-w-5xl mx-auto">
-            <div className="text-center mb-8">
-              <span className="inline-block text-[#33cccc] font-semibold text-sm uppercase tracking-wider mb-4">
+            <div className="text-center mb-6">
+              <span className="inline-block text-[#33cccc] font-semibold text-sm uppercase tracking-wider mb-3">
                 Buying Guide
               </span>
-              <h2 className="text-4xl md:text-5xl font-extrabold text-black">How to Choose the Right Printer or Scanner</h2>
+              <h2 className="text-2xl md:text-3xl font-bold text-black">How to Choose the Right Printer or Scanner</h2>
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               <div className="bg-gray-50 rounded-xl p-6 border border-gray-100 hover:border-[#33cccc] hover:shadow-lg transition-all">
@@ -317,11 +317,11 @@ export default function Shop() {
           className="bg-white rounded-lg border border-gray-200 p-8 mt-8"
         >
           <div className="max-w-5xl mx-auto">
-            <div className="text-center mb-8">
-              <span className="inline-block text-[#33cccc] font-semibold text-sm uppercase tracking-wider mb-4">
+            <div className="text-center mb-6">
+              <span className="inline-block text-[#33cccc] font-semibold text-sm uppercase tracking-wider mb-3">
                 Customer Experience
               </span>
-              <h2 className="text-4xl md:text-5xl font-extrabold text-black">Ordering, Shipping & Warranty</h2>
+              <h2 className="text-2xl md:text-3xl font-bold text-black">Ordering, Shipping & Warranty</h2>
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               <div className="bg-gray-50 rounded-xl p-6 border border-gray-100 hover:border-[#33cccc] hover:shadow-lg transition-all">
@@ -386,7 +386,7 @@ export default function Shop() {
               <div className="w-14 h-14 rounded-xl bg-[#33cccc]/10 flex items-center justify-center">
                 <ShieldCheck className="w-7 h-7 text-[#33cccc]" />
               </div>
-              <h2 className="text-xl font-bold text-black">Product Authenticity & Warranty</h2>
+              <h2 className="text-lg font-bold text-black">Product Authenticity & Warranty</h2>
             </div>
             <div className="text-gray-600 leading-relaxed space-y-4">
               <p>
