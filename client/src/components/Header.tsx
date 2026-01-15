@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { Link, useLocation } from "wouter";
-import { Menu, X, User, Search, Package } from "lucide-react";
+import { Menu, X, User, Search, Heart } from "lucide-react";
 import { Button } from "./ui/button";
 import { cn } from "@/lib/utils";
 import { STORE_CATEGORIES, getCategoryUrl, STORE_ID } from "@/lib/ecwid";
@@ -110,20 +110,14 @@ export function Header() {
 
               <div className="hidden md:block w-px h-6 bg-gray-200" />
 
-              {/* Ecwid Search Widget */}
-              <div 
-                className="ec-search-widget"
-                data-testid="ecwid-search"
-              />
-
-              {/* Track Order Button */}
+              {/* Search Products Button */}
               <a
-                href="/shop#!/~/orders"
+                href="/shop#!/~/search"
                 className="hidden md:flex items-center gap-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
-                data-testid="link-track-order"
+                data-testid="link-search"
               >
-                <Package className="w-4 h-4" />
-                <span className="hidden lg:inline">Track Order</span>
+                <Search className="w-4 h-4" />
+                <span className="hidden lg:inline">Search</span>
               </a>
 
               {/* Ecwid Sign In Button */}
@@ -136,11 +130,14 @@ export function Header() {
                 <span className="hidden lg:inline">Sign In</span>
               </a>
 
-              {/* Ecwid Favorites Widget */}
-              <div 
-                className="ec-favorites-widget"
-                data-testid="ecwid-favorites"
-              />
+              {/* Favorites Button */}
+              <a
+                href="/shop#!/~/favorites"
+                className="flex items-center gap-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+                data-testid="link-favorites"
+              >
+                <Heart className="w-4 h-4" />
+              </a>
 
               {/* Ecwid Cart Widget - Native Ecwid Icon */}
               <div 
