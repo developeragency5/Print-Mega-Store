@@ -110,26 +110,6 @@ export function Header() {
 
               <div className="hidden md:block w-px h-6 bg-gray-200" />
 
-              {/* Favorites Button */}
-              <a
-                href="/shop#!/~/favorites"
-                className="hidden md:flex items-center gap-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
-                data-testid="link-favorites"
-              >
-                <Heart className="w-4 h-4" />
-                <span className="hidden lg:inline">Favorites</span>
-              </a>
-
-              {/* Search Products Button */}
-              <a
-                href="/shop#!/~/search"
-                className="hidden md:flex items-center gap-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
-                data-testid="link-search"
-              >
-                <Search className="w-4 h-4" />
-                <span className="hidden lg:inline">Search</span>
-              </a>
-
               {/* Sign In Button */}
               <a
                 href="/shop#!/~/signin"
@@ -236,6 +216,28 @@ export function Header() {
             >
               Contact
             </Link>
+
+            <div className="w-px h-5 bg-gray-300 mx-2" />
+
+            {/* Search Icon */}
+            <a
+              href="/shop#!/~/search"
+              className="px-3 py-3 text-muted-foreground hover:text-foreground transition-colors"
+              data-testid="link-search"
+              title="Search"
+            >
+              <Search className="w-5 h-5" />
+            </a>
+
+            {/* Favorites Icon */}
+            <a
+              href="/shop#!/~/favorites"
+              className="px-3 py-3 text-muted-foreground hover:text-foreground transition-colors"
+              data-testid="link-favorites"
+              title="Favorites"
+            >
+              <Heart className="w-5 h-5" />
+            </a>
           </nav>
         </div>
       </div>
