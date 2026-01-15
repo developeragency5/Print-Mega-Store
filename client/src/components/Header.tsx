@@ -8,7 +8,7 @@ import logoImg from "@assets/ChatGPT_Image_Jan_13,_2026,_07_50_24_PM(1)_17683518
 import phoneIcon from "@assets/phone_1768348600813.png";
 import searchIcon from "@assets/magnifying-glass_1768508427596.png";
 import favoritesIcon from "@assets/like_1768508473767.png";
-import profileIcon from "@assets/profile_1768508640529.png";
+import profileIcon from "@assets/userr_1768508906929.png";
 import cartIcon from "@assets/shopping-bag_1768508640529.png";
 
 export function Header() {
