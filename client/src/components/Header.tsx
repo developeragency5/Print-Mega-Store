@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { Link, useLocation } from "wouter";
-import { Menu, X, User, Search, Heart } from "lucide-react";
+import { Menu, X, User, Search, Heart, ShoppingCart } from "lucide-react";
 import { Button } from "./ui/button";
 import { cn } from "@/lib/utils";
 import { STORE_CATEGORIES, getCategoryUrl, STORE_ID } from "@/lib/ecwid";
@@ -110,6 +110,16 @@ export function Header() {
 
               <div className="hidden md:block w-px h-6 bg-gray-200" />
 
+              {/* Favorites Button */}
+              <a
+                href="/shop#!/~/favorites"
+                className="hidden md:flex items-center gap-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+                data-testid="link-favorites"
+              >
+                <Heart className="w-4 h-4" />
+                <span className="hidden lg:inline">Favorites</span>
+              </a>
+
               {/* Search Products Button */}
               <a
                 href="/shop#!/~/search"
@@ -120,7 +130,7 @@ export function Header() {
                 <span className="hidden lg:inline">Search</span>
               </a>
 
-              {/* Ecwid Sign In Button */}
+              {/* Sign In Button */}
               <a
                 href="/shop#!/~/signin"
                 className="hidden md:flex items-center gap-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
@@ -130,21 +140,15 @@ export function Header() {
                 <span className="hidden lg:inline">Sign In</span>
               </a>
 
-              {/* Favorites Button */}
+              {/* Cart Button */}
               <a
-                href="/shop#!/~/favorites"
-                className="flex items-center gap-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
-                data-testid="link-favorites"
+                href="/shop#!/~/cart"
+                className="hidden md:flex items-center gap-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+                data-testid="link-cart"
               >
-                <Heart className="w-4 h-4" />
+                <ShoppingCart className="w-4 h-4" />
+                <span className="hidden lg:inline">Cart</span>
               </a>
-
-              {/* Ecwid Cart Widget - Native Ecwid Icon */}
-              <div 
-                ref={cartWidgetRef}
-                className="ec-cart-widget"
-                data-testid="ecwid-cart"
-              />
 
               {/* Mobile Menu Button */}
               <Button
