@@ -156,9 +156,8 @@ export default function PurchaseTerms() {
                 </p>
                 <p className="mt-4">
                   <strong>Email:</strong> info@printmegastore.com<br />
-                  <strong>Phone:</strong> +1 (555) 123-4567<br />
-                  <strong>Hours:</strong> Monday - Friday, 9:00 AM - 6:00 PM EST<br />
-                  <strong>Address:</strong> 123 Printer Avenue, Tech District, NY 10001
+                  <strong>Phone:</strong> +1-567-323-0815<br />
+                  <strong>Hours:</strong> Monday - Friday, 9:00 AM - 6:00 PM EST
                 </p>
               </section>
             </div>

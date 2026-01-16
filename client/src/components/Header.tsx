@@ -121,12 +121,12 @@ export function Header() {
             <div className="flex items-center gap-2 sm:gap-4">
               {/* Phone */}
               <a 
-                href="tel:+15551234567"
+                href="tel:+15673230815"
                 className="hidden md:flex items-center gap-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
                 data-testid="link-phone"
               >
                 <img src={phoneIcon} alt="Phone" className="w-5 h-5" />
-                <span className="hidden lg:inline">+1 (555) 123-4567</span>
+                <span className="hidden lg:inline">+1-567-323-0815</span>
               </a>
 
               <div className="hidden md:block w-px h-6 bg-gray-200" />
