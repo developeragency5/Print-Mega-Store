@@ -13,7 +13,6 @@ import {
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
 import { Mail, Phone, MapPin, Send, Clock, MessageCircle, Headphones, HelpCircle, CheckCircle } from "lucide-react";
 
 const SimpleTextarea = forwardRef<HTMLTextAreaElement, React.TextareaHTMLAttributes<HTMLTextAreaElement>>(
@@ -21,7 +20,7 @@ const SimpleTextarea = forwardRef<HTMLTextAreaElement, React.TextareaHTMLAttribu
     return (
       <textarea
         ref={ref}
-        className={`flex min-h-[140px] w-full rounded-xl border border-input bg-background px-4 py-3 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 resize-none ${className}`}
+        className={`flex min-h-[140px] w-full rounded-lg border border-input bg-background px-4 py-3 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 resize-none ${className}`}
         {...props}
       />
     );
@@ -101,22 +100,21 @@ export default function Contact() {
   ];
 
   return (
-    <div className="min-h-screen bg-gray-50">
-      <section className="py-16 md:py-24">
+    <div className="flex flex-col">
+      <section className="py-16 md:py-24 bg-gray-50">
         <div className="container mx-auto px-6 sm:px-8 lg:px-12">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="text-center mb-16"
+            className="text-center mb-12"
           >
-            <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-br from-[#33cccc] to-[#29a3a3] mb-6">
-              <Mail className="w-10 h-10 text-white" />
-            </div>
-            <p className="text-sm font-semibold text-[#33cccc] uppercase tracking-wider mb-2">Print Mega Store</p>
-            <h1 className="text-4xl md:text-5xl font-extrabold text-black mb-4" data-testid="heading-contact">
+            <span className="inline-block text-[#33cccc] font-semibold text-sm uppercase tracking-wider mb-4">
+              Get In Touch
+            </span>
+            <h1 className="text-4xl md:text-5xl font-extrabold mb-6 text-black" data-testid="heading-contact">
               Contact Us
             </h1>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+            <p className="text-gray-600 text-lg max-w-2xl mx-auto leading-relaxed">
               Have questions about a product or need assistance? Our dedicated team is here to help you find the perfect printing solution.
             </p>
           </motion.div>
@@ -125,7 +123,7 @@ export default function Contact() {
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.05 }}
-            className="bg-white rounded-xl border border-gray-200 p-6 max-w-2xl mx-auto mb-12"
+            className="bg-white rounded-lg border border-gray-200 p-6 max-w-2xl mx-auto mb-12"
           >
             <div className="grid md:grid-cols-3 gap-4 text-center">
               <div>
@@ -157,28 +155,34 @@ export default function Contact() {
               <h2 className="text-2xl font-bold text-black mb-6">Contact Information</h2>
               
               {contactMethods.map((item, i) => (
-                <Card key={i} className="overflow-hidden hover:shadow-lg transition-shadow duration-300">
-                  <CardContent className="p-6 flex items-start gap-5">
-                    <div className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${item.color} flex items-center justify-center shrink-0 shadow-lg`}>
-                      {item.icon}
-                    </div>
-                    <div>
-                      <h3 className="font-bold text-lg text-black mb-1">{item.title}</h3>
-                      <p className="text-sm text-gray-500 mb-2">{item.subtitle}</p>
-                      <a 
-                        href={item.href} 
-                        className="text-[#33cccc] hover:underline font-medium"
-                        data-testid={`link-contact-${item.title.toLowerCase().replace(/\s+/g, '-')}`}
-                      >
-                        {item.content}
-                      </a>
-                    </div>
-                  </CardContent>
-                </Card>
+                <motion.div
+                  key={i}
+                  whileHover={{
+                    y: -4,
+                    boxShadow: "0 10px 30px rgba(55, 175, 225, 0.12)",
+                  }}
+                  transition={{ duration: 0.2 }}
+                  className="bg-white rounded-lg border border-gray-200 p-6 flex items-start gap-5 cursor-pointer"
+                >
+                  <div className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${item.color} flex items-center justify-center shrink-0 shadow-lg`}>
+                    {item.icon}
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-lg text-black mb-1">{item.title}</h3>
+                    <p className="text-sm text-gray-500 mb-2">{item.subtitle}</p>
+                    <a 
+                      href={item.href} 
+                      className="text-[#33cccc] hover:underline font-medium"
+                      data-testid={`link-contact-${item.title.toLowerCase().replace(/\s+/g, '-')}`}
+                    >
+                      {item.content}
+                    </a>
+                  </div>
+                </motion.div>
               ))}
 
-              <div className="bg-gradient-to-br from-[#33cccc]/10 to-[#33cccc]/5 rounded-xl p-6 border border-[#33cccc]/20 mt-8">
-                <h3 className="font-bold text-black mb-2">Business Hours</h3>
+              <div className="bg-gradient-to-br from-[#33cccc]/10 to-[#33cccc]/5 rounded-lg p-6 border border-[#33cccc]/20 mt-8">
+                <h3 className="font-bold text-black mb-3">Business Hours</h3>
                 <div className="space-y-2 text-gray-600">
                   <p className="flex justify-between">
                     <span>Monday - Friday:</span>
@@ -201,18 +205,18 @@ export default function Contact() {
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.2 }}
             >
-              <Card className="shadow-xl border-0 rounded-3xl overflow-hidden">
+              <div className="bg-white rounded-lg border border-gray-200 overflow-hidden">
                 {showSuccess ? (
                   <div className="p-8 md:p-12">
                     <div className="text-center py-8">
-                      <div className="w-24 h-24 bg-gradient-to-br from-green-500 to-emerald-600 rounded-full flex items-center justify-center mx-auto mb-6 shadow-xl">
-                        <CheckCircle className="w-14 h-14 text-white" />
+                      <div className="w-20 h-20 bg-gradient-to-br from-green-500 to-emerald-600 rounded-full flex items-center justify-center mx-auto mb-6 shadow-xl">
+                        <CheckCircle className="w-10 h-10 text-white" />
                       </div>
-                      <h2 className="text-3xl font-bold text-black mb-4">Message Sent Successfully!</h2>
+                      <h2 className="text-3xl font-extrabold text-black mb-4">Message Sent!</h2>
                       <p className="text-gray-600 text-lg mb-6 max-w-md mx-auto">
-                        Thank you for reaching out to us. Our team will review your message and get back to you within 24 hours.
+                        Thank you for reaching out. Our team will review your message and get back to you within 24 hours.
                       </p>
-                      <div className="bg-gradient-to-br from-[#33cccc]/10 to-[#33cccc]/5 rounded-xl p-6 border border-[#33cccc]/20 max-w-sm mx-auto">
+                      <div className="bg-gradient-to-br from-[#33cccc]/10 to-[#33cccc]/5 rounded-lg p-6 border border-[#33cccc]/20 max-w-sm mx-auto">
                         <p className="text-sm text-gray-600 mb-2">In the meantime, feel free to:</p>
                         <ul className="text-sm text-gray-700 space-y-2">
                           <li className="flex items-center gap-2">
@@ -231,7 +235,7 @@ export default function Contact() {
                       </div>
                       <Button 
                         onClick={() => setShowSuccess(false)}
-                        className="mt-8 bg-gradient-to-r from-[#33cccc] to-[#29a3a3] hover:from-[#29a3a3] hover:to-[#33cccc]"
+                        className="mt-8"
                         data-testid="button-send-another"
                       >
                         Send Another Message
@@ -240,14 +244,14 @@ export default function Contact() {
                   </div>
                 ) : (
                   <>
-                    <div className="p-8 pb-4 bg-gradient-to-br from-[#33cccc] to-[#29a3a3]">
-                      <h2 className="text-2xl font-bold text-white flex items-center gap-3">
-                        <Send className="w-6 h-6" />
+                    <div className="p-6 bg-gradient-to-br from-[#33cccc] to-[#29a3a3]">
+                      <h2 className="text-xl font-bold text-white flex items-center gap-3">
+                        <Send className="w-5 h-5" />
                         Send us a Message
                       </h2>
-                      <p className="text-white/80 mt-2">Fill out the form below and we'll get back to you soon.</p>
+                      <p className="text-white/80 mt-1 text-sm">Fill out the form below and we'll get back to you soon.</p>
                     </div>
-                    <CardContent className="p-8">
+                    <div className="p-8">
                       <Form {...form}>
                         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
                           <FormField
@@ -259,7 +263,7 @@ export default function Contact() {
                                 <FormControl>
                                   <Input 
                                     placeholder="John Doe" 
-                                    className="h-12 rounded-xl" 
+                                    className="h-12 rounded-lg" 
                                     data-testid="input-name"
                                     {...field} 
                                   />
@@ -279,7 +283,7 @@ export default function Contact() {
                                   <Input 
                                     placeholder="john@example.com" 
                                     type="email" 
-                                    className="h-12 rounded-xl"
+                                    className="h-12 rounded-lg"
                                     data-testid="input-email"
                                     {...field} 
                                   />
@@ -309,66 +313,85 @@ export default function Contact() {
 
                           <Button 
                             type="submit" 
-                            className="w-full h-14 text-base font-semibold rounded-xl bg-gradient-to-r from-[#33cccc] to-[#29a3a3] hover:from-[#29a3a3] hover:to-[#33cccc] transition-all duration-300"
+                            className="w-full h-12 text-base font-semibold rounded-lg"
                             data-testid="button-submit-contact"
                           >
                             Send Message
                           </Button>
                         </form>
                       </Form>
-                    </CardContent>
+                    </div>
                   </>
                 )}
-              </Card>
+              </div>
             </motion.div>
           </div>
+        </div>
+      </section>
 
+      <section className="py-16 md:py-24 bg-white">
+        <div className="container mx-auto px-6 sm:px-8 lg:px-12">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.3 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-12"
           >
-            <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-black mb-4">How Can We Help?</h2>
-              <p className="text-gray-600 max-w-2xl mx-auto">
-                Whether you need help choosing the right printer or have questions about your order, we're here for you.
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
-              {helpTopics.map((topic, i) => (
-                <motion.div
-                  key={i}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.4 + i * 0.1 }}
-                >
-                  <Card className="h-full hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
-                    <CardContent className="p-6 text-center">
-                      <div className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${topic.color} flex items-center justify-center mx-auto mb-4 shadow-lg`}>
-                        {topic.icon}
-                      </div>
-                      <h3 className="font-bold text-lg text-black mb-2">{topic.title}</h3>
-                      <p className="text-sm text-gray-600">{topic.desc}</p>
-                    </CardContent>
-                  </Card>
-                </motion.div>
-              ))}
-            </div>
+            <span className="inline-block text-[#33cccc] font-semibold text-sm uppercase tracking-wider mb-4">
+              How We Can Help
+            </span>
+            <h2 className="text-4xl md:text-5xl font-extrabold mb-6 text-black">
+              How Can We Help?
+            </h2>
+            <p className="text-gray-600 text-lg max-w-2xl mx-auto">
+              Whether you need help choosing the right printer or have questions about your order, we're here for you.
+            </p>
           </motion.div>
 
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+            {helpTopics.map((topic, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.1 }}
+                whileHover={{
+                  y: -8,
+                  boxShadow: "0 20px 40px rgba(55, 175, 225, 0.15)",
+                }}
+                className="bg-gray-50 rounded-lg border border-gray-200 p-6 text-center cursor-pointer"
+              >
+                <div className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${topic.color} flex items-center justify-center mx-auto mb-4 shadow-lg`}>
+                  {topic.icon}
+                </div>
+                <h3 className="font-bold text-lg text-black mb-2">{topic.title}</h3>
+                <p className="text-sm text-gray-600">{topic.desc}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-16 md:py-24 bg-gray-50">
+        <div className="container mx-auto px-6 sm:px-8 lg:px-12">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.6 }}
-            className="mt-20 max-w-4xl mx-auto"
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-12"
           >
-            <div className="bg-white rounded-2xl border border-gray-100 p-8 md:p-12">
-              <div className="text-center mb-8">
-                <h2 className="text-2xl font-bold text-black mb-2">Frequently Asked Questions</h2>
-                <p className="text-gray-600">Quick answers to common questions</p>
-              </div>
-              
+            <span className="inline-block text-[#33cccc] font-semibold text-sm uppercase tracking-wider mb-4">
+              FAQ
+            </span>
+            <h2 className="text-4xl md:text-5xl font-extrabold mb-6 text-black">
+              Frequently Asked Questions
+            </h2>
+            <p className="text-gray-600 text-lg">Quick answers to common questions</p>
+          </motion.div>
+
+          <div className="max-w-4xl mx-auto">
+            <div className="bg-white rounded-lg border border-gray-200 p-8 md:p-12">
               <div className="space-y-6">
                 {[
                   {
@@ -389,22 +412,22 @@ export default function Contact() {
                   }
                 ].map((faq, i) => (
                   <div key={i} className="border-b border-gray-100 pb-6 last:border-0 last:pb-0">
-                    <h3 className="font-semibold text-black mb-2">{faq.q}</h3>
-                    <p className="text-gray-600 text-sm">{faq.a}</p>
+                    <h3 className="font-bold text-black mb-2">{faq.q}</h3>
+                    <p className="text-gray-600 leading-relaxed">{faq.a}</p>
                   </div>
                 ))}
               </div>
 
               <div className="text-center mt-8 pt-6 border-t border-gray-100">
                 <p className="text-gray-600 mb-4">Still have questions?</p>
-                <Button asChild className="bg-gradient-to-r from-[#33cccc] to-[#29a3a3] hover:from-[#29a3a3] hover:to-[#33cccc]">
+                <Button asChild>
                   <a href="mailto:info@printmegastore.com">
                     Email Us Directly
                   </a>
                 </Button>
               </div>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
     </div>
