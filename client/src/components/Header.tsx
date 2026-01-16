@@ -15,6 +15,7 @@ export function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [currentHash, setCurrentHash] = useState("");
+  const [cartCount, setCartCount] = useState(0);
   const [location] = useLocation();
   const cartWidgetRef = useRef<HTMLDivElement>(null);
 
@@ -47,18 +48,34 @@ export function Header() {
   const hasActiveCategory = STORE_CATEGORIES.some(cat => isActiveCategory(cat.slug));
   const isShopPage = location === "/shop" || window.location.pathname === "/shop";
 
+  // Track Ecwid cart changes
   useEffect(() => {
-    const initEcwidWidgets = () => {
+    const initEcwidCart = () => {
       if (typeof window.Ecwid !== "undefined") {
-        if (cartWidgetRef.current && cartWidgetRef.current.children.length === 0) {
-          window.Ecwid.init();
+        // Initialize Ecwid
+        window.Ecwid.init();
+        
+        // Subscribe to cart changes
+        if (window.Ecwid.OnCartChanged) {
+          window.Ecwid.OnCartChanged.add((cart: any) => {
+            const itemCount = cart.productsQuantity || 0;
+            setCartCount(itemCount);
+          });
+        }
+        
+        // Get initial cart count
+        if (window.Ecwid.Cart) {
+          window.Ecwid.Cart.get((cart: any) => {
+            const itemCount = cart.productsQuantity || 0;
+            setCartCount(itemCount);
+          });
         }
       }
     };
 
     const checkEcwid = setInterval(() => {
       if (typeof window.Ecwid !== "undefined") {
-        initEcwidWidgets();
+        initEcwidCart();
         clearInterval(checkEcwid);
       }
     }, 100);
@@ -127,10 +144,17 @@ export function Header() {
               {/* Cart Button */}
               <a
                 href="/shop#!/~/cart"
-                className="hidden md:flex items-center gap-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors hover:opacity-70"
+                className="hidden md:flex items-center gap-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors hover:opacity-70 relative"
                 data-testid="link-cart"
               >
-                <img src={cartIcon} alt="Cart" className="w-5 h-5" />
+                <div className="relative">
+                  <img src={cartIcon} alt="Cart" className="w-5 h-5" />
+                  {cartCount > 0 && (
+                    <span className="absolute -top-2 -right-2 bg-primary text-white text-xs font-bold rounded-full w-5 h-5 flex items-center justify-center">
+                      {cartCount > 99 ? "99+" : cartCount}
+                    </span>
+                  )}
+                </div>
                 <span className="hidden lg:inline">Cart</span>
               </a>
 
@@ -331,10 +355,15 @@ export function Header() {
             </a>
             <a
               href="/shop#!/~/cart"
-              className="block px-4 py-3 text-base font-medium rounded-xl transition-colors text-foreground hover:bg-gray-100"
+              className="flex items-center justify-between px-4 py-3 text-base font-medium rounded-xl transition-colors text-foreground hover:bg-gray-100"
               data-testid="link-mobile-cart"
             >
-              View Cart
+              <span>View Cart</span>
+              {cartCount > 0 && (
+                <span className="bg-primary text-white text-xs font-bold rounded-full px-2 py-1">
+                  {cartCount > 99 ? "99+" : cartCount}
+                </span>
+              )}
             </a>
           </div>
         </div>
